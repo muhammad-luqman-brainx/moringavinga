@@ -61,16 +61,13 @@
 }
 
 .multicolumn:not(.background-none) .multicolumn-card {
-  background: rgb(var(--color-background));
   height: 100%;
 }
 
-.multicolumn.background-primary .multicolumn-card {
-  background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));
-}
 
 .multicolumn-list h3 {
   line-height: calc(1 + 0.5 / max(1, var(--font-heading-scale)));
+  letter-spacing: -2px;
 }
 
 .multicolumn-list h3,
@@ -78,6 +75,17 @@
   margin: 0;
 }
 
+
+.multicolumn-v1 .multicolumn-list__item .multicolumn-card__info[data-animation="fade-in-from-bottom"]{
+  transform: translateY(75px);
+  transition: all 1s ease;
+  opacity: 0;
+  transition-delay: 0s;
+}
+.multicolumn-v1 .multicolumn-list__item .multicolumn-card__info.visible[data-animation="fade-in-from-bottom"]{
+  transform: translateY(0);
+  opacity: 1;
+}
 .multicolumn-card-spacing {
   padding-top: 2.5rem;
   margin-left: 2.5rem;
