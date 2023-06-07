@@ -3,40 +3,151 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "d423f788-2f89-412b-9c30-3c3275d3c032": {
+          "type": "reviews",
+          "settings": {
+            "reviews_url": "",
+            "reviews": "100’s of 5 Star Reviews",
+            "reviews_style": "body"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "heading": "Your Daily Shot Of Health & Wellness",
+            "heading_size": "h1"
+          }
+        },
+        "810864ef-155b-4057-aacf-f176b60ad8f6": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "PLANT-BASED \/ ORGANIC \/ RAW",
+            "subtitle_style": "subtitle"
+          }
+        },
+        "123c4707-a5b4-45ff-9ae3-377a1a32b4a3": {
+          "type": "text",
+          "settings": {
+            "text": "We make apple cider vinegar and adaptogenic plants taste amazing! Give our nutrient-rich Moringa Infusions a try today.",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "How It Works",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "d85b28e9-1302-4e4d-8245-96c0664c98a7": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-1.webp"
+          }
+        },
+        "55a6e99e-d01a-4b9e-abc5-49f274125293": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-2.webp"
+          }
+        },
+        "fc8ad1dc-69bb-4a58-ab48-1038b29fe2c9": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-3.webp"
+          }
+        },
+        "f2dc83d4-e62d-4c80-92ef-95e1e34830a3": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-4.webp"
+          }
+        },
+        "acf893ff-185a-4453-8ac8-53c4121c6c7f": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-5.webp"
+          }
+        },
+        "12a4173a-8b04-4a0b-b774-0404c019032c": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-6.webp"
+          }
         }
       },
       "block_order": [
+        "d423f788-2f89-412b-9c30-3c3275d3c032",
         "heading",
-        "button"
+        "810864ef-155b-4057-aacf-f176b60ad8f6",
+        "123c4707-a5b4-45ff-9ae3-377a1a32b4a3",
+        "button",
+        "d85b28e9-1302-4e4d-8245-96c0664c98a7",
+        "55a6e99e-d01a-4b9e-abc5-49f274125293",
+        "fc8ad1dc-69bb-4a58-ab48-1038b29fe2c9",
+        "f2dc83d4-e62d-4c80-92ef-95e1e34830a3",
+        "acf893ff-185a-4453-8ac8-53c4121c6c7f",
+        "12a4173a-8b04-4a0b-b774-0404c019032c"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/here.webp",
+        "image_overlay_opacity": 30,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "top-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "5bf00c88-6c24-472d-b096-3bb20b95eade": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "c22f1f25-8e0d-41c2-8199-39000135d8ec": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“I have been taking this wonderful sipping vinegar for the past 3 years. I chose the Ginger &amp; Lemongrass to help with my digestive system and for the anti-inflammitory qualities. I have been amazed with the results. I hate going a day without my morning ritual of Moringa Vinga!”",
+            "blockquoteImage": "shopify:\/\/shop_images\/testimonial-1.jpg",
+            "authorName": "Lori Kaye",
+            "authorDesignation": "Moringa Subscriber"
+          }
+        },
+        "8df6fa19-135f-4fc5-b79e-4d1fe1aa383a": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“I drink this instead of coffee in the morning, and it takes down food cravings at night. Truly a delicious option anytime. Highly recommend.”",
+            "blockquoteImage": "shopify:\/\/shop_images\/testimonial-2.jpg",
+            "authorName": "Ray Jackson",
+            "authorDesignation": "Moringa Subscriber"
+          }
+        },
+        "581804f7-3594-4359-874a-e982a75c6bc6": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“I have been drinking a shot of it every morning for a year & the flavors are great! I've mixed it in cocktails and yogurt as well. And these days, who doesn't want an extra immunity boost!? Moringa Vinga has become a staple in my diet. Keep making great products!”",
+            "blockquoteImage": "shopify:\/\/shop_images\/testimonial-3.jpg",
+            "authorName": "Joycelyn May",
+            "authorDesignation": "Moringa Subscriber"
+          }
+        }
+      },
+      "block_order": [
+        "c22f1f25-8e0d-41c2-8199-39000135d8ec",
+        "8df6fa19-135f-4fc5-b79e-4d1fe1aa383a",
+        "581804f7-3594-4359-874a-e982a75c6bc6"
+      ],
+      "settings": {
+        "fixedHeading": "Functional Ingredients You Can Feel",
+        "fixedDescription": "Moringa oleifera is said to offer over 300 medicinal benefits. We combine adaptogens like moringa with powerful superfoods to bring you a convenient and easy way to take your health and wellness to the next level.",
+        "fixedButtonText": "View all Testimonials",
+        "FixedButtonlink": "#"
       }
     },
     "featured_collection": {
@@ -69,6 +180,7 @@
   },
   "order": [
     "image_banner",
+    "5bf00c88-6c24-472d-b096-3bb20b95eade",
     "featured_collection"
   ]
 }

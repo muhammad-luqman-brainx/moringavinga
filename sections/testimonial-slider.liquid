@@ -1,0 +1,150 @@
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+{{ 'section-testimonial-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="testimonial-section slider-container">
+  <div class="bg-overlay"></div>
+  <div class="page-width grid grid--1-col-tablet-down grid--2-col-desktop testimonial-carousel">
+    <div class="grid__item multicolumn-list testimonial-carousel-fixed-content">
+      <h2 class="h1">{{ section.settings.fixedHeading }}</h2>
+      <p>
+        {{ section.settings.fixedDescription }}
+      </p>
+      {% if section.settings.FixedButtonlink %}
+        <div>
+          <a
+            class="button testimonial-button has-icon"
+            href="{{ section.settings.FixedButtonlink  }}"
+            data-color-override="false"
+            data-hover-color-override="false"
+            data-hover-text-color-override="#fff"
+            style="visibility: visible;"
+          >
+            <span>{{ section.settings.fixedButtonText }}</span>
+            {% render 'icon-arrow-right' %}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    <div class="grid__item slider-section-outer">
+      <div class="slider-section">
+        <div class="main-carousel mc__custom--slider" data-flickity="">
+          {%- for block in section.blocks -%}
+            <div class="carousel-cell">
+              <div class="carousel-cover">
+                <div class="carousel-content">
+                  <blockquote class="single_testimonial" data-color="" data-style="basic">
+                    <div class="inner">
+                      <p>
+                        {{ block.settings.blockquote }}
+                      </p>
+
+                      <div
+                        style="background-image:url('{{ block.settings.blockquoteImage.src | img_url: 'large' }}')"
+                        class="image-icon image-icon-{{ block.id }}"
+                      ></div>
+                      <span class="wrap blockquote-author">
+                        <span>{{ block.settings.authorName }}</span>
+                        <span class="title">{{ block.settings.authorDesignation }}</span>
+                      </span>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'section-testimonial-slider.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  .animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Testimonial Slideshow",
+  "settings": [
+    {
+      "type": "text",
+      "id": "fixedHeading",
+      "label": "Heading Text",
+      "default": "Header Text Here",
+      "placeholder": "Header Text",
+      "info": "Header Text"
+    },
+    {
+      "type": "textarea",
+      "id": "fixedDescription",
+      "label": "Heading Text",
+      "default": "Header Text Here",
+      "info": "Header Text"
+    },
+    {
+      "type": "text",
+      "id": "fixedButtonText",
+      "label": "Button Text",
+      "default": "View all Testimonials",
+      "placeholder": "Text Button",
+      "info": "Text Button"
+    },
+    {
+      "type": "url",
+      "id": "FixedButtonlink",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Testimonial"
+        },
+        {
+          "type": "textarea",
+          "id": "blockquote",
+          "label": "Blockquote",
+          "default": "Blockquote Here",
+          "placeholder": "Blockquote Text",
+          "info": "Blockquote Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "blockquoteImage",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "authorName",
+          "label": "Author Name",
+          "default": "Author Name Here",
+          "placeholder": "Author",
+          "info": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "authorDesignation",
+          "label": "Author Designation",
+          "default": "Author Designation",
+          "placeholder": "Author Designation",
+          "info": "Author Designation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Slider"
+    }
+  ]
+}
+{% endschema %}
