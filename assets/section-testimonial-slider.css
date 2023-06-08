@@ -22,6 +22,7 @@
 }
 .testimonial-section .testimonial-carousel .testimonial-carousel-fixed-content {
   padding-right: 65px;
+  padding-left: 2.5rem;
 }
 .testimonial-section
   .testimonial-carousel
@@ -67,10 +68,11 @@
 .testimonial-section
   .testimonial-carousel
   .testimonial-carousel-fixed-content
-  a svg{
-    position: absolute;
-    right: 20px;
-  }
+  a
+  svg {
+  position: absolute;
+  right: 20px;
+}
 .testimonial-section
   .testimonial-carousel
   .slider-section-outer
@@ -255,6 +257,13 @@
   transform: scale(2);
   box-shadow: inset 0 0 0 1px #000;
   background-color: transparent;
+}
+@media only screen and (max-width: 749px) {
+  .testimonial-section
+    .testimonial-carousel
+    .testimonial-carousel-fixed-content {
+    padding-left: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 990px) {

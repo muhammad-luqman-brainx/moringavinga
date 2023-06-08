@@ -150,30 +150,70 @@
         "FixedButtonlink": "#"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "46a67235-1714-43b0-822b-0e8a19018e90": {
+      "type": "multicolumn-v1",
+      "blocks": {
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/svgexport-12.png",
+            "title": "100% Pure",
+            "text": "<p>Raw, living, and nutrient dense organic concentrates are slowly and carefully crafted.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/svgexport-13.png",
+            "title": "Never Heated",
+            "text": "<p>To keep everything alive and ensure critical probiotics and enzymes are intact, Moringa Vinga is never heated during the infusion process. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/svgexport-14.png",
+            "title": "No Additives or Powders",
+            "text": "<p>We use real, raw, and functional whole-food ingredients that nourish mind, body, and spirit.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "8d969694-a82f-4a9c-a179-4b5c67886aad": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/svgexport-15.png",
+            "title": "18 Month Shelf Life",
+            "text": "<p>Preserved with unfiltered apple cider vinegar and wild honey. Moringa Vinga is shelf-stable even after opening.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-0",
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-1",
+        "template--19285340389682__46a67235-1714-43b0-822b-0e8a19018e90-168614865351a95575-2",
+        "8d969694-a82f-4a9c-a179-4b5c67886aad"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
         "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
@@ -181,6 +221,6 @@
   "order": [
     "image_banner",
     "5bf00c88-6c24-472d-b096-3bb20b95eade",
-    "featured_collection"
+    "46a67235-1714-43b0-822b-0e8a19018e90"
   ]
 }
