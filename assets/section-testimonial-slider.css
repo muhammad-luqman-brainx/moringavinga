@@ -84,9 +84,7 @@
   counter-increment: carousel-cell;
   margin-right: 30px;
   opacity: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
+  display: flex;
 }
 
 .testimonial-section
@@ -94,7 +92,13 @@
   .slider-section-outer
   .slider-section
   .mc__custom--slider.is-fullscreen
-  .carousel-cell {
+  .carousel-cell,
+  .testimonial-section
+  .testimonial-carousel
+  .slider-section-outer
+  .slider-section
+  .mc__custom--slider.is-fullscreen
+  .carousel-cell .carousel-cover {
   opacity: 1;
   min-height: 100%;
 }
@@ -109,6 +113,10 @@
   padding: 30px;
   box-sizing: border-box;
   display: inline-block;
+  min-height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 .testimonial-section
   .testimonial-carousel
@@ -189,75 +197,7 @@
   text-align: left;
   bottom: -85px;
 }
-.testimonial-section
-  .testimonial-carousel
-  .slider-section-outer
-  .slider-section
-  .mc__custom--slider
-  .flickity-page-dots
-  .dot {
-  display: inline-block;
-  width: 10px;
-  height: 20px;
-  margin: 0 8px;
-  opacity: 0.25;
-  cursor: pointer;
-  transition: all 0.1s ease;
-  list-style: none;
-  height: 30px;
-  width: 30px;
-  position: relative;
-  margin: 0 5px;
-  width: 30px;
-  margin: 0;
-  opacity: 0.35;
-  background: transparent;
-}
-.testimonial-section
-  .testimonial-carousel
-  .slider-section-outer
-  .slider-section
-  .mc__custom--slider
-  .flickity-page-dots
-  .dot.is-selected {
-  opacity: 1;
-}
-.testimonial-section
-  .testimonial-carousel
-  .slider-section-outer
-  .slider-section
-  .mc__custom--slider
-  .flickity-page-dots
-  .dot::before {
-  content: "";
-  background: #333;
-  width: 100%;
-  height: 4px;
-  display: block;
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  transition: all 0.25s ease;
-  border-radius: 50%;
-  margin-left: 11px;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 5px #000;
-  transition: all 0.1s linear;
-}
-.testimonial-section
-  .testimonial-carousel
-  .slider-section-outer
-  .slider-section
-  .mc__custom--slider
-  .flickity-page-dots
-  .dot.is-selected::before {
-  transform: scale(2);
-  box-shadow: inset 0 0 0 1px #000;
-  background-color: transparent;
-}
+
 @media only screen and (max-width: 749px) {
   .testimonial-section
     .testimonial-carousel

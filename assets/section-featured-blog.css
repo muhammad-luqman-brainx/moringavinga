@@ -37,10 +37,20 @@
 
 .blog__title {
   margin: 0;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -1px;
 }
 
+
+.blog__subtitle{
+  margin: 0;
+  font-size: 14px;
+  line-height: 15px;
+}
 .blog__posts.articles-wrapper {
   margin-bottom: 1rem;
+  column-gap: 0;
 }
 
 @media screen and (min-width: 990px) {
@@ -51,11 +61,17 @@
 
 .blog__posts.articles-wrapper .article {
   scroll-snap-align: start;
+  padding: 0 2.5rem;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 749px) {
   .blog__post.article {
     width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+  }
+  .blog__posts.articles-wrapper .article {
+    scroll-snap-align: start;
+    padding: 0 1.5rem;
   }
 }
 
@@ -76,6 +92,26 @@
     margin-top: 5rem;
   }
 }
+
+@media only screen and (max-width: 690px) {
+  .blog__title {
+    font-size: 28.9px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 690px) {
+  .blog__title {
+    font-size: 28.9px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+  .blog__title {
+    font-size: 23.8px;
+    line-height: 28px;
+  }
+}
+
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {

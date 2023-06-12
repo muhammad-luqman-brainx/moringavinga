@@ -116,7 +116,11 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              <div class="fnc-slide__heading-line" data-animation="fade-in-from-bottom">
+                <span>
+                  {{ block.settings.heading }}
+                </span>
+              </div>
             </h2>
           {%- when 'reviews' -%}
             <div class="banner__text review__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -137,7 +141,11 @@
             </div>
           {%- when 'subtitle' -%}
             <div class="banner__text rte {{ block.settings.subtitle_style }}" {{ block.shopify_attributes }}>
-              <p class="h2">{{ block.settings.subtitle }}</p>
+              <p class="fnc-slide__heading-line h2" data-animation="fade-in-from-bottom">
+                <span>
+                  {{ block.settings.subtitle }}
+                </span>
+              </p>
             </div>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -145,7 +153,7 @@
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons animated__cta {% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -157,9 +165,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  <span class="text">{{- block.settings.button_label_1 | escape -}}</span>
-                  {% render 'next-arrow' %}
-                  <span class="line" style="background-color: #dd8500;"></span>
+                  {% render 'button', buttonLabel: block.settings.button_label_1 | escape %}
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
