@@ -114,6 +114,16 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
+              {%- when 'range_price' -%}
+                <div class="no-js-hidden" id="range-price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'range-price',
+                    product: product,
+                    use_variant: false,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
+                </div>
+               
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -618,6 +628,11 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
+      "limit": 1
+    },
+    {
+      "type": "range_price",
+      "name": "Price Range",
       "limit": 1
     },
     {
