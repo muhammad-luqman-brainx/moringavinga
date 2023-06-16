@@ -1,0 +1,28 @@
+.embed-video{
+    margin-bottom: 36px;
+}
+.embed-video .play{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 70px !important;
+    height: 70px !important;
+    background-color: rgba(var(--color-button), var(--alpha-button-background));
+    box-shadow: 0 20px 45px rgba(0,0,0,.25);
+    border: 0 !important;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.embed-video .play svg{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+.embed-video .play svg path{
+    fill: rgb(var(--color-button-text));
+}

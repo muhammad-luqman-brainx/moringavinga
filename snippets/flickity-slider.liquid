@@ -1,0 +1,49 @@
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+{{ 'section-flickity.css' | asset_url | stylesheet_tag }}
+
+<div class="metaSlider flickity-section-outer">
+  <div class="flickity-carousel multicolumn-carousel mc__custom--slider" data-flickity="">
+    {%- for image in images.value -%}
+      <div class="flickity-cell">
+        {%- liquid
+          assign highest_ratio = 1
+          if image.aspect_ratio > highest_ratio
+            assign highest_ratio = image.aspect_ratio
+          endif
+        -%}
+        <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--adapt-width multicolumn-card-spacing">
+          <div
+            class="media media--transparent media--{{ section.settings.image_ratio }}"
+            style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+          >
+            {%- liquid
+              assign number_of_columns = 1
+              assign number_of_columns_mobile = 1
+              assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+              assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+              assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+              assign image_width = 1
+            -%}
+            {% capture sizes %}
+                    (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                    (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                    (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                    calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                  {% endcapture %}
+            {{
+              image
+              | image_url: width: 346
+              | image_tag:
+                loading: 'lazy',
+                widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                sizes: sizes,
+                class: 'multicolumn-card__image'
+            }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'multicolumn-slider.js' | asset_url }}" defer="defer"></script>

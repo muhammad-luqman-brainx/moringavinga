@@ -6,44 +6,86 @@
 
   Usage:
   {% render 'share-button',
-    block: block,
-    share_link: share_url
+  block: block,
+  share_link: share_url
   %}
 {% endcomment %}
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+{{ 'share.css' | asset_url | stylesheet_tag }}
 
-<share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
+<share-button
+  id="Share-{{ section.id }}"
+  class="share-button share-button-fixed quick-add-hidden"
+  {{ block.shopify_attributes }}
+>
   <button class="share-button__button hidden">
     {% render 'icon-share' %}
-    {{ block.settings.share_label | escape }}
+    {% comment %}
+      {{ block.settings.share_label | escape }}
+    {% endcomment %}
   </button>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
       {% render 'icon-share' %}
-      {{ block.settings.share_label | escape }}
+      {% comment %}
+        {{ block.settings.share_label | escape }}
+      {% endcomment %}
     </summary>
-    <div class="share-button__fallback motion-reduce">
-      <div class="field">
-        <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status"> </span>
-        <input
-          type="text"
-          class="field__input"
-          id="ShareUrl-{{ section.id }}"
-          value="{{ share_link }}"
-          placeholder="{{ 'general.share.share_url' | t }}"
-          onclick="this.select();"
-          readonly
-        >
-        <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
+    {% comment %}
+      <div class="share-button__fallback motion-reduce">
+        <div class="field">
+          <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status"> </span>
+          <input type="text" class="field__input" id="ShareUrl-{{ section.id }}" value="{{ share_link }}"
+            placeholder="{{ 'general.share.share_url' | t }}" onclick="this.select();" readonly>
+          <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
+        </div>
+        <button class="share-button__close hidden no-js-hidden">
+          {% render 'icon-close' %}
+          <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
+        </button>
+        <button class="share-button__copy no-js-hidden">
+          {% render 'icon-clipboard' %}
+          <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
+        </button>
       </div>
-      <button class="share-button__close hidden no-js-hidden">
-        {% render 'icon-close' %}
-        <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
-      </button>
-      <button class="share-button__copy no-js-hidden">
-        {% render 'icon-clipboard' %}
-        <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
-      </button>
-    </div>
+    {% endcomment %}
   </details>
+  <div class="social-inner">
+    <a
+      class="facebook-share sharing"
+      href="https://www.facebook.com/sharer/sharer.php?u={{ share_link }}"
+      target="_blank"
+      title="Share this"
+    >
+      {%- render 'icon-facebook' -%}
+      <span class="social-text">Share</span>
+    </a>
+    <a
+      class="twitter-share sharing"
+      href="https://www.twitter.com/sharer/sharer.php?u={{ share_link }}"
+      target="_blank"
+      title="Tweet this"
+    >
+      {%- render 'icon-twitter' -%}
+      <span class="social-text">Tweet</span>
+    </a>
+    <a
+      class="linkedin-share sharing"
+      href="https://www.linkedin.com/sharer/sharer.php?u={{ share_link }}"
+      target="_blank"
+      title="Share this"
+    >
+      {%- render 'icon-linkedin' -%}
+      <span class="social-text">Share</span>
+    </a>
+    <a
+      class="pinterest-share sharing"
+      href="https://www.pinterest.com/sharer/sharer.php?u={{ share_link }}"
+      target="_blank"
+      title="Pin this"
+    >
+      {%- render 'icon-pinterest' -%}
+      <span class="social-text">Pin</span>
+    </a>
+  </div>
 </share-button>

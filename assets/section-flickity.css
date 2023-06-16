@@ -1,0 +1,20 @@
+
+.metaSlider .flickity-cell {
+  width: 66%;
+  counter-increment: gallery-cell;
+  margin-right: 3%;
+}
+.metaSlider .multicolumn-carousel{
+    opacity: 0;
+}
+.metaSlider .multicolumn-carousel.flickity-enabled{
+    opacity: 1;
+}
+.metaSlider .multicolumn-carousel .flickity-page-dots{
+    bottom: -60px;
+}
+@media only screen and (max-width: 690px) {
+  .metaSlider .flickity-cell {
+    width: 100%;
+  }
+}

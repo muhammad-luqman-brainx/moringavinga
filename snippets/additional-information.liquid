@@ -1,0 +1,21 @@
+{{ 'section-additional-information.css' | asset_url | stylesheet_tag }}
+<table class="product-attributes shop_attributes">
+  <tbody>
+    {% for item in additional_information %}
+      {% if item.additional_information_data %}
+        {% for item in item.additional_information_data.value %}
+          <tr class="product-attributes-item">
+            <th class="product-attributes-item__label">
+              {{ item.first }}
+            </th>
+            <td class="product-attributes-item__value">
+              <p>
+                {{ item.last }}
+              </p>
+            </td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
