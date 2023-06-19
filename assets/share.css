@@ -1,3 +1,12 @@
+.share-button.share-button-fixed {
+  cursor: pointer;
+}
+.share-button.share-button-fixed:hover {
+  height: 340px;
+}
+.share-button.share-button-fixed:hover details {
+  transform: scale(1.23) translateZ(0);
+}
 .share-button.share-button-fixed .social-inner {
   position: absolute;
   height: 50px;
@@ -25,7 +34,7 @@
   transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
   background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
-.share-button.share-button-fixed .social-inner a svg{
+.share-button.share-button-fixed .social-inner a svg {
   width: 14px;
   fill: rgb(var(--color-button-text));
   color: rgb(var(--color-button-text));
@@ -43,38 +52,43 @@
   opacity: 1;
 }
 .share-button.share-button-fixed .social-inner a:nth-child(2) {
-    transform: translateY(-36px) scale(0);
-    -webkit-transform: translateY(-36px) scale(0);
-  }
-  .share-button.share-button-fixed:hover .social-inner a:nth-child(2) {
-    -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    -webkit-transform: translateY(-106px) scale(1);
-    transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    transform: translateY(-106px) scale(1);
-    opacity: 1;
-  }
-  .share-button.share-button-fixed .social-inner a:nth-child(3) {
-    transform: translateY(-86px) scale(0);
-    -webkit-transform: translateY(-86px) scale(0);
-  }
-  .share-button.share-button-fixed:hover .social-inner a:nth-child(3) {
-    -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    -webkit-transform: translateY(-156px) scale(1);
-    transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    transform: translateY(-156px) scale(1);
-    opacity: 1;
-  }
-  .share-button.share-button-fixed .social-inner a:nth-child(4) {
-    transform: translateY(-136px) scale(0);
-    -webkit-transform: translateY(-136px) scale(0);
-  }
-  .share-button.share-button-fixed:hover .social-inner a:nth-child(4) {
-    -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    -webkit-transform: translateY(-206px) scale(1);
-    transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
-    transform: translateY(-206px) scale(1);
-    opacity: 1;
-  }
-  .social-inner .social-text{
+  transform: translateY(-36px) scale(0);
+  -webkit-transform: translateY(-36px) scale(0);
+}
+.share-button.share-button-fixed:hover .social-inner a:nth-child(2) {
+  -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  -webkit-transform: translateY(-106px) scale(1);
+  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  transform: translateY(-106px) scale(1);
+  opacity: 1;
+}
+.share-button.share-button-fixed .social-inner a:nth-child(3) {
+  transform: translateY(-86px) scale(0);
+  -webkit-transform: translateY(-86px) scale(0);
+}
+.share-button.share-button-fixed:hover .social-inner a:nth-child(3) {
+  -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  -webkit-transform: translateY(-156px) scale(1);
+  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  transform: translateY(-156px) scale(1);
+  opacity: 1;
+}
+.share-button.share-button-fixed .social-inner a:nth-child(4) {
+  transform: translateY(-136px) scale(0);
+  -webkit-transform: translateY(-136px) scale(0);
+}
+.share-button.share-button-fixed:hover .social-inner a:nth-child(4) {
+  -webkit-transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  -webkit-transform: translateY(-206px) scale(1);
+  transition: all 0.45s cubic-bezier(0.15, 0.2, 0.1, 1);
+  transform: translateY(-206px) scale(1);
+  opacity: 1;
+}
+.social-inner .social-text {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .share-button.share-button-fixed {
     display: none;
   }
+}

@@ -74,7 +74,7 @@
               </div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
-                <div class="button animated__cta {% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+                <div class="animated__cta {% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
                   <a
                     {% if block.settings.button_link == blank %}
                       role="link" aria-disabled="true"

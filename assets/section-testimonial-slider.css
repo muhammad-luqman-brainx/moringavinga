@@ -58,6 +58,7 @@
   h2 {
   margin-top: 0;
   margin-bottom: 1rem;
+  letter-spacing: -2px;
 }
 .testimonial-section
   .testimonial-carousel
@@ -224,6 +225,62 @@
   .flickity-page-dots {
   text-align: left;
   bottom: -85px;
+}
+
+.flickity-page-dots {
+  text-align: center;
+}
+  .flickity-page-dots
+  .dot {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  margin: 0 8px;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  list-style: none;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin: 0 5px;
+  width: 30px;
+  margin: 0;
+  opacity: 0.35;
+  background: transparent;
+}
+  .flickity-page-dots
+  .dot.is-selected {
+  opacity: 1;
+}
+  .flickity-page-dots
+  .dot::before {
+  content: "";
+  background: #333;
+  width: 100%;
+  height: 4px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  transition: all 0.25s ease;
+  border-radius: 50%;
+  margin-left: 11px;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 5px #000;
+  transition: all 0.1s linear;
+}
+  .flickity-page-dots
+  .dot.is-selected::before {
+  transform: scale(2);
+  box-shadow: inset 0 0 0 1px #000;
+  background-color: transparent;
+}
+.flickity-prev-next-button{
+  display: none;
 }
 
 @media only screen and (max-width: 749px) {
