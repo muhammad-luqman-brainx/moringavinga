@@ -21,6 +21,7 @@
 .instagram-feed .feed-heading {
   font-size: 34px;
   line-height: 44px;
+  margin: 2rem 0;
 }
 .instagram-feed [data-animation="fade-in-from-bottom"] {
   opacity: 0;

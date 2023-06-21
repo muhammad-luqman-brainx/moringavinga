@@ -3234,6 +3234,7 @@ details-disclosure > details {
     background-color 0.45s cubic-bezier(0.25, 1, 0.33, 1);
   width: max-content;
   max-width: 100%;
+  padding: 0 !important;
 }
 .animated__cta > :first-child {
   position: relative;
