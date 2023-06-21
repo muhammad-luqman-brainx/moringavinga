@@ -442,6 +442,11 @@
               {% render 'icon-with-text',
                 block: block
               %}
+            {%- when 'category' -%}
+                {% render 'category',
+                  product: product,
+                  block: block
+                %}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -634,6 +639,28 @@
       "type": "range_price",
       "name": "Price Range",
       "limit": 1
+    },
+    {
+      "type": "category",
+      "name": "t:sections.main-product.blocks.category.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_label",
+          "label": "t:sections.main-product.blocks.category.settings.text.label",
+          "default": "Share"
+        },
+        {
+          "type": "range",
+          "id": "category_threshold",
+          "label": "t:sections.main-product.blocks.category.settings.category_threshold.label",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 3
+        }
+      ]
     },
     {
       "type": "sku",

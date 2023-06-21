@@ -1,0 +1,11 @@
+<div class="product_meta product_categories">
+  <span class="posted_in">
+    {{ block.settings.category_label }}&nbsp;
+    {%- for collection in product.collections limit: block.settings.category_threshold -%}
+      <a href="{{ collection.url }}" rel="tag">{{ collection.title }}</a>
+      {% unless forloop.last %}
+        ,&nbsp;
+      {% endunless %}
+    {%- endfor -%}
+  </span>
+</div>

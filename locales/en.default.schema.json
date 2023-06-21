@@ -1918,6 +1918,17 @@
         "price": {
           "name": "Price"
         },
+        "category": {
+          "name": "Category",
+          "settings": {
+            "category_threshold": {
+              "label": "Max Categories threshold"
+            },
+            "text":{
+              "label" : "Text"
+            }
+          }
+        },
         "inventory": {
           "name": "Inventory status",
           "settings": {

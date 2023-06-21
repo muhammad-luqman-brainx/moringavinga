@@ -54,6 +54,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "1b662bc0-93f5-49c2-a0a8-4dbc65bf068e": {
+          "type": "category",
+          "settings": {
+            "category_label": "Categories:",
+            "category_threshold": 3
+          }
         }
       },
       "block_order": [
@@ -65,7 +72,8 @@
         "9b30fea5-2038-4734-93a9-27a5d09f153d",
         "quantity_selector",
         "buy_buttons",
-        "share"
+        "share",
+        "1b662bc0-93f5-49c2-a0a8-4dbc65bf068e"
       ],
       "settings": {
         "enable_sticky_info": true,
