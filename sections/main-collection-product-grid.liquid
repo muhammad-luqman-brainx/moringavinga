@@ -13,6 +13,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background-color: {{ section.settings.color_bg }};
   }
 
   @media screen and (min-width: 750px) {
@@ -327,6 +328,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Custom background color",
+      "default": "#f6f6f6"
     }
   ]
 }

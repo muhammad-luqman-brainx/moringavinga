@@ -1,3 +1,7 @@
+.page-width.cart-page .page-width{
+padding: 0;
+max-width: 100%;
+}
 .cart {
   position: relative;
   display: block;
@@ -6,7 +10,8 @@
 .cart__empty-text,
 .is-empty .cart__contents,
 cart-items.is-empty .title-wrapper-with-link,
-.is-empty .cart__footer {
+.is-empty .cart__footer,
+.page-width.cart-page .is-empty .collection{
   display: none;
 }
 
@@ -18,13 +23,17 @@ cart-items.is-empty .title-wrapper-with-link,
 .cart__warnings {
   display: none;
   text-align: center;
-  padding: 3rem 0 1rem;
+  padding: 3rem 0;
 }
 
 .cart__empty-text {
   margin: 4.5rem 0 2rem;
-}
 
+}
+.cart-page .cart__empty-text {
+  padding: 1em 2em 1em 3.5em;
+  color: rgb(255, 255, 255);
+}
 .cart__contents > * + * {
   margin-top: 2.5rem;
 }
@@ -43,11 +52,11 @@ cart-items.is-empty .title-wrapper-with-link,
 
 @media screen and (min-width: 990px) {
   .cart__warnings {
-    padding: 7rem 0 1rem;
+    padding: 7rem 0;
   }
 
   .cart__empty-text {
-    margin: 0 0 3rem;
+    margin: 0 0 3em;
   }
 }
 
@@ -60,17 +69,19 @@ cart-items {
   padding-bottom: 3rem;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
-
+.cart-page .cart__items {
+  padding-bottom: 0;
+}
 .cart__items--disabled {
   pointer-events: none;
 }
 
 .cart__footer {
-  padding: 4rem 0 0;
+  padding: 3.6rem 0 0;
 }
 
 .cart__footer-wrapper:last-child .cart__footer {
-  padding-bottom: 5rem;
+  padding-bottom: 3.6rem;
 }
 
 .cart__footer > div:only-child {
@@ -133,8 +144,6 @@ cart-items {
   }
 
   .cart__footer {
-    display: flex;
-    justify-content: space-between;
     border: 0;
   }
 
@@ -142,18 +151,21 @@ cart-items {
     padding-top: 0;
   }
 
-  .cart__footer > * {
-    width: 35rem;
-  }
 
   .cart__footer > * + * {
-    margin-left: 4rem;
     margin-top: 0;
   }
 }
 
 .cart__ctas button {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: auto;
+  padding: 1em 2em;
+  line-height: 1.2em;
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {
@@ -170,7 +182,7 @@ cart-items {
 }
 
 .cart__blocks > * + * {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .cart__dynamic-checkout-buttons div[role='button'] {
@@ -185,8 +197,9 @@ cart-items {
 
 .tax-note {
   margin: 2.2rem 0 1.6rem auto;
-  text-align: center;
+  text-align: left;
   display: block;
+  padding: 0 2rem;
 }
 
 .cart__checkout-button {
@@ -209,7 +222,7 @@ cart-items {
 
   .tax-note {
     margin-bottom: 2.2rem;
-    text-align: right;
+    text-align: left;
   }
 
   [data-shopify-buttoncontainer] {

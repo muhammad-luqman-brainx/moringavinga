@@ -68,6 +68,10 @@
         --font-blockquote-family: Garamond,serif;
         --font-blockquote-size: 28px;
 
+        --font-collection-family: {{ settings.type_heading_font_2.family }}, {{ settings.type_heading_font_2.fallback_families }};
+        --font-collection-style: {{ settings.type_heading_font_2.style }};
+        --font-collection-weight: {{ settings.type_heading_font_2.weight }};
+
         --font-author-family: Heebo,serif;
         --font-blockquote-weight: 500;
 
@@ -227,7 +231,7 @@
 
       @media screen and (min-width: 750px) {
         body {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
         }
       }
     {% endstyle %}
@@ -263,9 +267,11 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+    {% comment %}
+      {%- if settings.cart_type == 'drawer' -%}
+        {%- render 'cart-drawer' -%}
+      {%- endif -%}
+    {% endcomment %}
 
     {% sections 'header-group' %}
 

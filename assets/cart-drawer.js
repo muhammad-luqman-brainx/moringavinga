@@ -8,12 +8,16 @@ class CartDrawer extends HTMLElement {
   }
 
   setHeaderCartIconAccessibility() {
-    const cartLink = document.querySelector('#cart-icon-bubble');
+    const cartLink = document.querySelector('.drawer-popup-container');
     cartLink.setAttribute('role', 'button');
     cartLink.setAttribute('aria-haspopup', 'dialog');
-    cartLink.addEventListener('click', (event) => {
+    cartLink.addEventListener('mouseover', (event) => {
       event.preventDefault();
       this.open(cartLink)
+    });
+    cartLink.addEventListener('mouseleave', (event) => {
+      event.preventDefault();
+      this.close()
     });
     cartLink.addEventListener('keydown', (event) => {
       if (event.code.toUpperCase() === 'SPACE') {
@@ -36,13 +40,11 @@ class CartDrawer extends HTMLElement {
       trapFocus(containerToTrapFocusOn, focusElement);
     }, { once: true });
 
-    document.body.classList.add('overflow-hidden');
   }
 
   close() {
     this.classList.remove('active');
     removeTrapFocus(this.activeElement);
-    document.body.classList.remove('overflow-hidden');
   }
 
   setSummaryAccessibility(cartDrawerNote) {

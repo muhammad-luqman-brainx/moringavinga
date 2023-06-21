@@ -20,6 +20,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    .width-{{ section.id }}{
+      width: {{ section.settings.section_width }}%;
+      float: left;
+    }
   }
 {%- endstyle -%}
 
@@ -43,7 +47,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+<div class="color-{{ section.settings.color_scheme }} width-{{ section.id }} {% if cart == empty %} is-empty{% endif %} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
@@ -146,6 +150,16 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "range",
+      "id": "section_width",
+      "min": 40,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Section Width",
+      "default": 100
+    },
     {
       "type": "inline_richtext",
       "id": "title",

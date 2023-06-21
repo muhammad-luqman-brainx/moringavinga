@@ -211,6 +211,9 @@
         "header__2": {
           "content": "Body"
         },
+        "header__3": {
+          "content": "Collection Heading"
+        },
         "type_body_font": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
@@ -343,6 +346,9 @@
           },
           "notification": {
             "label": "Popup notification"
+          },
+          "popup": {
+            "label": "Popup Drawer"
           }
         },
         "show_vendor": {

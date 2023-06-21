@@ -3,9 +3,27 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+{%- style -%}
+  @media screen and (min-width: 750px) {
+    .width-{{ section.id }}{
+      width: {{ section.settings.section_width }}%;
+      float: right;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="{% if cart == empty %} is-empty{% endif %} width-{{ section.id }}"
+  id="main-cart-footer"
+  data-id="{{ section.id }}"
+>
   <div>
     <div class="cart__footer">
+      <div class="cart__title title-wrapper title-wrapper--no-top-margin">
+        {%- if section.settings.title != blank -%}
+          <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+        {%- endif -%}
+      </div>
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
@@ -118,6 +136,44 @@
 {
   "name": "t:sections.main-cart-footer.name",
   "class": "cart__footer-wrapper",
+  "settings": [
+    {
+      "type": "range",
+      "id": "section_width",
+      "min": 40,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Section Width",
+      "default": 100
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Cart totals",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    }
+  ],
   "blocks": [
     {
       "type": "subtotal",

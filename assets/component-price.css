@@ -2,7 +2,7 @@
   margin: 3rem 0 0;
 }
 .price {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
