@@ -121,7 +121,7 @@
   padding: 20px;
 }
 .drawer.drawer-popup .cart__empty-text {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 12px;
 }
 

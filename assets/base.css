@@ -3258,6 +3258,7 @@ details-disclosure > details {
   display: block;
   animation: ctaArrowTextStart 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   margin-right: 10px;
+  font-size: 1.4rem;
 }
 .animated__cta:hover > :first-child .text {
   animation: ctaArrowTextEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;

@@ -24,6 +24,8 @@
       modal_id: section.id
     %}
 {% endcomment %}
+{{ 'fancybox.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'fancybox.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
   unless lazy_load == false
@@ -77,7 +79,8 @@
     {%- endif -%}
   </noscript>
 
-  <modal-opener class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
+  <modal-opener class="product__modal-opener product-gallery__opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
+    <div class="product-gallery__trigger">{% render 'search-icon' %}</div>
     <span class="product__media-icon motion-reduce quick-add-hidden{% if media.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}" aria-hidden="true">
       {%- liquid
         case media.media_type
@@ -106,8 +109,10 @@
         class: image_class,
         loading: lazy,
         sizes: sizes,
+        data-fancybox: "gallery",
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
+      
     </div>
     <button class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
       <span class="visually-hidden">
@@ -135,6 +140,7 @@
       {{ media.preview_image | image_url: width: 1946 | image_tag:
         loading: lazy,
         sizes: sizes,
+        data-fancybox: "gallery",
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
     </button>
@@ -177,3 +183,4 @@
     {%- endif -%}
   {%- endif -%}
 </div>
+<script src="{{ 'fancybox-initializer.js' | asset_url }}" defer="defer"></script>

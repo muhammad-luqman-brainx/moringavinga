@@ -33,6 +33,25 @@
   transform: translateY(0px) translateZ(0px);
   opacity: 1;
 }
+.instagram-feed .media{
+  cursor: pointer;
+}
+.instagram-feed .work-info-bg{
+  opacity: 0;
+  filter: alpha(opacity=0);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  position: absolute;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(.15,.75,.5,1) 0s;
+  -webkit-transition: all 0.4s cubic-bezier(.15,.75,.5,1) 0s;
+}
+.instagram-feed .media:hover .work-info-bg{
+  opacity: 0.9;
+}
 @media screen and (max-width: 749px) {
   .instagram-feed .multicolumn-list {
     padding-left: 0;

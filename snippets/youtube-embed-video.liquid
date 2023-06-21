@@ -1,14 +1,16 @@
 {{ 'section-embed-video.css' | asset_url | stylesheet_tag }}
+{{ 'fancybox.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'fancybox.js' | asset_url }}" defer="defer"></script>
 {%- if thumbImage != blank -%}
   {%- liquid
-    assign highest_ratio = 1
+    assign highest_ratio = 1.5
     if thumbImage.aspect_ratio > highest_ratio
       assign highest_ratio = thumbImage.aspect_ratio
     endif
   -%}
   <div class="embed-video multicolumn-card__image-wrapper multicolumn-card__image-wrapper--adapt-width multicolumn-card-spacing">
     <div
-      class="media media--transparent media--{{ section.settings.image_ratio }}"
+      class="media media--transparent media--transparent"
       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
     >
       {%- liquid
@@ -28,18 +30,29 @@
 
       {{
         thumbImage
-        | image_url: width: 525
+        | image_url: width: 500
         | image_tag:
           loading: 'lazy',
           widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
           sizes: sizes,
           class: 'multicolumn-card__image'
       }}
-      <span class="play">
+      <span class="play iframe-play">
         <span class="inner-wrap inner">
           {% render 'icon--play' %}
         </span>
       </span>
     </div>
+    <a
+      href="{{ embedUrl }}"
+      class="product__media-toggle product__media-iframe"
+      data-fancybox="iframe"
+      data-type="iframe"
+    >
+      <span class="visually-hidden">
+        {{- 'products.product.video_exit_message' | t: title: product.title | escape -}}
+      </span>
+    </a>
   </div>
 {%- endif -%}
+<script src="{{ 'fancybox-iframe.js' | asset_url }}" defer="defer"></script>
