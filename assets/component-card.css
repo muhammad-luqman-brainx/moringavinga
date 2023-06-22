@@ -380,6 +380,11 @@
 #product-grid li {
   padding: 1.5rem;
 }
+@media screen and (min-width: 990px) {
+  #product-grid li{
+    padding: 0 1.5rem 1.5rem 0;
+  }
+}
 .card-cell {
   position: relative;
   height: 100%;

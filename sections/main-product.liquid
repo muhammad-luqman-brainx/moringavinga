@@ -52,6 +52,9 @@
       onload="this.media='all'"
     >
   {%- endif -%}
+<div class="breadcrumb-wrapper">
+  {% render 'breadcrumbs' %}
+</div>
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 

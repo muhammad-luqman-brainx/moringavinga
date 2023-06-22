@@ -37,12 +37,17 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term"
+      "reset": "Clear search term",
+      "collections": "Collections:"
     },
     "cart": {
       "view": "View cart ({{ count }})",
       "view_empty_cart": "View cart",
       "item_added": "Item added to your cart"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "home_link_title": "Back to the frontpage"
     },
     "share": {
       "close": "Close share",

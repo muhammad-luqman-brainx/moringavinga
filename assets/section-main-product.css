@@ -1725,6 +1725,9 @@ a.product__text {
   color: inherit;
   background-size: 100% 2px;
 }
+.breadcrumb-wrapper{
+  margin-bottom: 3rem;
+}
 @media screen and (forced-colors: active) {
   .recipient-fields > hr {
     border-top: 0.1rem solid rgb(var(--color-background));

@@ -1,0 +1,25 @@
+.breadcrumb{
+    font-size: .92em;
+}
+.breadcrumb a{
+    text-decoration: none;
+    background-repeat: no-repeat;
+    padding: 1px 0;
+    background-size: 0 2px;
+    background-position: left bottom;
+    background-image: linear-gradient(to right,#195059 0,#195059 100%);
+    transition: background-size .55s cubic-bezier(.2,.75,.5,1);
+
+}
+.breadcrumb a:hover{
+background-size: 100% 2px;
+}
+.breadcrumb span{
+    color: rgba(var(--color-button));
+}
+.breadcrumb svg{
+fill: inherit;
+}
+.breadcrumb__divider{
+    margin: 0 0.4rem 0 0.5rem;
+}
