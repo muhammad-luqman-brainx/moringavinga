@@ -419,6 +419,7 @@ body,
   font-weight: var(--font-body-weight);
 }
 
+
 h1,
 h2,
 h3,
@@ -462,7 +463,7 @@ h5,
 h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -480,7 +481,7 @@ h2,
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: calc(var(--font-heading-scale) * 3rem);
   }
 }
 
@@ -937,6 +938,7 @@ summary::-webkit-details-marker {
 .title,
 .title-wrapper-with-link {
   margin: 3rem 0 2rem;
+  letter-spacing: -1px;
 }
 
 .title-wrapper-with-link .title {
@@ -1551,6 +1553,11 @@ button.shopify-payment-button__button--unbranded {
   border-radius: 50%;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   line-height: 1px;
+  position: absolute;
+  bottom: 0;
+  transform: scale(1) translateZ(0);
+  transition: all 0.45s cubic-bezier(.15,0.2,.1,1);
+  -webkit-transition: all 0.45s cubic-bezier(.15,0.2,.1,1);
 }
 
 .share-button__button {
@@ -2057,8 +2064,9 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
+  align-items: center;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
   min-height: auto;
@@ -2097,7 +2105,7 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 500;
   opacity: 0.85;
   text-align: center;
@@ -2108,6 +2116,8 @@ input[type='checkbox'] {
   flex-grow: 1;
   -webkit-appearance: none;
   appearance: none;
+  line-height: 3.5rem;
+  font-family: var(--font-author-family);
 }
 
 .quantity__button {
@@ -2585,7 +2595,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
   position: relative;
   margin-right: -1.2rem;
 }
-
+.header__icon--cart:focus-visible{
+  outline: 0;
+  box-shadow: 0;
+}
 .header__icon--menu[aria-expanded="true"]::before {
   content: "";
   top: 100%;
@@ -3215,10 +3228,10 @@ details-disclosure > details {
   display: inline-flex;
   flex-wrap: wrap;
   word-break: break-word;
+  cursor: pointer;
   transition: border-color 0.45s cubic-bezier(0.25, 1, 0.33, 1),
     color 0.45s cubic-bezier(0.25, 1, 0.33, 1),
     background-color 0.45s cubic-bezier(0.25, 1, 0.33, 1);
-  padding: 15px 40px;
   width: max-content;
   max-width: 100%;
 }
@@ -3233,7 +3246,7 @@ details-disclosure > details {
   line-height: 15px;
   font-family: var(--font-heading-family);
   letter-spacing: 0;
-  padding: 0 0 0 40px;
+  padding: 15px 40px 15px 80px;
   margin: 0;
 }
 .animated__cta > :first-child::before,
@@ -3248,24 +3261,24 @@ details-disclosure > details {
 .animated__cta:hover > :first-child .text {
   animation: ctaArrowTextEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
 }
-.animated__cta > :first-child svg {
+.animated__cta > :first-child svg.next-arrow {
   position: absolute;
-  left: 25px;
+  left: 65px;
   top: 50%;
   width: 6px;
   animation: ctaArrowSVGStart 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   stroke: currentColor;
 }
-.animated__cta:hover > :first-child svg {
+.animated__cta:hover > :first-child svg.next-arrow {
   animation: ctaArrowSVGEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
 }
-.animated__cta > :first-child svg polyline {
+.animated__cta > :first-child svg.next-arrow polyline {
   stroke-dashoffset: 140px;
   stroke-dasharray: 140px;
   animation: ctaArrowEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   stroke: currentColor;
 }
-.animated__cta:hover > :first-child svg polyline {
+.animated__cta:hover > :first-child svg.next-arrow polyline {
   animation: ctaArrowStart 0.45s ease 0.25s forwards;
 }
 .animated__cta > :first-child .line {
@@ -3273,7 +3286,7 @@ details-disclosure > details {
   width: 25px;
   position: absolute;
   content: "";
-  left: 0;
+  left: 40px;
   display: block;
   top: 50%;
   transform-origin: left;
@@ -3388,6 +3401,11 @@ details-disclosure > details {
     0% { transform: rotate(0deg) translateX(1em) rotate(0deg) scale(1.2); }
     100% { transform: rotate(360deg) translateX(1em) rotate(-360deg) scale(1.2); }
   }
+}
+
+.text-collection {
+  font-family: var(--font-collection-family);
+  font-style: var(--font-collection-style);
 }
 
 blockquote p {

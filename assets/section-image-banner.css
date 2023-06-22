@@ -461,7 +461,7 @@
 }
 
 .banner__buttons a .line {
-  background-color: #dd8500;
+  background-color: #dd8500 !important;
 }
 .grid.banner__icons{
   margin-left: -30px;

@@ -66,7 +66,7 @@
 .card .card__inner .card__media {
   overflow: hidden;
   /* Fix for Safari border bug on hover */
-  z-index: 0;
+  z-index: 1;
   border-radius: calc(
     var(--border-radius) - var(--border-width) - var(--image-padding)
   );
@@ -139,6 +139,10 @@
   .card__information {
     padding-bottom: 1.7rem;
     padding-top: 1.7rem;
+  }
+  .card-cell .card__information {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -381,6 +385,9 @@
   height: 100%;
   cursor: pointer;
 }
+.card-cell .card__inner{
+  background-color: #fff;
+}
 .card-cell .background-color-expand {
   display: block !important;
   position: absolute;
@@ -391,20 +398,19 @@
   border-radius: 6px;
   transition: transform 0.55s cubic-bezier(0.2, 0.75, 0.5, 1);
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   transform: scale(1, 1) translateY(0px) translateZ(0px);
-
   background-color: #ffffff;
 }
 .card-cell:hover .background-color-expand {
-  transform: scale(1.15873, 1.10582) translateY(0px) translateZ(0px);
+  transform: scale(1.15625, 1.08949) translateY(0px) translateZ(0px);
 }
 
 .card-cell .background-color-expand::before {
   content: "";
   position: absolute;
   border-radius: 6px;
-  z-index: -2;
+  z-index: -1;
   width: 100%;
   height: 100%;
   top: 0;
@@ -434,10 +440,8 @@
 }
 .card-cell .card__content .card__information .card__heading {
   position: relative;
-  font-family: var(--font-body-family);
   text-transform: capitalize;
   font-size: 19px !important;
-  font-weight: 600;
   line-height: 22px;
   display: block;
   transition: opacity 0.55s cubic-bezier(0.2, 0.75, 0.5, 1),
@@ -517,4 +521,8 @@
   a
   span {
   background-size: 100% 2px;
+}
+.cart-page .product-grid .grid__item{
+  max-width: calc(50% - 15px);
+  margin-right: 15px;
 }

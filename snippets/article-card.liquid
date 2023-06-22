@@ -117,7 +117,7 @@
           <p class="card__heading{% if show_excerpt %} h2{% endif %}">
             {{ article.title | truncate: 50 | escape }}
           </p>
-          <div class="card__button animated__cta button button--secondary">
+          <div class="card__button button button--secondary">
             <a href="{{ article.url }}" class="full-unstyled-link">
               {% render 'button', buttonLabel: article.metafields.custom.blog_button_label | escape %}
             </a>

@@ -59,7 +59,7 @@
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
 
-        <div class="product-form__buttons animated__cta button {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}">
+        <div class="product-form__buttons animated__cta  {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}">
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'

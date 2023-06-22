@@ -177,6 +177,9 @@ variant-selects {
 
 .product-form__input .form__label {
   padding-left: 0;
+  font-family: var(--font-author-family);
+  color: rgb(var(--color-foreground));
+  font-weight: bold;
 }
 
 fieldset.product-form__input .form__label {
@@ -473,6 +476,7 @@ a.product__text {
 
 .product-form__buttons {
   max-width: 44rem;
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -1306,6 +1310,10 @@ a.product__text {
   gap: 0.5rem;
   margin-top: -1.5rem;
   margin-bottom: 3rem;
+  color: rgba(var(--color-button));
+}
+.product__inventory svg{
+  display: none;
 }
 
 .product--no-media .product__inventory {

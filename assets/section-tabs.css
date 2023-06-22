@@ -48,6 +48,13 @@
     flex-flow: column;
     justify-content: center;
 }
+.tab-content .multicolumn-card__info a{
+  color: rgba(var(--color-button));
+  text-decoration: none;
+}
+.tab-content .multicolumn-card__info a:hover{
+  color: inherit;
+}
 @media only screen and (max-width: 690px) {
     .grid.meta-details.grid--2-col-desktop .grid__item{
         padding: 0 1.5rem;

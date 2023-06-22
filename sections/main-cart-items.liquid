@@ -23,14 +23,14 @@
   <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
 
-<cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
-  <div class="title-wrapper-with-link">
+<cart-items class="{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+  <div class="title-wrapper-with-link hidden">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
   <div class="cart__warnings">
-    <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+    <p class="cart__empty-text color-accent-1 gradient">{{ 'sections.cart.empty' | t }}</p>
     <a href="{{ routes.all_products_collection_url }}" class="button">
       {{ 'general.continue_shopping' | t }}
     </a>
@@ -53,17 +53,26 @@
             </caption>
             <thead>
               <tr>
-                <th class="caption-with-letter-spacing" colspan="2" scope="col">
+                <th scope="col">
+                  <span class="screen-reader-text">Remove item</span>
+                </th>
+                <th scope="col">
+                  <span class="screen-reader-text">Thumbnail image</span>
+                </th>
+                <th class="caption-with-letter-spacing product-detail" scope="col">
                   {{ 'sections.cart.headings.product' | t }}
                 </th>
-                <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">
-                  {{ 'sections.cart.headings.total' | t }}
+                <th class="caption-with-letter-spacing" scope="col">
+                  {{ 'sections.cart.headings.price' | t }}
                 </th>
-                <th class="cart-items__heading--wide small-hide caption-with-letter-spacing" colspan="1" scope="col">
+                <th class="cart-items__heading--wide caption-with-letter-spacing" scope="col">
                   {{ 'sections.cart.headings.quantity' | t }}
                 </th>
-                <th class="small-hide right caption-with-letter-spacing" colspan="1" scope="col">
-                  {{ 'sections.cart.headings.total' | t }}
+                <th class="caption-with-letter-spacing" scope="col">
+                  {{ 'sections.cart.subtotal' | t }}
+                  {% comment %}
+                    {{ 'sections.cart.headings.total' | t }}
+                  {% endcomment %}
                 </th>
               </tr>
             </thead>
@@ -71,6 +80,22 @@
             <tbody>
               {%- for item in cart.items -%}
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                  <td class="cart-item__remove">
+                    <div class="cart-item__remove-wrapper">
+                      <cart-remove-button
+                        id="Remove-{{ item.index | plus: 1 }}"
+                        data-index="{{ item.index | plus: 1 }}"
+                      >
+                        <a
+                          href="{{ item.url_to_remove }}"
+                          class="button button--primary"
+                          aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                        >
+                          {% render 'icon-cross' %}
+                        </a>
+                      </cart-remove-button>
+                    </div>
+                  </td>
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -88,48 +113,26 @@
                     {% endif %}
                   </td>
 
-                  <td class="cart-item__details">
+                  <td class="cart-item__details" data-title="{{ 'sections.cart.headings.product' | t }}">
                     {%- if settings.show_vendor -%}
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
-                    <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+                    <a href="{{ item.url }}" class="cart-item__name h4 break">
+                      {{- item.product.title | escape -}}
 
-                    {%- if item.original_price != item.final_price -%}
-                      <div class="cart-item__discounted-prices">
-                        <span class="visually-hidden">
-                          {{ 'products.product.price.regular_price' | t }}
-                        </span>
-                        <s class="cart-item__old-price product-option">
-                          {{- item.original_price | money -}}
-                        </s>
-                        <span class="visually-hidden">
-                          {{ 'products.product.price.sale_price' | t }}
-                        </span>
-                        <strong class="cart-item__final-price product-option">
-                          {{ item.final_price | money }}
-                        </strong>
-                      </div>
-                    {%- else -%}
-                      <div class="product-option">
-                        {{ item.original_price | money }}
-                      </div>
-                    {%- endif -%}
+                      {%- if item.product.has_only_default_variant == false -%}
+                        {%- for option in item.options_with_values -%}
+                          &nbsp;-&nbsp;{{ option.value }}
+                        {%- endfor -%}
+                      {%- endif -%}
+                    </a>
 
                     {%- if item.product.has_only_default_variant == false
                       or item.properties.size != 0
                       or item.selling_plan_allocation != null
                     -%}
                       <dl>
-                        {%- if item.product.has_only_default_variant == false -%}
-                          {%- for option in item.options_with_values -%}
-                            <div class="product-option">
-                              <dt>{{ option.name }}:</dt>
-                              <dd>{{ option.value }}</dd>
-                            </div>
-                          {%- endfor -%}
-                        {%- endif -%}
-
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
                           {%- if property.last != blank and property_first_char != '_' -%}
@@ -162,62 +165,30 @@
                     </ul>
                   </td>
 
-                  <td class="cart-item__totals right medium-hide large-up-hide">
-                    <div class="loading-overlay hidden">
-                      <div class="loading-overlay__spinner">
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          class="spinner"
-                          viewBox="0 0 66 66"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-wrapper">
-                      {%- if item.original_line_price != item.final_line_price -%}
-                        <dl class="cart-item__discounted-prices">
-                          <dt class="visually-hidden">
-                            {{ 'products.product.price.regular_price' | t }}
-                          </dt>
-                          <dd>
-                            <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money }}
-                            </s>
-                          </dd>
-                          <dt class="visually-hidden">
-                            {{ 'products.product.price.sale_price' | t }}
-                          </dt>
-                          <dd class="price price--end">
-                            {{ item.final_line_price | money }}
-                          </dd>
-                        </dl>
-                      {%- else -%}
-                        <span class="price price--end">
-                          {{ item.original_line_price | money }}
+                  <td class="cart-item__price" data-title="{{ 'sections.cart.headings.price' | t }}">
+                    {%- if item.original_price != item.final_price -%}
+                      <div class="cart-item__discounted-prices">
+                        <span class="visually-hidden">
+                          {{ 'products.product.price.regular_price' | t }}
                         </span>
-                      {%- endif -%}
-
-                      {%- if item.variant.available and item.unit_price_measurement -%}
-                        <div class="unit-price caption">
-                          <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                          {{ item.variant.unit_price | money }}
-                          <span aria-hidden="true">/</span>
-                          <span class="visually-hidden"
-                            >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                          >
-                          {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                            {{- item.variant.unit_price_measurement.reference_value -}}
-                          {%- endif -%}
-                          {{ item.variant.unit_price_measurement.reference_unit }}
-                        </div>
-                      {%- endif -%}
-                    </div>
+                        <s class="cart-item__old-price product-option">
+                          {{- item.original_price | money -}}
+                        </s>
+                        <span class="visually-hidden">
+                          {{ 'products.product.price.sale_price' | t }}
+                        </span>
+                        <strong class="cart-item__final-price product-option">
+                          {{ item.final_price | money }}
+                        </strong>
+                      </div>
+                    {%- else -%}
+                      <div class="product-option">
+                        {{ item.original_price | money }}
+                      </div>
+                    {%- endif -%}
                   </td>
 
-                  <td class="cart-item__quantity">
+                  <td class="cart-item__quantity" data-title="{{ 'sections.cart.headings.quantity' | t }}">
                     <div class="cart-item__quantity-wrapper">
                       <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
@@ -254,19 +225,6 @@
                           {% render 'icon-plus' %}
                         </button>
                       </quantity-input>
-
-                      <cart-remove-button
-                        id="Remove-{{ item.index | plus: 1 }}"
-                        data-index="{{ item.index | plus: 1 }}"
-                      >
-                        <a
-                          href="{{ item.url_to_remove }}"
-                          class="button button--tertiary"
-                          aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                        >
-                          {% render 'icon-remove' %}
-                        </a>
-                      </cart-remove-button>
                     </div>
                     <div class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert">
                       <small class="cart-item__error-text"></small>
@@ -284,7 +242,7 @@
                     </div>
                   </td>
 
-                  <td class="cart-item__totals right small-hide">
+                  <td class="cart-item__totals" data-title="{{ 'sections.cart.subtotal' | t }}">
                     <div class="loading-overlay hidden">
                       <div class="loading-overlay__spinner">
                         <svg
@@ -313,12 +271,12 @@
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd class="price price--end">
+                          <dd class="price">
                             {{ item.final_line_price | money }}
                           </dd>
                         </dl>
                       {%- else -%}
-                        <span class="price price--end">
+                        <span class="price">
                           {{ item.original_line_price | money }}
                         </span>
                       {%- endif -%}

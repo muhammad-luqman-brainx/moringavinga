@@ -1,17 +1,56 @@
-
 .metaSlider .flickity-cell {
   width: 66%;
   counter-increment: gallery-cell;
   margin-right: 3%;
 }
-.metaSlider .multicolumn-carousel{
-    opacity: 0;
+.metaSlider .multicolumn-carousel {
+  opacity: 0;
+  margin-bottom: 60px;
 }
-.metaSlider .multicolumn-carousel.flickity-enabled{
-    opacity: 1;
+.metaSlider .multicolumn-carousel.flickity-enabled {
+  opacity: 1;
 }
-.metaSlider .multicolumn-carousel .flickity-page-dots{
-    bottom: -60px;
+.metaSlider .multicolumn-carousel .flickity-page-dots {
+  bottom: -60px;
+}
+.flickity-page-dots {
+  text-align: center;
+}
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  margin: 0 8px;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  list-style: none;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin: 0 5px;
+  background: transparent;
+}
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+.flickity-page-dots .dot::before {
+  content: "";
+  cursor: pointer;
+  list-style: none;
+  background: #333;
+  width: 100%;
+  height: 4px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 0;
+  transition: all 0.1s linear;
+}
+
+.flickity-prev-next-button {
+  display: none;
 }
 @media only screen and (max-width: 690px) {
   .metaSlider .flickity-cell {
