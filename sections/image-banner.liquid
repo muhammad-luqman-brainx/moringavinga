@@ -107,19 +107,53 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
+  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</h2>
+            <h2
+              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="fnc-slide__heading-line" data-animation="fade-in-from-bottom">
+                <span>
+                  {{ block.settings.heading }}
+                </span>
+              </div>
+            </h2>
+          {%- when 'reviews' -%}
+            <div class="banner__text review__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div class="reviews__rating">
+                {% for i in (1..5) %}
+                  {% render 'icon-star' %}
+                {% endfor %}
+              </div>
+              <p>
+                {% if block.settings.reviews_url %}
+                  <a href="{{ block.settings.reviews_url  }}" role="link" aria-disabled="true">
+                {% endif %}
+                {{ block.settings.reviews }}
+                {% if block.settings.reviews_url %}
+                  </a>
+                {% endif %}
+              </p>
+            </div>
+          {%- when 'subtitle' -%}
+            <div class="banner__text rte {{ block.settings.subtitle_style }}" {{ block.shopify_attributes }}>
+              <p class="fnc-slide__heading-line h2" data-animation="fade-in-from-bottom">
+                <span>
+                  {{ block.settings.subtitle }}
+                </span>
+              </p>
+            </div>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons animated__cta {% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -131,7 +165,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_1 | escape -}}
+                  {% render 'button', buttonLabel: block.settings.button_label_1 | escape %}
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
@@ -146,6 +180,34 @@
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
               {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+    <div class="grid grid--6-col-desktop grid--2-col-tablet-down banner__icons">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'icons' -%}
+            {%- liquid
+              assign stacked_sizes = '(max-width: 200px) 100vw, 200px'
+              assign widths = '100, 140, 150, 200'
+              assign image_height = block.settings.icon.width | divided_by: block.settings.icon.aspect_ratio
+              if block.settings.icon != blank
+                assign image_class = 'banner__media-icon'
+              endif
+            -%}
+            <div class="grid__item icon-inner">
+              {{
+                block.settings.icon
+                | image_url: width: 200
+                | image_tag:
+                  loading: 'lazy',
+                  width: block.settings.icon.width,
+                  height: image_height,
+                  class: image_class,
+                  sizes: sizes,
+                  widths: widths
+              }}
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -427,6 +489,89 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "subtitle",
+      "name": "Subtitle",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "subtitle",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "subtitle_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "name": "Reviews",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "reviews_url",
+          "label": "Url"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "reviews",
+          "default": "100’s of 5 Star Reviews",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "reviews_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "icons",
+      "name": "Icons",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "t:sections.image-banner.settings.image.label"
         }
       ]
     },

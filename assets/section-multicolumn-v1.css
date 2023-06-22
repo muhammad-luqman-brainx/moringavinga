@@ -1,0 +1,10 @@
+.multicolumn-v1 .multicolumn-list__item .multicolumn-card__info[data-animation="fade-in-from-bottom"]{
+    transform: translateY(75px);
+    transition: all 1s ease;
+    opacity: 0;
+    transition-delay: 0s;
+  }
+  .multicolumn-v1 .multicolumn-list__item .multicolumn-card__info.visible[data-animation="fade-in-from-bottom"]{
+    transform: translateY(0);
+    opacity: 1;
+  }

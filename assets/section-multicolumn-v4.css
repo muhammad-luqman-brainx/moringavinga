@@ -1,0 +1,185 @@
+.multicolumn-v4 .multicolumn-list {
+  column-gap: 0;
+}
+.multicolumn-v4 .multicolumn-list__item {
+  padding: 10px;
+  width: 66%;
+}
+.multicolumn-v4 .multicolumn-list__item .multicolumn-card::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  content: "";
+  border-radius: 5px;
+  box-shadow: 0 30px 90px #45a371;
+  transition: opacity 0.45s cubic-bezier(0.25, 1, 0.2, 1);
+}
+.multicolumn-v4 .multicolumn-list__item .multicolumn-card .card-inner-wrap {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.2, 1);
+  border-radius: 5px;
+  padding: 10% 15%;
+  position: relative;
+  overflow: hidden;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper-hover {
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: 1;
+  background-position: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.6s cubic-bezier(0.24, 1, 0.3, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.24, 1, 0.3, 1);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  z-index: 1;
+  opacity: 0;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper-hover
+  .media {
+  height: 100%;
+}
+
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper-hover::after {
+  content: "";
+  opacity: 0.5;
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: " ";
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.6s cubic-bezier(0.24, 1, 0.3, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.24, 1, 0.3, 1);
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__info {
+  min-height: 300px;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  vertical-align: middle;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  color: #444;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__info
+  img {
+  margin-bottom: 20px;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__info
+  h3 {
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  letter-spacing: 0;
+  color: #444;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card
+  .card-inner-wrap
+  .multicolumn-card__info .rte p{
+    opacity: 0.75;
+  }
+.multicolumn-v4 .multicolumn-list__item .multicolumn-card:hover::before {
+  box-shadow: 0 30px 90px #194e59;
+  opacity: 0.33;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card:hover
+  .card-inner-wrap {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card:hover
+  .card-inner-wrap
+  .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper-hover {
+  opacity: 1;
+  transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card:hover
+  .card-inner-wrap
+  .multicolumn-card__info,
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card:hover
+  .card-inner-wrap
+  .multicolumn-card__info
+  h3 {
+  color: #fff;
+}
+.multicolumn-v4
+  .multicolumn-list__item
+  .multicolumn-card:hover
+  .card-inner-wrap
+  .multicolumn-card__info
+  img {
+  filter: invert(1);
+}
+.multicolumn-carousel{
+    opacity: 0;
+}
+.multicolumn-carousel.flickity-enabled{
+    margin-bottom: 85px;
+    opacity: 1;
+}
+.multicolumn-carousel .flickity-page-dots {
+    bottom: -85px;
+  }
+
+@media only screen and (max-width: 1000px) and (min-width: 690px) {
+  .multicolumn-v4 .multicolumn-list__item {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .multicolumn-v4 .multicolumn-list__item {
+    width: 33.3%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .multicolumn-v4 .multicolumn-list__item {
+    width: 31.9%;
+  }
+}

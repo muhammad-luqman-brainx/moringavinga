@@ -53,7 +53,7 @@ function magnify(image, zoomRatio) {
 function enableZoomOnHover(zoomRatio) {
   const images = document.querySelectorAll('.image-magnify-hover');
   images.forEach(image => {
-    image.onclick = (event) => {
+    image.onmouseover = (event) => {
       magnify(image, zoomRatio);
       moveWithHover(image, event, zoomRatio);
     };
