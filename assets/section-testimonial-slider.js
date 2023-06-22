@@ -40,7 +40,7 @@
 
   
   $carousel.on( 'scroll', function () {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 990) {
       return;
     }
     
@@ -54,7 +54,15 @@
       var opacityVal = 1;
     
       var vw = document.documentElement.clientWidth;
-      var w2 = document.querySelector(".slider-section").offsetWidth - 180;
+      if(vw > 990){
+        vw = 990;
+      }
+      var sliderSectionWidth = document.querySelector(".slider-section").offsetWidth
+      if (sliderSectionWidth < 1130) {
+        sliderSectionWidth = 1130
+      }
+      var w2 = sliderSectionWidth - 465;
+      
       var w3 = document.querySelector(".slider-container").offsetWidth;
       var extraWindowSpace = w3 - w2 + (vw - w3) / 2;
     

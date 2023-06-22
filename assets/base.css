@@ -462,12 +462,13 @@ h5,
 h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
+  letter-spacing: -2px;
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: calc(var(--font-heading-scale) * 3.4rem);
   }
 }
 
@@ -570,9 +571,10 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.04rem;
+  font-weight: calc(var(--font-body-weight-bold) - 100);
 }
 
 .color-foreground {
@@ -1529,18 +1531,43 @@ button.shopify-payment-button__button--unbranded {
   position: relative;
 }
 
+.share-button.share-button-fixed{
+  position: fixed;
+  right: 34px;
+  bottom: 34px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  z-index: 1000;
+  right: 45px;
+  bottom: 75px;
+}
+
 .share-button details {
   width: fit-content;
+  height: 50px;
+  width: 50px;
+  line-height: 52px;
+  border-radius: 50%;
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  line-height: 1px;
 }
 
 .share-button__button {
   font-size: 1.4rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: rgb(var(--color-link));
   margin-left: 0;
   padding-left: 0;
   min-height: 4.4rem;
+  max-height: 100%;
+  top: 2px;
+  right: 2px;
+}
+.share-button__button svg * {
+  fill: #fff !important;
 }
 
 details[open] > .share-button__fallback {
@@ -1569,13 +1596,15 @@ details[open] > .share-button__fallback {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   left: 0.1rem;
   z-index: 3;
   width: 100%;
   min-width: max-content;
   border-radius: var(--inputs-radius);
   border: 0;
+  right: 0;
+  left: unset;
 }
 
 .share-button__fallback:after {
@@ -1761,14 +1790,21 @@ details[open] > .share-button__fallback {
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
+  box-shadow: none;
+  border: 0;
 }
 
 .select__select {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
   color: rgba(var(--color-foreground), 0.75);
+  background-color: rgba(0,0,0,.04);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  padding: 10px;
+  outline: 0;
 }
 
 .field:hover.field:after,
@@ -1780,6 +1816,9 @@ details[open] > .share-button__fallback {
   box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground),var(--inputs-border-opacity));
   outline: 0;
   border-radius: var(--inputs-radius);
+  box-shadow: none;
+  border: 0;
+  box-shadow: none;
 }
 
 .field__input:focus-visible,
@@ -1787,9 +1826,10 @@ details[open] > .share-button__fallback {
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground), 0.11);
   outline: 0;
   border-radius: var(--inputs-radius);
+  border-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .field__input:focus,
@@ -1797,9 +1837,10 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground),0.11);
   outline: 0;
   border-radius: var(--inputs-radius);
+  border-color: rgba(var(--color-button));
 }
 
 .localization-form__select:focus {
@@ -2020,6 +2061,7 @@ input[type='checkbox'] {
   display: flex;
   border-radius: var(--inputs-radius);
   min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+  min-height: auto;
 }
 
 .quantity:after {
@@ -2035,6 +2077,7 @@ input[type='checkbox'] {
   box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
+  box-shadow: none;
 }
 
 .quantity:before {
@@ -2049,6 +2092,7 @@ input[type='checkbox'] {
   border-radius: var(--inputs-radius-outset);
   box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-base-text), var(--inputs-shadow-opacity));
   z-index: -1;
+  box-shadow: none;
 }
 
 .quantity__input {
@@ -2078,6 +2122,17 @@ input[type='checkbox'] {
   justify-content: center;
   color: rgb(var(--color-foreground));
   padding: 0;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+  border-radius: 50px!important;
+  background-color: #fff !important;
+  -webkit-appearance: none;
+}
+.quantity__button:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
+  background-color: rgba(var(--color-button), var(--alpha-button-background)) !important;
+  color: #fff;
 }
 
 .quantity__button:first-child {
@@ -3167,7 +3222,7 @@ details-disclosure > details {
   width: max-content;
   max-width: 100%;
 }
-.animated__cta a {
+.animated__cta > :first-child {
   position: relative;
   padding: 0;
   font-size: 14px;
@@ -3179,20 +3234,21 @@ details-disclosure > details {
   font-family: var(--font-heading-family);
   letter-spacing: 0;
   padding: 0 0 0 40px;
+  margin: 0;
 }
-.animated__cta a::before,
-.animated__cta a::after {
+.animated__cta > :first-child::before,
+.animated__cta > :first-child::after {
   display: none;
 }
-.animated__cta a .text {
+.animated__cta > :first-child .text {
   display: block;
   animation: ctaArrowTextStart 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   margin-right: 10px;
 }
-.animated__cta:hover a .text {
+.animated__cta:hover > :first-child .text {
   animation: ctaArrowTextEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
 }
-.animated__cta a svg {
+.animated__cta > :first-child svg {
   position: absolute;
   left: 25px;
   top: 50%;
@@ -3200,19 +3256,19 @@ details-disclosure > details {
   animation: ctaArrowSVGStart 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   stroke: currentColor;
 }
-.animated__cta:hover a svg {
+.animated__cta:hover > :first-child svg {
   animation: ctaArrowSVGEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
 }
-.animated__cta a svg polyline {
+.animated__cta > :first-child svg polyline {
   stroke-dashoffset: 140px;
   stroke-dasharray: 140px;
   animation: ctaArrowEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   stroke: currentColor;
 }
-.animated__cta:hover a svg polyline {
+.animated__cta:hover > :first-child svg polyline {
   animation: ctaArrowStart 0.45s ease 0.25s forwards;
 }
-.animated__cta a .line {
+.animated__cta > :first-child .line {
   height: 1px;
   width: 25px;
   position: absolute;
@@ -3225,7 +3281,7 @@ details-disclosure > details {
   animation: ctaArrowLineStart 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
   background-color: rgb(var(--color-button-text));
 }
-.animated__cta:hover a .line {
+.animated__cta:hover > :first-child .line {
   animation: ctaArrowLineEnd 0.45s cubic-bezier(0.23, 0.46, 0.4, 1) forwards;
 }
 

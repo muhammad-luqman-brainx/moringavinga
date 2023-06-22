@@ -1,3 +1,6 @@
+.multicolumn-v1 p{
+  color: #a3a3a3;
+}
 .multicolumn-v1 .multicolumn-list__item .multicolumn-card__info[data-animation="fade-in-from-bottom"]{
     transform: translateY(75px);
     transition: all 1s ease;

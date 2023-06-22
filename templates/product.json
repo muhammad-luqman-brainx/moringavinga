@@ -15,15 +15,33 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
+        "37453709-fc61-4c60-8693-35c930cc2757": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "b321f6ab-37d3-4061-b19f-ed11e0f4cd34": {
+          "type": "range_price",
           "settings": {
           }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "9b30fea5-2038-4734-93a9-27a5d09f153d": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 5,
+            "show_inventory_quantity": false
           }
         },
         "quantity_selector": {
@@ -34,13 +52,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "share": {
@@ -53,11 +66,13 @@
       "block_order": [
         "vendor",
         "title",
-        "price",
+        "37453709-fc61-4c60-8693-35c930cc2757",
+        "b321f6ab-37d3-4061-b19f-ed11e0f4cd34",
         "variant_picker",
+        "price",
+        "9b30fea5-2038-4734-93a9-27a5d09f153d",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "share"
       ],
       "settings": {
@@ -67,7 +82,7 @@
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -75,10 +90,57 @@
         "padding_bottom": 12
       }
     },
+    "59ae0768-c898-45fd-924f-5dc434c00054": {
+      "type": "tabs",
+      "blocks": {
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-0": {
+          "type": "column",
+          "settings": {
+            "title": "Description",
+            "metafield_namespace": "custom",
+            "metafield_key": "description",
+            "show_description": true
+          }
+        },
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-1": {
+          "type": "column",
+          "settings": {
+            "title": "Additional information",
+            "metafield_namespace": "custom",
+            "metafield_key": "additional_information",
+            "show_description": false
+          }
+        },
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-2": {
+          "type": "column",
+          "settings": {
+            "title": "Refer A Friend",
+            "metafield_namespace": "",
+            "metafield_key": "",
+            "show_description": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-0",
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-1",
+        "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Related products",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -86,7 +148,7 @@
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
@@ -95,6 +157,7 @@
   },
   "order": [
     "main",
+    "59ae0768-c898-45fd-924f-5dc434c00054",
     "related-products"
   ]
 }

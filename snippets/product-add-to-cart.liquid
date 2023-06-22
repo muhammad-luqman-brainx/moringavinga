@@ -1,0 +1,15 @@
+<a
+  href="{{ product.url }}"
+  id="CardLink-{{ section_id }}-{{ product.id }}"
+  class="full-unstyled-link"
+  aria-labelledby="CardLink-{{ section_id }}-{{ product.id }} Badge-{{ section_id }}-{{ product.id }}"
+>
+  {% render 'icon-cart' %}
+  <span>
+    {% if product.has_only_default_variant %}
+      {{ 'products.product.add_to_cart' | t }}
+    {% else %}
+      Select options
+    {% endif %}
+  </span>
+</a>
