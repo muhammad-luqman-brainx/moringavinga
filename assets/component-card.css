@@ -377,11 +377,11 @@
 .card-article-info {
   margin-top: 1rem;
 }
-#product-grid li {
+.product-grid li {
   padding: 1.5rem;
 }
 @media screen and (min-width: 990px) {
-  #product-grid li{
+  .product-grid li{
     padding: 0 1.5rem 1.5rem 0;
   }
 }
@@ -527,7 +527,12 @@
   span {
   background-size: 100% 2px;
 }
+
+.cart-page::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 .cart-page .product-grid .grid__item{
   max-width: calc(50% - 15px);
-  margin-right: 15px;
 }

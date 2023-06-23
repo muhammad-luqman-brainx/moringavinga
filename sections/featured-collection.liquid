@@ -13,6 +13,7 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background: {{ section.settings.color_bg }};
   }
 
   @media screen and (min-width: 750px) {
@@ -20,9 +21,9 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .width-{{ section.id }}{
+    #shopify-section-{{ section.id }}{
+      display: inline-block;
       width: {{ section.settings.section_width }}%;
-      float: left;
     }
   }
 {%- endstyle -%}
@@ -49,7 +50,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} width-{{ section.id }} {% if cart == empty %} is-empty{% endif %} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %} {{ section.settings.content_position }}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
       {%- endif -%}
@@ -57,7 +58,7 @@
         or section.settings.show_description
         and section.settings.collection.description != empty
       -%}
-        <div class="collection__description {{ section.settings.description_style }} rte">
+        <div class="collection__description h4 caption-with-letter-spacing--medium {{ section.settings.description_style }} rte">
           {%- if section.settings.show_description -%}
             {{ section.settings.collection.description }}
           {%- else -%}
@@ -190,6 +191,26 @@
       "type": "richtext",
       "id": "description",
       "label": "t:sections.featured-collection.settings.description.label"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "center",
+      "label": "Content Position"
     },
     {
       "type": "checkbox",
@@ -405,6 +426,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Custom background color",
+      "default": "#ffffff"
     }
   ],
   "presets": [

@@ -97,6 +97,7 @@
       {
         "id": "gradient_background_1",
         "type": "color_background",
+        "default": "#f0f5f9",
         "label": "t:settings_schema.colors.settings.gradient_background_1.label"
       },
       {

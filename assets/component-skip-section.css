@@ -1,0 +1,39 @@
+.next-section-wrap {
+  margin-top: 10px;
+}
+.next-section-wrap.minimal-arrow a {
+  width: 30px;
+  height: 70px;
+  text-align: center;
+  display: block;
+  line-height: 0;
+  position: relative;
+}
+.next-section-wrap.minimal-arrow svg {
+  display: block;
+  width: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: ctaMinimaLArrowOuter 2.5s cubic-bezier(0.55, 0, 0.45, 1) infinite;
+}
+@keyframes ctaMinimaLArrowOuter {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(12px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 690px){
+  .next-section-wrap {
+    display: none;
+  }
+}

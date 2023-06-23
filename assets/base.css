@@ -243,6 +243,10 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
@@ -256,6 +260,10 @@ html.no-js .no-js-hidden {
 .page-width-desktop {
   padding: 0;
   margin: 0 auto;
+}
+
+.full--width{
+  width: 100%;
 }
 
 @media screen and (max-width: 350px) {
@@ -308,6 +316,12 @@ html.no-js .no-js-hidden {
   z-index: 0;
 }
 
+.section::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .section + .section {
   margin-top: var(--spacing-sections-mobile);
 }
@@ -340,6 +354,10 @@ body,
 
 .background-secondary {
   background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.background-transparent{
+  background-color: transparent;
 }
 
 .grid-auto-flow {
@@ -557,8 +575,9 @@ blockquote {
 }
 
 .caption-with-letter-spacing--medium {
-  font-size: 1.2rem;
-  letter-spacing: .16rem;
+  font-size: 1.4rem;
+  letter-spacing: .15rem;
+  letter-spacing: 0;
 }
 
 .caption-with-letter-spacing--large {

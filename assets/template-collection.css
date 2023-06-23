@@ -52,6 +52,11 @@
   margin-bottom: 2.5rem;
 }
 
+.collection__title .title{
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: -2px;
+}
 .collection__title .title:not(:only-child) {
   margin-bottom: 1rem;
 }
@@ -84,4 +89,24 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 1300px) and (min-width: 1000px){
+  .collection__title .title{
+
+    font-size: 30.6px;
+  }
+}
+@media only screen and (max-width: 999px) and (min-width: 690px){
+  .collection__title .title{
+
+    font-size: 28.9px;
+    line-height: 34px;
+  }
+}
+@media only screen and (max-width: 690px){
+  .collection__title .title{
+
+    font-size: 28.9px;
+    line-height: 34px;
+  }
 }

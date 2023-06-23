@@ -1,0 +1,159 @@
+{
+  "sections": {
+    "36cb9c48-6672-4a06-b6c3-1f451cbd2e28": {
+      "type": "image-banner-v2",
+      "blocks": {
+        "template--19621109629234__36cb9c48-6672-4a06-b6c3-1f451cbd2e28-16874232665a746929-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Moringa Vinga",
+            "heading_size": "h1"
+          }
+        },
+        "e0a2421f-f04a-419f-8783-2c5be9ec5717": {
+          "type": "skip_section",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19621109629234__36cb9c48-6672-4a06-b6c3-1f451cbd2e28-16874232665a746929-0",
+        "e0a2421f-f04a-419f-8783-2c5be9ec5717"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shop-all.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "4a1b6705-720f-4737-a925-e1bdfdd43df9": {
+      "type": "featured-collection",
+      "settings": {
+        "section_width": 100,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "apple-cider-vinegar",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_bg": "#f0f5f9"
+      }
+    },
+    "fdd138b3-f7e0-463c-91ff-c426f4d5694e": {
+      "type": "image-with-text-v2",
+      "blocks": {
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Subscription Today",
+            "heading_size": "h1"
+          }
+        },
+        "f2a95cf3-f6ce-40e5-aa21-b50c7557b490": {
+          "type": "caption",
+          "settings": {
+            "caption": "YOUR FAVORITE INFUSIONS, DELIVERED TO YOUR DOOR AND PRICED AT $2 PER SERVING.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>15% off Your Subscription<\/li><li>Free US Shipping<\/li><li>Members-only swag<\/li><li>Free Samples and Gifts<\/li><li>Early Access to New Products<\/li><li>Free Drinks & Discounts<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Save 15% + Free Shipping",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-0",
+        "f2a95cf3-f6ce-40e5-aa21-b50c7557b490",
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-1",
+        "template--19621109629234__fdd138b3-f7e0-463c-91ff-c426f4d5694e-1687436132ea30dcd7-2"
+      ],
+      "settings": {
+        "heading_image": "Membership\nHas its Perks!",
+        "image": "shopify:\/\/shop_images\/Subscribebanner.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "color_bg": "#f0f5f9"
+      }
+    },
+    "48580f08-14c4-40df-bbce-c05d72daf5a5": {
+      "type": "featured-collection",
+      "settings": {
+        "section_width": 100,
+        "title": "Other Great Products",
+        "heading_size": "h1",
+        "description": "<p>FROM TRAVEL SIZES, TO GIVING THE GIFT OF HEALTH TO A LOVED ONE!<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "apple-cider-vinegar",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_bg": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "36cb9c48-6672-4a06-b6c3-1f451cbd2e28",
+    "4a1b6705-720f-4737-a925-e1bdfdd43df9",
+    "fdd138b3-f7e0-463c-91ff-c426f4d5694e",
+    "48580f08-14c4-40df-bbce-c05d72daf5a5"
+  ]
+}
