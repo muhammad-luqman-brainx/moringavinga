@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "2764cf5c-78dc-4ee0-83d7-508907944c90": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/how-moringa-works-min_1057x6674_8515ac17-c6ad-4a65-bb59-1d5b2e66ca0f.jpg",
+        "show_text_box_2": true,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "3bc069c2-3ff0-4f52-be9f-13ca867082ce": {
+      "type": "featured-collection",
+      "settings": {
+        "section_width": 100,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "content_position": "center",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_bg": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "2764cf5c-78dc-4ee0-83d7-508907944c90",
+    "3bc069c2-3ff0-4f52-be9f-13ca867082ce"
+  ]
+}

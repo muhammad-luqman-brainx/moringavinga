@@ -135,7 +135,11 @@
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
         >
-          {{ 'sections.featured_collection.view_all' | t }}
+          {% if section.settings.view_all_title %}
+            {{ section.settings.view_all_title }}
+          {% else %}
+            {{ 'sections.featured_collection.view_all' | t }}
+          {% endif %}
         </a>
       </div>
     {%- endif -%}
@@ -272,6 +276,12 @@
       "id": "show_view_all",
       "default": true,
       "label": "t:sections.featured-collection.settings.show_view_all.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "view_all_title",
+      "default": "Shop Moringa Vinga",
+      "label": "t:sections.featured-collection.settings.title.label"
     },
     {
       "type": "select",

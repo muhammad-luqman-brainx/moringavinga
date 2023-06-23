@@ -1177,6 +1177,9 @@
         "show_text_box": {
           "label": "Show container on desktop"
         },
+        "show_text_box_2": {
+          "label": "Show container on Image"
+        },
         "desktop_content_alignment": {
           "options__1": {
             "label": "Left"
@@ -1337,6 +1340,9 @@
         },
         "show_text_box": {
           "label": "Show container on desktop"
+        },
+        "show_text_box_2": {
+          "label": "Show container on Image"
         },
         "desktop_content_alignment": {
           "options__1": {
@@ -2921,6 +2927,9 @@
         "show_text_box": {
           "label": "Show container on desktop"
         },
+        "show_text_box_2": {
+          "label": "Show container on Image"
+        },
         "desktop_content_position": {
           "options__1": {
             "label": "Top Left"
@@ -3369,6 +3378,9 @@
             },
             "show_text_box": {
               "label": "Show container on desktop"
+            },
+            "show_text_box_2": {
+              "label": "Show container on Image"
             },
             "text_alignment": {
               "label": "Desktop content alignment",

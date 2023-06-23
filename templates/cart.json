@@ -11,8 +11,8 @@
     "f53f2e02-527e-4581-be20-3bc8b99128bd": {
       "type": "featured-collection",
       "settings": {
-        "title": "You may be interested in…",
         "section_width": 48,
+        "title": "You may be interested in…",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
