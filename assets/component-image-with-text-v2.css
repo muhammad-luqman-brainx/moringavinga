@@ -485,7 +485,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: calc(100vw * 0.06);
+    padding: calc(100vw * 0.05);
   }
   .heading_inner .image-with-text__heading{
     margin: 0;
@@ -495,6 +495,27 @@
     text-align: left;
     white-space: break-spaces;
   }
+  .image-with-text-button{
+    padding-right: 39px;
+    padding-left: 46px;
+  }
+  .image-with-text-button span{
+    left: 0;
+    display: inline-block;
+    transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1);
+    transform: translateX(-18px);
+    position: relative;
+  }
+  .image-with-text-button svg{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    right: 2.4rem;
+    margin-top: 0;
+    text-align: center;
+    vertical-align: middle;
+    transform: translateY(-50%) translateX(4px);
+}
   @media screen and (min-width: 750px) {
     .multirow__inner {
       row-gap: var(--grid-desktop-vertical-spacing);

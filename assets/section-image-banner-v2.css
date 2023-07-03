@@ -423,7 +423,7 @@
   margin-top: 0;
 }
 .banner__box .banner__heading {
-  margin: 5rem 0;
+  margin: 5rem 0 4rem;
   text-align: left;
 }
 @media screen and (max-width: 749px) {
@@ -493,6 +493,7 @@
   transform: translateY(100%);
   overflow: hidden;
   position: relative;
+  padding-bottom: 1rem;
 }
 .fnc-slide__heading-line.visible {
   transform: translateY(0);

@@ -1,0 +1,109 @@
+{{ 'section-sticky-note.css' | asset_url | stylesheet_tag }}
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      {% style %}
+                .color-{{ block.id }}{
+                              background-color: {{ block.settings.color_bg }};
+                            }
+        .color-{{ block.id }} .announcement-bar__message{
+            color: {{ block.settings.color_text }};
+
+              }
+                            .
+      {% endstyle %}
+      <div
+        class="sticky-bar announcement-bar color-{{ block.id }} gradient"
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        {{ block.shopify_attributes }}
+      >
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="announcement-bar__link link--text focus-inset animate-arrow"
+            >
+          {%- endif -%}
+          <div class="page-width">
+            <p class="announcement-bar__message {{ block.settings.text_alignment }}">
+              <span>{{ block.settings.text | escape }}</span>
+            </p>
+          </div>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "t:sections.sticky-bar.name",
+  "max_blocks": 12,
+  "class": "sticky-bar-section",
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.sticky-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.sticky-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.sticky-bar.blocks.announcement.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.sticky-bar.blocks.announcement.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.sticky-bar.blocks.announcement.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.sticky-bar.blocks.announcement.settings.text_alignment.label"
+        },
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Custom background",
+          "default": "#fce182"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Custom Text color",
+          "default": "#dd8500"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.sticky-bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sticky-bar.name",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

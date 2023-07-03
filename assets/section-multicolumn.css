@@ -11,8 +11,14 @@
 
 .multicolumn .title-wrapper-with-link {
   margin-top: 0;
+  
 }
-
+.multicolumn .title-wrapper-with-link.center {
+justify-content: center;
+}
+.multicolumn .title-wrapper-with-link.right {
+justify-content: right;
+}
 @media screen and (max-width: 749px) {
   .multicolumn .title-wrapper-with-link {
     margin-bottom: 3rem;
@@ -77,6 +83,7 @@
 .multicolumn-list p {
   margin: 0;
 }
+
 
 .multicolumn-card-spacing {
   padding-top: 2.5rem;
@@ -239,5 +246,18 @@
 @media screen and (min-width: 990px) {
   .multicolumn-list__item--empty {
     display: list-item;
+  }
+}
+
+@media only screen and (max-width: 999px) and (min-width: 690px) {
+  .multicolumn .title {
+    font-size: 28.9px !important;
+    line-height: 34px !important;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .multicolumn .title {
+    font-size: 28.9px !important;
+    line-height: 34px !important;
   }
 }

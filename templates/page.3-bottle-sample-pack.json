@@ -1,0 +1,306 @@
+{
+  "sections": {
+    "6f8ebec9-d9f0-4874-b344-048c09bf1c10": {
+      "type": "sticky-note",
+      "blocks": {
+        "template--19637154873650__6f8ebec9-d9f0-4874-b344-048c09bf1c10-1687525369725cc2c2-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Click here to order your FREE sample box!",
+            "text_alignment": "center",
+            "color_bg": "#fce182",
+            "color_text": "#dd8500",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__6f8ebec9-d9f0-4874-b344-048c09bf1c10-1687525369725cc2c2-0"
+      ],
+      "settings": {
+      }
+    },
+    "74d46c43-4bb8-4f61-ae01-a7e33d4eac2d": {
+      "type": "image-banner-v3",
+      "blocks": {
+        "f9c781de-7590-4fb1-ad96-387ee9b4862f": {
+          "type": "image",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/FREE-BOT.webp"
+          }
+        },
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FEEL YOUR BEST SELF WITH OUR LIMITED-OFFER 3 BOTTLE SAMPLE PACK",
+            "heading_size": "h1"
+          }
+        },
+        "f0c5f506-0277-4300-b554-0393e2fdd438": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Use code “FREESAMPLE” and only pay for shipping",
+            "subtitle_style": "subtitle"
+          }
+        },
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-1": {
+          "type": "text",
+          "settings": {
+            "text": "Over 300 medicinal benefits from fermented and cold-pressed superfoods combined in a great-tasting apple cider vinegar with raw local honey.",
+            "text_style": "body"
+          }
+        },
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "GET YOUR FREE SAMPLES",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "f9c781de-7590-4fb1-ad96-387ee9b4862f",
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-0",
+        "f0c5f506-0277-4300-b554-0393e2fdd438",
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-1",
+        "template--19637154873650__74d46c43-4bb8-4f61-ae01-a7e33d4eac2d-16877752520ddcd711-2"
+      ],
+      "custom_css": [
+        ".banner__content {padding-bottom: 16.7rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/main-bg-blank-final.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "show_side_decor": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "8a4703ce-2a07-42e7-8b54-8d646c38838a": {
+      "type": "image-banner-v3",
+      "blocks": {
+        "template--19637154873650__8a4703ce-2a07-42e7-8b54-8d646c38838a-168778640807584f2d-1": {
+          "type": "text",
+          "settings": {
+            "text": "WHAT IS IT",
+            "text_style": "subtitle"
+          }
+        },
+        "template--19637154873650__8a4703ce-2a07-42e7-8b54-8d646c38838a-168778640807584f2d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pure and easily digestible superfoods with super powers.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__8a4703ce-2a07-42e7-8b54-8d646c38838a-168778640807584f2d-1",
+        "template--19637154873650__8a4703ce-2a07-42e7-8b54-8d646c38838a-168778640807584f2d-0"
+      ],
+      "custom_css": [
+        ".banner-v3 {margin-top: -13%; position: relative; z-index: 2; padding: calc(100vw * 0.06) 0;}",
+        ".banner__content,.banner__box,.banner__content * {padding-top: 0; padding-bottom: 0; color: #3e1e56; max-width: 100%;}",
+        ".banner-v3 .banner__heading {font-size: 4.6rem; line-height: 5.5rem; margin-top: -1rem;}",
+        "@media only screen and (max-width: 999px) {.banner-v3 {margin-top: -19%; } .banner-v3 {padding: 10% 0; }}",
+        "@media only screen and (max-width: 690px) {.banner-v3 {margin-top: -38%; } .banner-v3 {padding: 19% 0; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "show_side_decor": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "b7a6bfcd-3d9a-468a-b64e-1b4a06120d76": {
+      "type": "video",
+      "custom_css": [
+        ".video-section {margin-top: -9%;}",
+        "@media only screen and (max-width: 999px) {.video-section {margin-top: -11%; }}",
+        "@media only screen and (max-width: 690px) {.video-section {margin-top: -20%; } .video-section__media.global-media-settings--full-width {--ratio-percent: 72% !important; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/youtu.be\/jYQbfY8olgA?list=TLGGDWza2MjDnukyNjA2MjAyMw",
+        "cover_image": "shopify:\/\/shop_images\/video-thumbnail.jpg",
+        "description": "A message from the founders",
+        "full_width": true,
+        "video_decor": true,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "aa2f2f27-b49f-4746-8ecd-341db501090c": {
+      "type": "special",
+      "blocks": {
+        "be7d2c85-d844-49e0-86b1-5b6d7970a1e6": {
+          "type": "caption",
+          "settings": {
+            "caption": "WHAT MAKES IT SPECIAL?",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--19637154873650__aa2f2f27-b49f-4746-8ecd-341db501090c-168785457119bc5959-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Raw, living and functional concentrates",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "be7d2c85-d844-49e0-86b1-5b6d7970a1e6",
+        "template--19637154873650__aa2f2f27-b49f-4746-8ecd-341db501090c-168785457119bc5959-0"
+      ],
+      "custom_css": [
+        ".special * {color: #3e1e56;}",
+        ".special .image-with-text__heading {font-size: 4.6rem; line-height: 5.5rem; margin-top: -1rem;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/special.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5839caa3-04a7-40dc-8178-ac4df4a2a25a": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moringa-1.jpg",
+            "title": "Real Food. Real Function.",
+            "text": "<p>Unlike powders or pills, our natural long-slow infusion and cold-press process keeps everything intact and alive, “unlocking” the nutrients and making them more easily absorbed by the body.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moringa-2.jpg",
+            "title": "Raw Honey From the Hive",
+            "text": "<p>Raw honey that has never been heated contains beneficial enzymes known to improved digestion, and in certain cases has specifically helped the body more effectively break down and use sugars.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moringa-3.jpg",
+            "title": "Natural Remedies",
+            "text": "<p>Each ounce of our infusions contains a daily dose of apple cider vinegar, which has been shown to assist with weight loss, lowering cholesterol levels, and playing a large part in decrease blood glucose levels and increased insulin sensitivity.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-0",
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-1",
+        "template--19637154873650__5839caa3-04a7-40dc-8178-ac4df4a2a25a-1687871382eb815168-2"
+      ],
+      "custom_css": [
+        ".multicolumn .title,.multicolumn .image-with-text__text--caption {color: #174f59;}",
+        ".multicolumn .title {font-size: 4.6rem; line-height: 5.5rem; margin-top: 1rem; margin-bottom: 2.5rem;}",
+        ".multicolumn-list h3,.multicolumn-list p {margin: 0; padding-bottom: 2rem;}",
+        ".multicolumn-list h3:last-child,.multicolumn-list p:last-child {padding-bottom: 0;}"
+      ],
+      "settings": {
+        "title": "Your daily shot of functional plant-based organic and raw ingredients",
+        "heading_size": "h1",
+        "caption": "WHAT’S IN IT?",
+        "content_position": "center",
+        "bgImage": "shopify:\/\/shop_images\/bg-green_58d7805f-ed46-47b5-89de-53f802ada139.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "d4fa6042-fc5b-495a-bc28-a3a3b98af304": {
+      "type": "multirow",
+      "blocks": {
+        "template--19637154873650__d4fa6042-fc5b-495a-bc28-a3a3b98af304-16883208010216109a-0": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/production-1.svg",
+            "caption": "PRODUCTION",
+            "heading": "NEVER RUSHED",
+            "text": "<p>This way everything is kept intact and alive, “unlocking” the nutrients (all from our functional ingredients), rich beneficial bacteria (from the fermentation), amino acids and antioxidants, making them bioavailable (more easily absorbed by the body).<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__d4fa6042-fc5b-495a-bc28-a3a3b98af304-16883208010216109a-0"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "align-right",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "6f8ebec9-d9f0-4874-b344-048c09bf1c10",
+    "74d46c43-4bb8-4f61-ae01-a7e33d4eac2d",
+    "8a4703ce-2a07-42e7-8b54-8d646c38838a",
+    "b7a6bfcd-3d9a-468a-b64e-1b4a06120d76",
+    "aa2f2f27-b49f-4746-8ecd-341db501090c",
+    "5839caa3-04a7-40dc-8178-ac4df4a2a25a",
+    "d4fa6042-fc5b-495a-bc28-a3a3b98af304"
+  ]
+}

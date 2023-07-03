@@ -2,6 +2,21 @@
   --ratio-percent: 56.25%;
   position: relative;
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
+  border: 0;
+}
+
+.video-decor .video-section__poster::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -5%;
+  width: 110%;
+  padding-bottom: 2.5%;
+  background-image: url('https://cdn.shopify.com/s/files/1/0770/9904/1074/files/video-decor.svg?v=1687851813');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  z-index: 3;
 }
 
 .video-section__media.global-media-settings--full-width {
@@ -39,4 +54,18 @@
 
 .video-section__media.media-fit-cover video {
   object-fit: cover;
+}
+.video__title{
+  color: #fff;
+  letter-spacing: 0;
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 44px;
+}
+@media only screen and (max-width: 700px){
+  .video__title{
+    font-size: 30px;
+    line-height: 34px;
+  }
 }
