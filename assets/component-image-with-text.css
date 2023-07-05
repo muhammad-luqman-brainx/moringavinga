@@ -180,7 +180,7 @@
   transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
 }
 
-.image-with-text .grid .image-with-text__media:hover img {
+.image-with-text.image-with-text-zoom .grid .image-with-text__media:hover img {
   transform: scale(1.13);
 }
 
@@ -420,6 +420,16 @@
   }
   .image-with-text__content{
     padding-inline: 0;
+  }
+}
+@media screen and (max-width: 365px) {
+  .image-with-text__content {
+    padding-inline: 0;
+  }
+}
+@media screen and (max-width: 365px) {
+  .image-with-text .image-with-text__grid {
+    padding: 0;
   }
 }
 

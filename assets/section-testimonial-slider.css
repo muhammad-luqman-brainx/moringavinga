@@ -291,6 +291,14 @@
   }
 }
 
+@media only screen and (max-width: 365px) {
+  .testimonial-section
+    .testimonial-carousel
+    .testimonial-carousel-fixed-content {
+    padding-left: 0;
+  }
+}
+
 @media only screen and (min-width: 990px) {
   .testimonial-section .testimonial-carousel {
     flex-wrap: nowrap;

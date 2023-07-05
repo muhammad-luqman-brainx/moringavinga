@@ -16,10 +16,23 @@
 {%- endstyle -%}
 
 <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
+  {%- if section.settings.bgImage -%}
+    <div class="section-bgImage bgImage">
+      {%- capture sizes -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+    (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+  {%- endcapture -%}
+      {{
+        section.settings.bgImage
+        | image_url: width: 1150
+        | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+      }}
+    </div>
+  {%- endif -%}
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+        class="image-with-text__media image-with-text__media--{{ section.settings.height }} background-transparent color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %}
           style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
         {% endif %}
@@ -51,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class="image-with-text__text-item grid__item">
+    <div class="image-with-text__text-item grid__item page-width">
       <div
         id="ImageWithText--{{ section.id }}"
         class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} color-{{ section.settings.color_scheme }} content-container background-transparent"
@@ -78,7 +91,7 @@
               </div>
             {%- when 'button' -%}
               {%- if block.settings.button_label != blank -%}
-                <div class="{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+                <div class="{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %} {{ section.settings.button_type }}">
                   <a
                     {% if block.settings.button_link == blank %}
                       role="link" aria-disabled="true"
@@ -88,8 +101,12 @@
                     class="button image-with-text-button {% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                     {{ block.shopify_attributes }}
                   >
-                    <span>{{ block.settings.button_label | escape }}</span>
-                    {% render 'icon-arrow-right' %}
+                    {% if section.settings.button_type == 'simple' %}
+                      <span>{{ block.settings.button_label | escape }}</span>
+                      {% render 'icon-arrow-right' %}
+                    {% else %}
+                      {% render 'button', buttonLabel: block.settings.button_label | escape %}
+                    {% endif %}
                   </a>
                 </div>
               {%- endif -%}
@@ -113,6 +130,11 @@
       "id": "heading_image",
       "default": "Membership Has its Perks!",
       "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgImage",
+      "label": "t:sections.multicolumn.blocks.column.settings.image.label"
     },
     {
       "type": "image_picker",
@@ -332,6 +354,22 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "options": [
+        {
+          "value": "simple",
+          "label": "simple"
+        },
+        {
+          "value": "animated__cta",
+          "label": "animated"
+        }
+      ],
+      "default": "simple",
+      "label": "Button Type"
     },
     {
       "type": "color",

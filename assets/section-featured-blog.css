@@ -75,6 +75,12 @@
   }
 }
 
+@media screen and (max-width: 365px) {
+  .blog__posts.articles-wrapper .article {
+    padding: 0;
+  }
+}
+
 .background-secondary .blog-placeholder__content {
   background-color: rgb(var(--color-background));
 }

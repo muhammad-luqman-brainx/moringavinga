@@ -268,11 +268,7 @@ html{
 .bold, strong, b {
     font-weight: 600;
 }
-@media screen and (max-width: 350px) {
-  .page-width {
-    padding: 0;
-  }
-}
+
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 2.5rem;
@@ -350,7 +346,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   background-color: rgb(var(--color-background));
 }
 
@@ -359,7 +355,7 @@ body,
 }
 
 .background-transparent{
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .grid-auto-flow {

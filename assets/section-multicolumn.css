@@ -1,5 +1,6 @@
 .multicolumn{
   overflow: hidden;
+  position: relative;
 }
 .multicolumn .title {
   margin: 0;
@@ -23,11 +24,6 @@ justify-content: right;
   .multicolumn .title-wrapper-with-link {
     margin-bottom: 3rem;
   }
-
-  .multicolumn .page-width {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .multicolumn-card__image-wrapper--third-width {
@@ -36,6 +32,10 @@ justify-content: right;
 
 .multicolumn-card__image-wrapper--half-width {
   width: 50%;
+}
+
+.multicolumn-card__image-wrapper--extra-width {
+  width: 67%;
 }
 
 .multicolumn-list__item.center
@@ -62,7 +62,7 @@ justify-content: right;
 }
 
 .multicolumn-list__item:only-child {
-  max-width: 72rem;
+  max-width: 100%;
 }
 
 .multicolumn-list__item--empty {
@@ -117,7 +117,7 @@ justify-content: right;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 365px) {
   .multicolumn-list:not(.slider) {
     padding-left: 0;
     padding-right: 0;
@@ -235,12 +235,39 @@ justify-content: right;
   margin-left: 0.8rem;
   white-space: nowrap;
 }
+.multicolumn .section-bgImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.multicolumn .section-bgImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media screen and (max-width: 749px) {
 
 .multicolumn-card__info {
   padding: 1.5rem;
 }
+.multicolumn-card-spacing {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
+}
+
+@media screen and (max-width: 365px) {
+
+  .multicolumn-card__info {
+    padding: 1.5rem 0;
+  }
+  .multicolumn-card-spacing {
+    margin-left: 1.5rem 0;
+    margin-right: 1.5rem 0;
+  }
+  }
 
 
 @media screen and (min-width: 990px) {
@@ -249,15 +276,10 @@ justify-content: right;
   }
 }
 
-@media only screen and (max-width: 999px) and (min-width: 690px) {
+@media only screen and (max-width: 999px){
   .multicolumn .title {
     font-size: 28.9px !important;
     line-height: 34px !important;
   }
 }
-@media only screen and (max-width: 690px) {
-  .multicolumn .title {
-    font-size: 28.9px !important;
-    line-height: 34px !important;
-  }
-}
+

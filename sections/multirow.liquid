@@ -1,5 +1,16 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'section-multirow.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign slider = false
+  if section.settings.enable_slider
+    assign slider = true
+  endif
+-%}
+{% if slider %}
+  {{ 'flickity.css' | asset_url | stylesheet_tag }}
+  {{ 'section-multirow-flickity.css' | asset_url | stylesheet_tag }}
+{% endif %}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -42,70 +53,136 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="multirow__inner page-width">
-    {%- for block in section.blocks -%}
-      <div
-        class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}"
-        {{ block.shopify_attributes }}
+<div class="multirow section-{{ section.id }}-padding background-transparent color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    {%- if section.settings.caption != blank -%}
+      <p
+        class="image-with-text__text image-with-text__text--caption subtitle center"
+        {{ section.shopify_attributes }}
       >
-        <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
-          <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-            <div
-              class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
-              {% if section.settings.image_height == 'adapt' and block.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
-            >
-              {%- if block.settings.image != blank -%}
-                {%- capture sizes -%}
+        {{ section.settings.caption | escape }}
+      </p>
+    {%- endif -%}
+    {%- unless section.settings.title == blank -%}
+      <div class="title-wrapper--self-padded-mobile title-wrapper--no-top-margin center">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+    {%- endunless -%}
+    <div class="multirow__inner">
+      {%- if section.settings.bgImage -%}
+        <div class="section-bgImage">
+          {%- capture sizes -%}
+        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+        (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+      {%- endcapture -%}
+          {{
+            section.settings.bgImage
+            | image_url: width: 1150
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+          }}
+        </div>
+      {%- endif -%}
+      <div class="{% if slider %} multirow-carousel{% endif %}">
+        {%- for block in section.blocks -%}
+          <div
+            class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }} {% if slider %} carousel-cell{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="image-with-text__grid grid grid--gapless {% if slider %} grid--2-col {% else %} grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
+              <div class="grid__item">
+                <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }}">
+                  <div
+                    class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} background-transparent color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
+                    {% if section.settings.image_height == 'adapt' and block.settings.image != blank %}
+                      style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+                    {% endif %}
+                  >
+                    {%- if block.settings.image != blank -%}
+                      {%- capture sizes -%}
                   (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
                   (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
                 {%- endcapture -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 1500
-                  | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
-                }}
-              {%- else -%}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 1500
+                        | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                      }}
+                    {%- else -%}
+                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                </div>
+                {% if block.settings.image_2 %}
+                  <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }}">
+                    <div
+                      class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} background-transparent color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image_2 != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
+                      {% if section.settings.image_height == 'adapt' and block.settings.image_2 != blank %}
+                        style="padding-bottom: {{ 1 | divided_by: block.settings.image_2.aspect_ratio | times: 100 }}%;"
+                      {% endif %}
+                    >
+                      {%- if block.settings.image_2 != blank -%}
+                        {%- capture sizes -%}
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                  (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                {%- endcapture -%}
+                        {{
+                          block.settings.image_2
+                          | image_url: width: 1500
+                          | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                        }}
+                      {%- else -%}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="image-with-text__text-item grid__item">
+                <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} background-transparent color-{{ section.settings.row_color_scheme }}{% endunless %}">
+                  {%- if block.settings.caption -%}
+                    <p class="image-with-text__text image-with-text__text--caption">
+                      {{ block.settings.caption | escape }}
+                    </p>
+                  {%- endif -%}
+                  {%- if block.settings.heading -%}
+                    <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+                      {{ block.settings.heading }}
+                    </h2>
+                  {%- endif -%}
+                  {%- if block.settings.text -%}
+                    <div class="image-with-text__text rte {{ section.settings.text_style }}">
+                      {{ block.settings.text }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button button--{{ section.settings.button_style }}"
+                    >
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
             </div>
           </div>
-          <div class="image-with-text__text-item grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% endunless %}">
-              {%- if block.settings.caption -%}
-                <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
-                  {{ block.settings.caption | escape }}
-                </p>
-              {%- endif -%}
-              {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
-                  {{ block.settings.heading }}
-                </h2>
-              {%- endif -%}
-              {%- if block.settings.text -%}
-                <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
-              {%- endif -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}"
-                  {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
-                >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-            </div>
-          </div>
-        </div>
+        {%- endfor -%}
       </div>
-    {%- endfor -%}
+    </div>
   </div>
 </div>
+{% if slider %}
+  <script src="{{ 'flickity.pkgd.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'flickity-fade.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'multirow-slider.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 
 {% schema %}
 {
@@ -115,6 +192,29 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_slider",
+      "default": true,
+      "label": "Enable Slider"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgImage",
+      "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Multicolumn",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "caption",
+      "default": "caption",
+      "label": "Caption"
+    },
     {
       "type": "select",
       "id": "image_height",
@@ -391,6 +491,11 @@
         {
           "type": "image_picker",
           "id": "image",
+          "label": "t:sections.multirow.blocks.row.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
           "label": "t:sections.multirow.blocks.row.settings.image.label"
         },
         {

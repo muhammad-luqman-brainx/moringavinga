@@ -25,6 +25,6 @@
 }
 .multicolumn-v3 .multicolumn-card .wrap.blockquote-author .title {
   margin: 0;
-  font-weight: 400;
-  font-size: 1.4rem;
+  font-weight: 400 !important;
+  font-size: 1.4rem !important;
 }

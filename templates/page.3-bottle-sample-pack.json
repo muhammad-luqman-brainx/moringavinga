@@ -242,6 +242,7 @@
       "settings": {
         "title": "Your daily shot of functional plant-based organic and raw ingredients",
         "heading_size": "h1",
+        "title_size": "p",
         "caption": "WHAT’S IN IT?",
         "content_position": "center",
         "bgImage": "shopify:\/\/shop_images\/bg-green_58d7805f-ed46-47b5-89de-53f802ada139.svg",
@@ -255,8 +256,8 @@
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 60,
+        "padding_bottom": 80
       }
     },
     "d4fa6042-fc5b-495a-bc28-a3a3b98af304": {
@@ -272,13 +273,50 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "e55a69ce-1490-4294-a226-404c6b75c486": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/production-2.webp",
+            "caption": "OUR STORY",
+            "heading": "HOW IT ALL BEGAN",
+            "text": "<p>Rachael was helping to grow moringa trees in Zambia to fight malnourishment and Mike was working with a international nonprofit developing sustainable food initiatives and technologies, the two came together to create Moringa Vinga to help fight malnourishment locally and around the world.<\/p><p><\/p><p><strong>Moringa Vinga gives 15% of all profits to fight malnourishment around the world<\/strong><\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "29170ded-aa11-48be-a980-621d5f148539": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/production-3.svg",
+            "image_2": "shopify:\/\/shop_images\/production-4.webp",
+            "caption": "MULTIPLE BENEFITS",
+            "heading": "USE IT DAILY!",
+            "text": "<p>Unlock raw and organic functional ingredients that work to promote health & wellness:<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "template--19637154873650__d4fa6042-fc5b-495a-bc28-a3a3b98af304-16883208010216109a-0"
+        "template--19637154873650__d4fa6042-fc5b-495a-bc28-a3a3b98af304-16883208010216109a-0",
+        "e55a69ce-1490-4294-a226-404c6b75c486",
+        "29170ded-aa11-48be-a980-621d5f148539"
+      ],
+      "custom_css": [
+        ".multirow * {color: #6f311e;}",
+        ".multirow .title {font-size: 4.6rem; line-height: 5.5rem; margin-top: 1rem; margin-bottom: 3.5rem; letter-spacing: normal;}",
+        ".multirow__inner .image-with-text__text--caption {font-size: 112.5%; line-height: 1.5; letter-spacing: normal;}",
+        ".multirow__inner .image-with-text__heading {font-size: 212.5%; line-height: 1.5; letter-spacing: normal;}",
+        ".image-with-text__text {margin: 0;}",
+        ".image-with-text__text p {font-size: 106.25%; font-weight: 300; letter-spacing: normal;}"
       ],
       "settings": {
-        "image_height": "medium",
+        "enable_slider": true,
+        "bgImage": "shopify:\/\/shop_images\/bg-brown.svg",
+        "title": "Thoughtfully crafted. No compromise",
+        "caption": "WHAT MAKES IT SPECIAL?",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -289,8 +327,417 @@
         "section_color_scheme": "background-1",
         "row_color_scheme": "background-1",
         "mobile_content_alignment": "left",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "4bb1136d-4b7d-4c9b-9f0b-187b45e591c0": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-1.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-2.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-3.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2dcf4c15-bddd-4359-921b-c830dd45ca5a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-4.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "747da274-a5e4-4a40-9ae7-f5fcfb060bb6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-5.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d5411531-ad83-4a94-a827-b3fecdf7fcc8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-6.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-0",
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-1",
+        "template--19637154873650__4bb1136d-4b7d-4c9b-9f0b-187b45e591c0-168838870949fcb321-2",
+        "2dcf4c15-bddd-4359-921b-c830dd45ca5a",
+        "747da274-a5e4-4a40-9ae7-f5fcfb060bb6",
+        "d5411531-ad83-4a94-a827-b3fecdf7fcc8"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "",
+        "content_position": "center",
+        "image_width": "extra",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "37ab7352-d53e-45bf-bda5-de66ebe62e6f": {
+      "type": "popular-sizes",
+      "blocks": {
+        "template--19637154873650__37ab7352-d53e-45bf-bda5-de66ebe62e6f-1688395473b46c27f6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/infographic.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "effdeff1-9d26-411d-bc94-96d2f3bfa428": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/popular-sizes-1.webp",
+            "title": "Farmer’s Market Fizzy Mocktail",
+            "text": "<p>1 oz of our sweet sipping vinegar concentrate 8 oz…<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "5a0e1006-c5ec-4902-a90d-970cc0df0a94": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/popular-sizes-2.webp",
+            "title": "Be Your Own Mixologist",
+            "text": "<p>Moringa Recipes Creative Moringa Drinks: Mix 1 oz of our…\t<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "589a2855-b0c9-4da9-b48d-256ca1b82051": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/popular-sizes-3.jpg",
+            "title": "Sweet Vinegar Dressing",
+            "text": "<p>Blend our sweet sipping vinegars with olive oil for a…<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "43881293-384f-4ecb-bd2a-aae8aa3b824d": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/popular-sizes-4.jpg",
+            "title": "Ice Cream Topping",
+            "text": "<p>Pour 1 oz of our sweet sipping vinegar over your…<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__37ab7352-d53e-45bf-bda5-de66ebe62e6f-1688395473b46c27f6-0",
+        "effdeff1-9d26-411d-bc94-96d2f3bfa428",
+        "5a0e1006-c5ec-4902-a90d-970cc0df0a94",
+        "589a2855-b0c9-4da9-b48d-256ca1b82051",
+        "43881293-384f-4ecb-bd2a-aae8aa3b824d"
+      ],
+      "custom_css": [
+        ".multicolumn * {color: #3e1e56;}",
+        ".multicolumn .title {font-size: 4.6rem; line-height: 5.5rem; margin-top: 1rem; margin-bottom: 2.5rem;}",
+        ".multicolumn .title-v2 {margin-top: 5rem; margin-bottom: 1rem;}",
+        ".multicolumn .rte-v2 {max-width: 65rem; margin: 0 auto;}",
+        ".multicolumn .bgImage img {object-position: center top;}",
+        ".slider-component-carousel {padding-top: 1rem; padding-bottom: calc(100vw * 0.08);}",
+        ".slider-component-carousel .inline-richtext {font-family: \"Lato\"; font-size: 3.2rem;}",
+        ".slider-component-carousel .rte p {font-size: 2rem;}"
+      ],
+      "settings": {
+        "title": "Easy, tasty & affordable",
+        "title_2": "Super versatile",
+        "heading_size": "h1",
+        "caption": "WHY SHOULD YOU TRY IT?",
+        "caption_2": "",
+        "text": "",
+        "text_2": "There are lots of ways you can enjoy Moringa Vinga® as a part of your daily routine, but one of the most popular mixings is simply adding 1 ounce of Moringa Vinga® to a glass of sparkling or still water over ice.",
+        "content_position": "center",
+        "bgImage": "shopify:\/\/shop_images\/bg-purple.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "01ded1c8-26a7-4edb-8c0b-d04559528e43": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19637154873650__01ded1c8-26a7-4edb-8c0b-d04559528e43-168841089207b65be1-0": {
+          "type": "column",
+          "settings": {
+            "title": "1 Ounce = 1 Serving",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__01ded1c8-26a7-4edb-8c0b-d04559528e43-168841089207b65be1-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Unlike powers or pills, Moringa Vinga® is made with functional plant-based organic and raw ingredients that undergo a long-slow infusion process just before they are all cold-pressed. This way, everything is kept intact and alive, “unlocking” the nutrients and making them more easily absorbed by the body.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__01ded1c8-26a7-4edb-8c0b-d04559528e43-168841089207b65be1-0",
+        "template--19637154873650__01ded1c8-26a7-4edb-8c0b-d04559528e43-168841089207b65be1-1"
+      ],
+      "custom_css": [
+        ".multicolumn * {color: #dd8500; padding-block: 0;}",
+        ".multicolumn {margin-top: -8%; padding: calc(100vw * 0.06) 0;}",
+        ".multicolumn-card {display: flex; flex-flow: column; justify-content: center;}",
+        ".bgImage img {object-position: top center;}",
+        ".inline-richtext {font-size: 4.6rem;}",
+        "@media only screen and (max-width: 999px) {.multicolumn .inline-richtext {font-size: 28.9px; text-align: center; } .multicolumn {margin-top: -11%; }}",
+        "@media only screen and (max-width: 690px) {.multicolumn {margin-top: -16%; } .multicolumn-list {padding: 5rem 0 2rem; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "h2",
+        "caption": "",
+        "content_position": "center",
+        "bgImage": "shopify:\/\/shop_images\/bg-yellow.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "5a62ec94-b34d-438e-9c68-f7775fc1e718": {
+      "type": "rich-text",
+      "blocks": {
+        "882c20fd-a360-480d-b093-c76c127921c9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/food.svg"
+          }
+        },
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The judges love Moringa Vinga®!",
+            "heading_size": "h1"
+          }
+        },
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Good Food Awards could be considered the summa cum laude of craft food awards. For over a decade, this prestigious California-based foundation has heaped praise upon products such as confections, spirits, and coffee that hail from across the country. A GFA recognizes the quality of food in addition to environmental and social accountability; it also must pass a series of daunting blind taste tests from chefs, makers, grocers, and journalists. Which is to say: This is a big deal.<\/p>"
+          }
+        },
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "ORDER NOW",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "882c20fd-a360-480d-b093-c76c127921c9",
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-0",
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-1",
+        "template--19637154873650__5a62ec94-b34d-438e-9c68-f7775fc1e718-1688488792478899f2-2"
+      ],
+      "custom_css": [
+        ".rich-text .rich-text__wrapper {max-width: 87.2rem; margin-inline: auto;}",
+        ".rich-text__heading,.rich-text__text {color: #174f59; opacity: 1;}",
+        ".rich-text .rich-text__heading {font-size: 3.4rem; line-height: 5.5rem;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "701c3d86-1be3-4f08-840c-cdc6ca3f9f72": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sample-1.svg",
+            "title": "ELDERBERRY & HOLY BASIL",
+            "text": "<p>Supports the immune system, increases resilience to stress, and has ingredients known to aid in sinus & lung respiratory wellness.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sample-2.svg",
+            "title": "GINGER & LEMONGRASS",
+            "text": "<p>Supports mobility, aids with inflammation, supports the immune system, and may assist with digestion, upset stomach & nausea.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sample-3.svg",
+            "title": "SPEARMINT & ROSEMARY",
+            "text": "<p>Supports brain memory & focus, circulation, hormone balance, and has ingredients known to support anti-aging properties.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-0",
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-1",
+        "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-2"
+      ],
+      "custom_css": [
+        ".multicolumn .title {font-size: 4.6rem; line-height: 5.5rem;}",
+        ".multicolumn .multicolumn-card__info .inline-richtext {font-size: 1.9rem; line-height: 2.9rem;}"
+      ],
+      "settings": {
+        "title": "Inside the sampler",
+        "heading_size": "h1",
+        "title_size": "h2",
+        "caption": "",
+        "content_position": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "922f6838-5eaf-400f-9d36-a89111197673": {
+      "type": "image-with-text-v2",
+      "blocks": {
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Use Code \"FREESAMPLE\" & Only Pay Shipping",
+            "heading_size": "h1"
+          }
+        },
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Getting quality superfoods into our daily routine can take time and effort. That’s why we want to give you an opportunity to try each of our best-selling Moringa Vinga blends.<\/p><p>We believe in our products so much that we’re going to let you try them for FREE.<\/p><p>We’ll send you 3 samples of our top functional and cold-pressed superfood infusions. Just pay shipping.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET YOUR FREE SAMPLES",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-0",
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-1",
+        "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-2"
+      ],
+      "settings": {
+        "heading_image": "",
+        "bgImage": "shopify:\/\/shop_images\/free-sample.svg",
+        "image": "shopify:\/\/shop_images\/free-sample.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "button_type": "animated__cta",
+        "color_bg": "#ffffff"
       }
     }
   },
@@ -301,6 +748,12 @@
     "b7a6bfcd-3d9a-468a-b64e-1b4a06120d76",
     "aa2f2f27-b49f-4746-8ecd-341db501090c",
     "5839caa3-04a7-40dc-8178-ac4df4a2a25a",
-    "d4fa6042-fc5b-495a-bc28-a3a3b98af304"
+    "d4fa6042-fc5b-495a-bc28-a3a3b98af304",
+    "4bb1136d-4b7d-4c9b-9f0b-187b45e591c0",
+    "37ab7352-d53e-45bf-bda5-de66ebe62e6f",
+    "01ded1c8-26a7-4edb-8c0b-d04559528e43",
+    "5a62ec94-b34d-438e-9c68-f7775fc1e718",
+    "701c3d86-1be3-4f08-840c-cdc6ca3f9f72",
+    "922f6838-5eaf-400f-9d36-a89111197673"
   ]
 }

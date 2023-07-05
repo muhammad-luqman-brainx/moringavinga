@@ -1,0 +1,67 @@
+.popular-sizes ul {
+  list-style: none;
+}
+.popular-sizes .flickity-prev-next-button {
+  background-color: transparent;
+}
+.popular-sizes .flickity-prev-next-button.previous {
+  left: -5rem;
+}
+.popular-sizes .flickity-prev-next-button.next {
+  right: -5rem;
+}
+.popular-sizes .multicolumn-carousel .media {
+  padding-bottom: 126% !important;
+}
+.popular-sizes .multicolumn-carousel .media img {
+  width: 100%;
+  object-fit: cover;
+}
+.popular-sizes .flickity-page-dots .dot {
+  background: #3e1e56;
+  width: 1.3rem;
+  height: 1.3rem;
+  opacity: 0.6;
+  margin: 0 6px;
+}
+.popular-sizes .flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 990px) {
+  .popular-sizes .flickity-prev-next-button.previous {
+    left: -2rem;
+  }
+  .popular-sizes .flickity-prev-next-button.next {
+    right: -2rem;
+  }
+}
+@media only screen and (max-width: 989px) {
+  .popular-sizes .flickity-prev-next-button.previous {
+    left: 0;
+  }
+  .popular-sizes .flickity-prev-next-button.next {
+    right: 0;
+  }
+  .popular-sizes .multicolumn-card-spacing {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  .popular-sizes .multicolumn-card__info {
+    padding: 2.5rem;
+  }
+  .popular-sizes .flickity-prev-next-button .flickity-button-icon {
+    width: 40%;
+    height: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 365px) {
+  .popular-sizes .flickity-prev-next-button.previous {
+    left: -1.5rem;
+  }
+  .popular-sizes .flickity-prev-next-button.next {
+    right: -1.5rem;
+  }
+}

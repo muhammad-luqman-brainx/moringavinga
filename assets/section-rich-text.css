@@ -51,7 +51,7 @@
 }
 
 .rich-text__blocks > * + * {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .rich-text__blocks > * + a {
@@ -83,4 +83,14 @@
 
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
+}
+.rich-text__blocks .rich-text-card .media{
+  max-width: 20rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 999px){
+  .rich-text .rich-text__heading {
+    font-size: 28.9px !important;
+    line-height: 34px !important;
+  }
 }

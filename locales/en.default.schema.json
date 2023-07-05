@@ -2986,6 +2986,9 @@
           },
           "options__3": {
             "label": "Full width of column"
+          },
+          "options__4": {
+            "label": "3/4 width of column"
           }
         },
         "image_ratio": {

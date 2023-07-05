@@ -1,0 +1,46 @@
+.multirow{
+  overflow: hidden;
+}
+.multirow  .multirow__inner{
+  position: relative;
+}
+.multirow  .multirow__inner .multirow-carousel{
+  padding: 0 2rem 1rem 3rem;
+}
+.multirow .image-with-text__content{
+  padding-bottom: 0;
+}
+
+.multirow .section-bgImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.multirow .section-bgImage img{
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+.multirow .image-with-text__grid--reverse{
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 999px) and (min-width: 690px) {
+    .multirow .title {
+      font-size: 28.9px !important;
+      line-height: 34px !important;
+    }
+    .multirow  .multirow__inner{
+      overflow: hidden;
+    }
+  }
+  @media only screen and (max-width: 690px) {
+    .multirow .title {
+      font-size: 28.9px !important;
+      line-height: 34px !important;
+    }
+    .multirow  .multirow__inner{
+      overflow: hidden;
+    }
+  }

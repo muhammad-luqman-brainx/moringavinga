@@ -1,24 +1,17 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
-  {% if section.settings.bgImage %}
-  .section-{{ section.id }}-bgImage{
-    background-image: url('{{ section.settings.bgImage.src | img_url: 'large' }}');
-        background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-    {% endif %}
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -29,7 +22,20 @@
   endif
 -%}
 
-<div class="multicolumn section-{{ section.id }}-bgImage color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="multicolumn color-{{ section.settings.color_scheme }} background-transparent {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+  {%- if section.settings.bgImage -%}
+    <div class="section-bgImage bgImage">
+      {%- capture sizes -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+    (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+  {%- endcapture -%}
+      {{
+        section.settings.bgImage
+        | image_url: width: 1150
+        | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+      }}
+    </div>
+  {%- endif -%}
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- if section.settings.caption != blank -%}
       <p
@@ -127,8 +133,12 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <p class="inline-richtext">
-                    <strong> {{ block.settings.title }} </strong>
+                  <p class="inline-richtext {{ section.settings.title_size }}">
+                    {% if section.settings.title_size == 'p' %}
+                      <strong> {{ block.settings.title }} </strong>
+                    {% else %}
+                      {{ block.settings.title }}
+                    {% endif %}
                   </p>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
@@ -232,7 +242,30 @@
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
     },
-
+    {
+      "type": "select",
+      "id": "title_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "p",
+          "label": "body"
+        }
+      ],
+      "default": "p",
+      "label": "Column Title Size"
+    },
     {
       "type": "inline_richtext",
       "id": "caption",
@@ -275,6 +308,10 @@
         {
           "value": "half",
           "label": "t:sections.multicolumn.settings.image_width.options__2.label"
+        },
+        {
+          "value": "extra",
+          "label": "t:sections.multicolumn.settings.image_width.options__4.label"
         },
         {
           "value": "full",
