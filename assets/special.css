@@ -10,7 +10,10 @@
 .image-with-text .grid__item {
   position: relative;
 }
-
+.special .image-with-text__media-item .image-with-text__media-wrapper {
+position: relative;
+overflow: visible;
+}
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
@@ -448,11 +451,33 @@
 }
 .hotspot_wrap {
   position: absolute;
-  top: 18.4031%;
-  left: 39.6709%;
   width: auto;
   height: auto;
   z-index: 1000;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(1) {
+  top: 18.4031%;
+  left: 34.6709%;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(2) {
+  top: 35.1775%;
+  left: 18.4987%;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(3) {
+  top: 77.2538%;
+  left: 10.1451%;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(4) {
+  top: 86.9779%;
+  left: 48.2409%;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(5) {
+  top: 72.6669%;
+  left: 73.4112%;
+}
+.hotspot-wrap_container > .hotspot_wrap:nth-child(6) {
+  top: 36.5033%;
+  left: 81.4527%;
 }
 .hotspot_wrap .hotspot {
   position: relative;
@@ -633,13 +658,40 @@
 @media only screen and (min-width: 1024px) {
   .hotspot_wrap .tooltip {
     position: absolute;
-    top: -170px;
     transform: none;
     right: 10px;
     left: auto;
     margin-top: 15px;
     display: flex;
     justify-content: flex-end;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(1) .tooltip {
+    top: -170px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(2) .tooltip {
+    top: -210px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(3) .tooltip {
+    bottom: -20px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(4) .tooltip {
+    bottom: -140px;
+    transform: none;
+    left: 50%;
+    display: block;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(5) .tooltip {
+    top: auto;
+    bottom: -70px;
+    transform: none;
+    left: 50%;
+    display: block;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(6) .tooltip {
+    display: block;
+    top: -90px;
+    transform: none;
+    left: 100%;
   }
 }
 @media only screen and (min-width: 690px) {

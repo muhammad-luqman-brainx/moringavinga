@@ -10,7 +10,7 @@
             "text_alignment": "center",
             "color_bg": "#fce182",
             "color_text": "#dd8500",
-            "link": "#"
+            "link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1"
           }
         }
       },
@@ -54,7 +54,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "GET YOUR FREE SAMPLES",
-            "button_link_1": "#",
+            "button_link_1": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -169,11 +169,53 @@
             "heading": "Raw, living and functional concentrates",
             "heading_size": "h1"
           }
+        },
+        "c2f9f1ce-b338-4f54-a0c6-61d174d5c449": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-1.svg"
+          }
+        },
+        "e0892f2d-2369-43f2-bef4-a45ed9704302": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-2.svg"
+          }
+        },
+        "802c9302-1dc8-437f-a429-566e7ce4ab39": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-3.svg"
+          }
+        },
+        "7bd4baf6-6eb5-435f-91db-f616c2981f5f": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-4.svg"
+          }
+        },
+        "02268d66-b287-42de-8eec-9c4e0129f462": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-5.svg"
+          }
+        },
+        "7b768246-6d97-4b9b-9176-1986a98b58ef": {
+          "type": "tooltip",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tooltip-6.svg"
+          }
         }
       },
       "block_order": [
         "be7d2c85-d844-49e0-86b1-5b6d7970a1e6",
-        "template--19637154873650__aa2f2f27-b49f-4746-8ecd-341db501090c-168785457119bc5959-0"
+        "template--19637154873650__aa2f2f27-b49f-4746-8ecd-341db501090c-168785457119bc5959-0",
+        "c2f9f1ce-b338-4f54-a0c6-61d174d5c449",
+        "e0892f2d-2369-43f2-bef4-a45ed9704302",
+        "802c9302-1dc8-437f-a429-566e7ce4ab39",
+        "7bd4baf6-6eb5-435f-91db-f616c2981f5f",
+        "02268d66-b287-42de-8eec-9c4e0129f462",
+        "7b768246-6d97-4b9b-9176-1986a98b58ef"
       ],
       "custom_css": [
         ".special * {color: #3e1e56;}",
@@ -600,7 +642,7 @@
           "type": "button",
           "settings": {
             "button_label": "ORDER NOW",
-            "button_link": "#",
+            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -712,7 +754,7 @@
           "type": "button",
           "settings": {
             "button_label": "GET YOUR FREE SAMPLES",
-            "button_link": "#"
+            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1"
           }
         }
       },

@@ -14,131 +14,120 @@
   }
 {%- endstyle -%}
 
-<div class="image-with-text special image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}1-col-tablet{% else %}1-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__text-item grid__item">
-      <div
-        id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
-      >
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'heading' -%}
-              <h2
-                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.heading }}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class="image-with-text__text image-with-text__text--caption subtitle"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
-              </div>
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link }}"
-                  {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+<div class="image-with-text special image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}1-col-tablet{% else %}1-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+      <div class="image-with-text__text-item grid__item">
+        <div
+          id="ImageWithText--{{ section.id }}"
+          class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
+        >
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'heading' -%}
+                <h2
+                  class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
+                  {{ block.settings.heading }}
+                </h2>
+              {%- when 'caption' -%}
+                <p
+                  class="image-with-text__text image-with-text__text--caption subtitle"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ block.settings.caption | escape }}
+                </p>
+              {%- when 'text' -%}
+                <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- when 'button' -%}
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
       </div>
-    </div>
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div class="image-with-text__media-wrapper">
-        <div
-          class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-          {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-            style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-          {% endif %}
-        >
-          {%- if section.settings.image != blank -%}
-            {%- if section.settings.image_behavior == 'ambient' -%}
-              {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-              {%- capture sizes -%}
+      <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+        <div class="image-with-text__media-wrapper">
+          <div
+            class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+            {% if section.settings.height == 'adapt' and section.settings.image != blank %}
+              style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            {%- if section.settings.image != blank -%}
+              {%- if section.settings.image_behavior == 'ambient' -%}
+                {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+                {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
               (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
             {%- endcapture -%}
-            {%- else -%}
-              {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-              {%- capture sizes -%}
+              {%- else -%}
+                {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+                {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
               (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
             {%- endcapture -%}
+              {%- endif -%}
+              {{
+                section.settings.image
+                | image_url: width: 1500
+                | image_tag: loading: 'lazy', sizes: sizes, widths: widths
+              }}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
-            {{
-              section.settings.image
-              | image_url: width: 1500
-              | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-            }}
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-        </div>
-        <div
-          class="hotspot_wrap"
-        >
-          <div class="hotspot click"><span></span></div>
-          <div class="tooltip" data-tooltip-position="left">
-            <div class="inner">
-              <span class="vm-ih-item1"
-                ><img
-                  decoding="async"
-                  class="vm-ih-item1-img"
-                  src="https://moringavinga.com/wp-content/uploads/2022/12/Group-1360.svg"
-              ></span>
-              <a href="#" class="tipclose"><span></span></a>
-            </div>
+          </div>
+          <div class="hotspot-wrap_container">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'tooltip' -%}
+                  {%- if block.settings.image != blank -%}
+                    <div
+                      class="hotspot_wrap"
+                    >
+                      <div class="hotspot click"><span></span></div>
+                      <div class="tooltip" data-tooltip-position="left">
+                        <div class="inner">
+                          <span class="item">
+                            {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                            {{
+                              block.settings.image
+                              | image_url: width: 500
+                              | image_tag:
+                                loading: 'lazy',
+                                sizes: sizes,
+                                widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+                            }}
+                          </span>
+                          <a href="#" class="tipclose"><span></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+              {%- endcase -%}
+            {%- endfor -%}
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<script>
-  // Step 1: Select the element
-  const button = document.querySelector('.hotspot.click');
+<script src="{{ 'special.js' | asset_url }}" defer="defer"></script>
 
-  // Step 2: Add event listener
-  button.addEventListener('click', function () {
-    // Step 3: Toggle the class
-    button.classList.toggle('open');
-    var nextSection = button.nextElementSibling; // Get the next sibling section
-
-    if (nextSection) {
-      nextSection.classList.toggle('open');
-    }
-  });
-  const closeTooltip = document.querySelector('.tipclose');
-
-  // Step 2: Add event listener
-  closeTooltip.addEventListener('click', function (event) {
-    event.preventDefault();
-    // Step 3: Toggle the class
-    var Tooltip = closeTooltip.closest('.hotspot_wrap').querySelector('.hotspot');
-    Tooltip.classList.toggle('open');
-    var nextSection = Tooltip.nextElementSibling; // Get the next sibling section
-
-    if (nextSection) {
-      nextSection.classList.toggle('open');
-    }
-  });
-</script>
 {% schema %}
 {
   "name": "t:sections.special.name",
@@ -495,6 +484,17 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        }
+      ]
+    },
+    {
+      "type": "tooltip",
+      "name": "Tooltip",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.collage.blocks.image.settings.image.label"
         }
       ]
     }

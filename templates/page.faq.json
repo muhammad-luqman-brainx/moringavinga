@@ -1,0 +1,276 @@
+{
+  "sections": {
+    "2e3c8903-481b-4724-9c03-61da18dce4cd": {
+      "type": "page-banner",
+      "blocks": {
+        "template--19817310683442__2e3c8903-481b-4724-9c03-61da18dce4cd-1688543925ee007769-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "d957571e-823f-4746-8555-2aa5145649ef": {
+          "type": "skip_section",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19817310683442__2e3c8903-481b-4724-9c03-61da18dce4cd-1688543925ee007769-0",
+        "d957571e-823f-4746-8555-2aa5145649ef"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/faq.jpg",
+        "image_overlay_opacity": 80,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "show_side_decor": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "b61141b6-0427-4572-a064-95078e5f8b4d": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19817310683442__b61141b6-0427-4572-a064-95078e5f8b4d-1688546098736411fb-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Moringa Vinga compare to drinking regular apple cider vinegar or taking moringa powder?",
+            "icon": "none",
+            "row_content": "<p>Excellent question! Our infusions are different in a few ways:<\/p><ul><li>The most obvious is that they contain some very powerful herbs, flowers, and berries that have been fermented and infused for around two months<\/li><li>Our apple cider vinegar is still ALIVE and is loaded with the Mother because we never use any heat or chemicals in the creation of our infusions<\/li><li>We only use whole moringa leaves which is why our infusion process unlocks the true power of this life-giving plant. PURE. No powders, extracts or additives.<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__b61141b6-0427-4572-a064-95078e5f8b4d-1688546098736411fb-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are our infusions safe for children?",
+            "icon": "none",
+            "row_content": "<p>Children over the age of one can safely consume raw honey and apple cider vinegar. Since apple cider vinegar and some of the herbs we use are not standard food items, we always suggest consulting with a pediatrician before introducing it to any diet.<\/p>",
+            "page": ""
+          }
+        },
+        "1af717df-7de6-4955-9101-dd7a2dd0e072": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When is the best time to consume Moringa Vinga?",
+            "icon": "none",
+            "row_content": "<p>There’s no better time than right now! Every one of our functional ingredients works differently for different people. Some of our customers take it in the morning and others take it right before bed! The only way to know the answer to this question is to try it yourself!<\/p><ul><li>Ginger & Lemongrass has been known to help the stomach and swelling in the body all day<\/li><li>Holy Basil has been known to ease tension<\/li><li>Raw honey restocks the liver with glycogen to prevent the crisis trigger from the brain which is great when you’re trying to get some ZZZ’s<\/li><\/ul>",
+            "page": ""
+          }
+        },
+        "f361f70a-c898-4da2-b122-d6172f703e32": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much Moringa Vinga can I take each day? Can I combine the infusions?",
+            "icon": "none",
+            "row_content": "<p>We recommend one ounce per day of any of our infusions, so that you can get a feel for how each of our herbs, flowers and berries affect your body.<\/p><p>Once comfortable with each infusion, you can definitely increase your daily servings to what works best for you*. Our infusions are meant to be a part of your daily practice, so you can use them to get daily access to functional superfoods your body loves.<\/p><p>*Please note that if you are currently pregnant or on any medications, it is always wise to consult with your healthcare provider.<\/p>",
+            "page": ""
+          }
+        },
+        "be39a647-ea4b-4d9e-b44a-047f251ba10a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CAN I TAKE THESE PRODUCTS WHILE PREGNANT OR NURSING?",
+            "icon": "none",
+            "row_content": "<p>We recommend that you consult your healthcare provider before consuming any Moringa Vinga products if you are pregnant or nursing.<\/p><p>During pregnancy\/nursing it is important to use caution and listen to your body when consuming strong natural herbs, raw honey and apple cider vinegar. This is the case when using any of the Moringa Vinga products. Unfortunately, we cannot give any specific recommendations about which products to take.<\/p><p>Also, <a href=\"https:\/\/moringavinga.com\/taking-moringa-during-and-after-pregnancy\/\">here’s an article we wrote on moringa during and after pregnancy<\/a>.<\/p><p>*It is important to note that the only part of the moringa plant we use is the leaves.<\/p>",
+            "page": ""
+          }
+        },
+        "9740995e-b4aa-4f2b-bcff-1e586db0c016": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the nutritional content of Moringa Vinga?",
+            "icon": "none",
+            "row_content": "<p>Each daily suggested serving of 1 ounce contains your daily recommend serving of organic Moringa leaf, organic and unfiltered apple cider vinegar, raw wild honey, and organic herbs, berries and flowers.<\/p><p>Depending on the infusion, there are roughly 11-13 carbs\/grams of sugar that come from our raw wild honey (we never use added sweeteners or sugars), 45-55 calories, and less than 1 mg of sodium.<\/p><p>Additionally, each serving yields 18 amino acids, 46 antioxidants, and over 92 nutrients like vitamin B6, vitamin C, vitamin E, with potassium, iron, protein and magnesium. <\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19817310683442__b61141b6-0427-4572-a064-95078e5f8b4d-1688546098736411fb-0",
+        "template--19817310683442__b61141b6-0427-4572-a064-95078e5f8b4d-1688546098736411fb-1",
+        "1af717df-7de6-4955-9101-dd7a2dd0e072",
+        "f361f70a-c898-4da2-b122-d6172f703e32",
+        "be39a647-ea4b-4d9e-b44a-047f251ba10a",
+        "9740995e-b4aa-4f2b-bcff-1e586db0c016"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Most Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e11e2f98-6c92-422d-a839-143e22624ed8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How many servings are in a bottle?",
+            "icon": "none",
+            "row_content": "<p>Our nutrient rich infusions are densely packed with herbs, flowers and berries and come in three bottle sizes (two, eight and sixteen ounces). Each ounce (equivalent of two tablespoons) is equal to one serving.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I take a serving of Moringa Vinga?",
+            "icon": "none",
+            "row_content": "<p>You get to be your own mixologist! Every ounce can be enjoyed in a number of different ways. One of the most popular creations is adding your infusion to a glass of sparkling ice water (our amazing fizzy mocktails). You can also get creative and mix with olive oil to make salad dressing, top your yogurt and granola! See our recipes page for more ideas.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I have to refrigerate my Moringa Vinga infusion?",
+            "icon": "none",
+            "row_content": "<p>Refrigeration is not necessary! Raw honey and unfiltered apple cider vinegar are natural preservatives that will keep your infusion shelf stable for a concervative 18 months.<\/p><p>It is important however to keep it out of direct sunlight and stored in a cool\/dry location.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is this strange thick stuff in my bottle?",
+            "icon": "none",
+            "row_content": "<p>Yes, it can look rather funky and scary, floating in the infusion like that, but this spongy mass of bacteria (also known as the Mother) and herb sediment is completely harmless and actually good for you.<\/p>",
+            "page": ""
+          }
+        },
+        "7e7cbece-99e1-4857-ab64-3186694db891": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you tell me more about your organic and sustainably sourced ingredients?",
+            "icon": "none",
+            "row_content": "<h2>Pure.<\/h2><h2>Never Heated.<\/h2><h2>No Powders.<\/h2><h2>No Additives.<\/h2><h2>No Extracted Flavors.<\/h2><p><a href=\"#\" title=\"#\">Click here to head on over to our ingredients page<\/a>.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-0",
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-1",
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-2",
+        "template--19817310683442__e11e2f98-6c92-422d-a839-143e22624ed8-1688556843351671b1-3",
+        "7e7cbece-99e1-4857-ab64-3186694db891"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Product Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1dd7e853-b715-4af9-84e7-a78612bc2706": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I change my Moringa Vinga infusions order after I subscribe?",
+            "icon": "none",
+            "row_content": "<p>Yes! You can easily add, subtract or change your future orders after your subscription begins. Our infusions are meant to be a part of your daily practice, so changing it up to meet your unique goals is something we most definitely support!<\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I login and manage my subscription on your website?",
+            "icon": "none",
+            "row_content": "<p>From any page on moringavinga.com, look for the person icon in the upper right-hand corner. Hover over the icon to reveal the login link.<\/p><p>Once logged in, click on ‘<a href=\"https:\/\/moringavinga.com\/my-account\/subscriptions\/\">Subscriptions<\/a>‘ at the left of the page. In the ‘Subscription’ tab you can make any and all adjustments to your subscription.<\/p><p> <\/p><p><\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I change the frequency or scheduled date of my shipments after my initial order?",
+            "icon": "none",
+            "row_content": "<p>Yes, you definitely can! You can adjust your order frequency in the ‘<a href=\"https:\/\/moringavinga.com\/my-account\/subscriptions\/\">Subscriptions<\/a>’ tab of your online customer account. There’s also a calendar option where you can choose to change your future scheduled shipment date.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I pause my subscription if I’m heading out of town or just need to take a break?",
+            "icon": "none",
+            "row_content": "<p>Yes, absolutely! We’ve made it easier than ever to simply skip your next shipment. From your online customer account just head over to the ‘<a href=\"https:\/\/moringavinga.com\/my-account\/subscriptions\/\">Subscriptions<\/a>’ tab and view the specific subscription you would like to skip. Scroll down to ‘Skip Subscription’ in the ‘Modify Subscription’ area.<\/p>",
+            "page": ""
+          }
+        },
+        "b84bc369-5df7-4129-b0ed-181335e536e7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there an initial fee for subscriptions?",
+            "icon": "none",
+            "row_content": "<p>No, there are no fees associated with enrolling and you can stop your subscription at any time!<\/p>",
+            "page": ""
+          }
+        },
+        "f543afdb-925f-4822-bcb3-063867dcfb1d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it easy to cancel my subscription for any reason?",
+            "icon": "none",
+            "row_content": "<p>We require a 3 shipment minimum, otherwise there are no restrictions and you can end it anytime with no penalties! This ensures we can give you our best price and means you get to fully experience the benefits of daily Moringa Vinga. However, if you cancel before you’ve received 3 shipments, you’ll be charged the full product price and shipping.<\/p><p>Customers who buy subscription products can view and manage their subscriptions from their online customer account. If you are not happy with your subscription, cancelling has never been easier.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-0",
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-1",
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-2",
+        "template--19817310683442__1dd7e853-b715-4af9-84e7-a78612bc2706-1688556843351671b1-3",
+        "b84bc369-5df7-4129-b0ed-181335e536e7",
+        "f543afdb-925f-4822-bcb3-063867dcfb1d"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Subscription Membership Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "2e3c8903-481b-4724-9c03-61da18dce4cd",
+    "b61141b6-0427-4572-a064-95078e5f8b4d",
+    "e11e2f98-6c92-422d-a839-143e22624ed8",
+    "1dd7e853-b715-4af9-84e7-a78612bc2706"
+  ]
+}
