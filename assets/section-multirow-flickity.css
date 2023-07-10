@@ -29,17 +29,7 @@
 .multirow-carousel .flickity-prev-next-button.next {
   right: -5rem;
 }
-/* flickity-fade */
 
-.flickity-enabled.is-fade .flickity-slider > * {
-  pointer-events: none;
-  z-index: 0;
-}
-
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-  pointer-events: auto;
-  z-index: 1;
-}
 @media only screen and (max-width: 990px) {
   .multirow-carousel .flickity-prev-next-button {
     display: none;

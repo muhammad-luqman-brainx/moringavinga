@@ -1,0 +1,104 @@
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+{{ 'flickity-fade.css' | asset_url | stylesheet_tag }}
+{{ 'section-testimonial-slider-v2.css' | asset_url | stylesheet_tag }}
+
+<section class=" testimonial-section testimonial-section-v2 slider-container">
+  <div class="bg-overlay"></div>
+  <div class="page-width">
+    <div class="testimonial-carousel">
+      <div class="slider-section-outer">
+        <div class="slider-section">
+          <div class="main-carousel mc__custom--slider testimonial-carousel-v2" data-flickity="">
+            {%- for block in section.blocks -%}
+              <div class="carousel-cell">
+                <div class="carousel-cover">
+                  <div class="carousel-content">
+                    <blockquote class="single_testimonial" data-color="" data-style="basic">
+                      <div class="inner center">
+                        <p>
+                          {{ block.settings.blockquote }}
+                        </p>
+
+                        <div
+                          style="background-image:url('{{ block.settings.blockquoteImage.src | img_url: 'large' }}')"
+                          class="{% if block.settings.blockquoteImage.src %} image-icon {% endif %} image-icon-{{ block.id }}"
+                        ></div>
+                        <span class="wrap blockquote-author">
+                          <span>{{ block.settings.authorName }}</span>
+                          <span class="title">{{ block.settings.authorDesignation }}</span>
+                        </span>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <p class="carousel-status center"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'flickity-fade.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'section-testimonial-slider-v2.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  .animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Testimonial Slideshow V2",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Testimonial"
+        },
+        {
+          "type": "textarea",
+          "id": "blockquote",
+          "label": "Blockquote",
+          "default": "Blockquote Here",
+          "placeholder": "Blockquote Text",
+          "info": "Blockquote Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "blockquoteImage",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "authorName",
+          "label": "Author Name",
+          "default": "Author Name Here",
+          "placeholder": "Author",
+          "info": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "authorDesignation",
+          "label": "Author Designation",
+          "default": "Author Designation",
+          "placeholder": "Author Designation",
+          "info": "Author Designation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Slider V2"
+    }
+  ]
+}
+{% endschema %}

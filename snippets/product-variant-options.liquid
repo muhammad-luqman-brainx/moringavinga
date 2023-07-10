@@ -21,6 +21,7 @@
   assign variants_option3_arr = product.variants | map: 'option3'
 
   assign product_form_id = 'product-form-' | append: section.id
+  assign most_popular = false
 -%}
 
 {%- for value in option.values -%}
@@ -60,7 +61,22 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {{ value -}}
+      <span class="break-lines">{{ value -}}</span>
+
+      {% assign max_price = product.price_max | default: 1999 %}
+      {% assign position = option.position | minus: 1 %}
+      {% for variant in product.variants %}
+        {% assign variantValue = variant.options[position] %}
+        {% if variantValue == value %}
+          <span class="price">
+            {{ variant.price | money }}
+          </span>
+          {% if most_popular == false and max_price == variant.price %}
+            {% assign most_popular = true %}
+            <span class="most-popular"> Most Popular </span>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}

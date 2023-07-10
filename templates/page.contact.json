@@ -1,25 +1,73 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Let Us Know How We Can Help",
         "heading_size": "h1",
+        "text": "We’re looking forward to hearing from you! Please provide as much detail as possible, and we’ll be in touch soon!",
+        "form_heading": "<p>Get in Touch With US<\/p><p>Fields marked with an *  are required<\/p>",
         "color_scheme": "background-1",
         "padding_top": 36,
+        "color_bg": "#91cdaf",
+        "color_text": "#ffffff",
+        "form_color_bg": "#f0f5f9",
+        "form_color_text": "#195059",
         "padding_bottom": 36
+      }
+    },
+    "4823fcff-f0dc-4d06-af45-4d15a42098b7": {
+      "type": "testimonial-slider-v2",
+      "blocks": {
+        "f5db4d22-833c-44f0-a89a-66b713db08be": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“I love this product! I bought the Spearmint Rosemary flavor and have been loving the health benefits. My favorite way to consume it is in sparkling water. It tastes delicious and always feels like a treat! I never knew there could be such a tasty way to get apple cider vinegar into your body! I can’t wait to try all of the flavors!”",
+            "authorName": "Alicia",
+            "authorDesignation": "Customer"
+          }
+        },
+        "7b1d0a82-315e-4328-9237-634c401ffdf3": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“I love all the infusions in sparkling water! I choose which one based on my needs that day: immune support, digestive function or a mental enhancement. They always give me boost and I love having healthy mocktail option!”",
+            "authorName": "Kirsten Miller",
+            "authorDesignation": "Online Customer"
+          }
+        },
+        "b25ee387-355a-4e41-9509-e3bee66601e3": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“Moringa Infusions was introduced to me at a farmers market a year ago. I've been a proud consumer ever since. I love all three Moringa Vinga offerings. Mocktails, cocktails, sweet treat, hot tea, juice for my daughter; Moringa Vinga is a staple in our house.”",
+            "authorName": "Meredith Lee McTigue",
+            "authorDesignation": "Customer"
+          }
+        },
+        "a9ae7714-596b-4860-8a58-51f1ad48bd94": {
+          "type": "column",
+          "settings": {
+            "blockquote": "“We discovered Moringa Vinga at a farmer’s market last summer and restocked every couple of weeks. When the market season ended, we signed up for a monthly subscription and now we are never without our daily dose of our favorite spearmint and rosemary Moringa Vinga. The shipment arrives carefully packaged and there is always a note or surprise in the box. Thank you!”",
+            "authorName": "Ellen Smith",
+            "authorDesignation": "Month Subscriber"
+          }
+        }
+      },
+      "block_order": [
+        "f5db4d22-833c-44f0-a89a-66b713db08be",
+        "7b1d0a82-315e-4328-9237-634c401ffdf3",
+        "b25ee387-355a-4e41-9509-e3bee66601e3",
+        "a9ae7714-596b-4860-8a58-51f1ad48bd94"
+      ],
+      "custom_css": [
+        ".testimonial-section-v2 {padding-top: calc(100vw * 0.15); padding-bottom: calc(100vw * 0.06);}",
+        ".testimonial-carousel-v2 {color: #174f59;}"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "main",
-    "form"
+    "form",
+    "4823fcff-f0dc-4d06-af45-4d15a42098b7"
   ]
 }

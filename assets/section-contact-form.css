@@ -13,6 +13,74 @@
 .contact .field {
   margin-bottom: 1.5rem;
 }
+.contact .contact-top {
+  padding-bottom: 4%;
+  margin-bottom: 5rem;
+}
+.contact .title {
+  color: inherit;
+  font-size: 4.6rem;
+  line-height: 5.5rem;
+  margin-bottom: 2.5rem;
+}
+.contact .contact-form {
+  margin-bottom: -10%;
+  padding: calc(600px * 0.06);
+  border-radius: 10px;
+position: relative;
+z-index: 3;
+}
+.contact .contact-form .rte p {
+  margin: 0;
+}
+.contact .contact-form .contact__fields,
+.contact .contact-form .field {
+  display: block;
+}
+.contact .contact-form .field::before,
+.contact .contact-form .field::after {
+  display: none;
+}
+.contact .contact-form .field__label {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-family: var(--font-author-family);
+  font-weight: var(--font-heading-weight);
+  transition: none;
+}
+.contact .contact-form input {
+  background: #f7f7f7;
+  border: 1px solid #c4c4c4;
+  border-radius: 0;
+  box-shadow: none;
+  color: #787878;
+  transition: all 0.5s;
+  font-size: 1.6rem;
+  padding: 12px;
+  height: 5rem;
+}
+.contact .contact-form input:focus {
+  background: #fff;
+  color: #9191b0;
+  outline: none;
+}
+.contact .contact-form button {
+  font-size: 15pt;
+  padding: 1.6rem 3.2rem;
+}
+@media only screen and (min-width: 1425px) {
+  .contact .contact-form {
+    padding: calc(1245px * 0.06);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .contact .contact-form {
+    padding: calc((100vw - 180px) * 0.06);
+  }
+}
 
 @media screen and (min-width: 750px) {
   .contact .field {
@@ -35,5 +103,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .contact .title {
+    font-size: 36.8px;
+    line-height: 44px;
   }
 }

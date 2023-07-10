@@ -1,29 +1,53 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-top: calc(100vw * 0.04);
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-bottom: 0;
+
     }
-  }
+
+    .section-{{ section.id }}-bg-color{
+  background: {{ section.settings.color_bg }};
+  color: {{ section.settings.color_text }};
+    }
+
+    .contact-form{
+  background: {{ section.settings.form_color_bg }};
+  color: {{ section.settings.form_color_text }};
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-top: calc(100vw * 0.04);
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-bottom: 0;
+
+      }
+    }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.heading }}
-      </h2>
-    {%- else -%}
-      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
-    {%- endif -%}
-    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-bg-color">
+  <div class="contact page-width section-{{ section.id }}-padding">
+    <div class="contact-top center">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {%- else -%}
+        <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <div class="rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+    {%- form 'contact', id: 'ContactForm', class: 'isolate contact-form' -%}
+      <div class="rte">
+        {{ section.settings.form_heading }}
+      </div>
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
           {% render 'icon-success' %}
@@ -47,6 +71,10 @@
       {%- endif -%}
       <div class="contact__fields">
         <div class="field">
+          <label class="field__label" for="ContactForm-name">
+            {{- 'templates.contact.form.name' | t }}
+            <span aria-hidden="true">*</span>
+          </label>
           <input
             class="field__input"
             autocomplete="name"
@@ -55,10 +83,14 @@
             name="contact[{{ 'templates.contact.form.name' | t }}]"
             value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
             placeholder="{{ 'templates.contact.form.name' | t }}"
+            aria-required="true"
           >
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
         </div>
         <div class="field field--with-error">
+          <label class="field__label" for="ContactForm-email">
+            {{- 'templates.contact.form.email' | t }}
+            <span aria-hidden="true">*</span></label
+          >
           <input
             autocomplete="email"
             type="email"
@@ -75,10 +107,7 @@
             {% endif %}
             placeholder="{{ 'templates.contact.form.email' | t }}"
           >
-          <label class="field__label" for="ContactForm-email">
-            {{- 'templates.contact.form.email' | t }}
-            <span aria-hidden="true">*</span></label
-          >
+
           {%- if form.errors contains 'email' -%}
             <small class="contact__field-error" id="ContactForm-email-error">
               <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
@@ -92,6 +121,11 @@
         </div>
       </div>
       <div class="field">
+        <label class="field__label" for="ContactForm-phone">
+          {{- 'templates.contact.form.phone' | t }}
+          <span aria-hidden="true">*</span>
+        </label>
+
         <input
           type="tel"
           id="ContactForm-phone"
@@ -101,22 +135,24 @@
           pattern="[0-9\-]*"
           value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
           placeholder="{{ 'templates.contact.form.phone' | t }}"
+          aria-required="true"
         >
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
       </div>
       <div class="field">
+        <label class="form__label field__label" for="ContactForm-body">
+          {{- 'templates.contact.form.comment' | t -}}
+          <span aria-hidden="true">*</span>
+        </label>
         <textarea
           rows="10"
           id="ContactForm-body"
           class="text-area field__input"
           name="contact[{{ 'templates.contact.form.comment' | t }}]"
           placeholder="{{ 'templates.contact.form.comment' | t }}"
+          aria-required="true"
         >
           {{- form.body -}}
         </textarea>
-        <label class="form__label field__label" for="ContactForm-body">
-          {{- 'templates.contact.form.comment' | t -}}
-        </label>
       </div>
       <div class="contact__button">
         <button type="submit" class="button">
@@ -163,6 +199,18 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "inline_richtext",
+      "id": "text",
+      "default": "Description",
+      "label": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "form_heading",
+      "default": "<p>Form heading</p>",
+      "label": "form_heading"
+    },
+    {
       "type": "select",
       "id": "color_scheme",
       "options": [
@@ -203,6 +251,34 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Choose Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Custom background color",
+      "default": "#91cdaf"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Custom text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "form_color_bg",
+      "label": "Custom Form background color",
+      "default": "#f0f5f9"
+    },
+    {
+      "type": "color",
+      "id": "form_color_text",
+      "label": "Custom Form text color",
+      "default": "#195059"
     },
     {
       "type": "range",
