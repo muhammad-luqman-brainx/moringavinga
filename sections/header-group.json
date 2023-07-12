@@ -8,9 +8,9 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "BUY TWO OR MORE BOTTLES & WE PAY FOR SHIPPING!",
             "text_alignment": "center",
-            "color_scheme": "background-1",
+            "color_scheme": "accent-1",
             "link": ""
           }
         }
@@ -23,19 +23,120 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "507cb5fd-eda5-4996-bbca-64b128f438d8": {
+          "type": "image",
+          "settings": {
+            "menu_item": "SPEARMINT & ROSEMERRY",
+            "image": "shopify:\/\/shop_images\/spearmint-rosemerry-image.png"
+          }
+        },
+        "478321e1-16e6-4d0b-9d0e-f56a3b6b86df": {
+          "type": "image",
+          "settings": {
+            "menu_item": "GINGER & LEMONGRASS",
+            "image": "shopify:\/\/shop_images\/ginger-lemongrass-image.png"
+          }
+        },
+        "8ca264ba-9324-490e-97ca-5e813df5966c": {
+          "type": "image",
+          "settings": {
+            "menu_item": "ELDERBERRY & HOLY BASIL",
+            "image": "shopify:\/\/shop_images\/elderberry-holybasil-image.png"
+          }
+        },
+        "55900e57-eaf2-4068-bda9-f81b129b609c": {
+          "type": "image",
+          "settings": {
+            "menu_item": "LAVA VINGA",
+            "image": "shopify:\/\/shop_images\/lava-vinga-image.png"
+          }
+        },
+        "3d0ce56a-1b82-465d-8ba1-5a7d26aa6217": {
+          "type": "image",
+          "settings": {
+            "menu_item": "IMMUNITY + CALM + BREATHE",
+            "image": "shopify:\/\/shop_images\/immunity-calm-breath.png"
+          }
+        },
+        "9f96e965-667d-4072-ba03-36a13bf52b71": {
+          "type": "image",
+          "settings": {
+            "menu_item": "MOTION + SOOTHE + DIGESTION",
+            "image": "shopify:\/\/shop_images\/motion-circulation-digestion.png"
+          }
+        },
+        "db719f91-c6e9-4b6e-a1aa-5b60ea4c519f": {
+          "type": "image",
+          "settings": {
+            "menu_item": "MIND + RENEW + CIRCULATION",
+            "image": "shopify:\/\/shop_images\/mind-renew-circulation.png"
+          }
+        },
+        "a0d16496-5f42-44a2-8d7a-83121120a49d": {
+          "type": "image",
+          "settings": {
+            "menu_item": "NATURAL COLD & FLU REMEDY",
+            "image": "shopify:\/\/shop_images\/naturalcold-fluremedy.png"
+          }
+        },
+        "676f4335-542e-418c-8695-e3fea437d543": {
+          "type": "image",
+          "settings": {
+            "menu_item": "ABOUT US",
+            "image": "shopify:\/\/shop_images\/about-us.png"
+          }
+        },
+        "696098f3-ed9d-4cec-a176-004698d4499c": {
+          "type": "image",
+          "settings": {
+            "menu_item": "HOW MORINGA WORKS",
+            "image": "shopify:\/\/shop_images\/how-moringa-works.png"
+          }
+        },
+        "07f9fd85-504f-4811-b340-21ca5f02bbee": {
+          "type": "image",
+          "settings": {
+            "menu_item": "OUR INGREDIENTS",
+            "image": "shopify:\/\/shop_images\/our-ingredients.png"
+          }
+        },
+        "3402f73f-7bfe-465d-af1f-151b80b42767": {
+          "type": "image",
+          "settings": {
+            "menu_item": "RECIPES & ARTICLES",
+            "image": "shopify:\/\/shop_images\/recipes-and-articles.png"
+          }
+        }
+      },
+      "block_order": [
+        "507cb5fd-eda5-4996-bbca-64b128f438d8",
+        "478321e1-16e6-4d0b-9d0e-f56a3b6b86df",
+        "8ca264ba-9324-490e-97ca-5e813df5966c",
+        "55900e57-eaf2-4068-bda9-f81b129b609c",
+        "3d0ce56a-1b82-465d-8ba1-5a7d26aa6217",
+        "9f96e965-667d-4072-ba03-36a13bf52b71",
+        "db719f91-c6e9-4b6e-a1aa-5b60ea4c519f",
+        "a0d16496-5f42-44a2-8d7a-83121120a49d",
+        "676f4335-542e-418c-8695-e3fea437d543",
+        "696098f3-ed9d-4cec-a176-004698d4499c",
+        "07f9fd85-504f-4811-b340-21ca5f02bbee",
+        "3402f73f-7bfe-465d-af1f-151b80b42767"
+      ],
       "settings": {
-        "logo_position": "middle-left",
-        "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "logo_position": "middle-center",
+        "menu": "menu",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "background-1",
+        "enable_account": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },

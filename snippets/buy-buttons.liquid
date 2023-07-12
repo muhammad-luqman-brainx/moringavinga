@@ -78,16 +78,36 @@
               disabled
             {% endif %}
           >
-            <span>
+            <span class="inline">
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {% assign buttonLabel = 'products.product.sold_out' | t %}
-                {% render 'button', buttonLabel: buttonLabel %}
-
+                {{- buttonLabel -}}
               {%- else -%}
                 {% assign buttonLabel = 'products.product.add_to_cart' | t %}
-                {% render 'button', buttonLabel: buttonLabel %}
+                {{- buttonLabel -}}
               {%- endif -%}
             </span>
+            {% render 'next-arrow' %}
+            <span class="line"></span>
+            {% if showButtonPrice %}
+              <span class="inline">&nbsp;-&nbsp;&nbsp;</span>
+              <span class="inline button-price">
+                <div
+                  class="no-js-hidden price-section"
+                  id="price-{{ section.id }}"
+                  role="status"
+                  {{ block.shopify_attributes }}
+                >
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--small'
+                  -%}
+                </div>
+              </span>
+            {% endif %}
+
             <div class="loading-overlay__spinner hidden">
               <svg
                 aria-hidden="true"

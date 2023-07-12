@@ -1,7 +1,14 @@
 .mega-menu {
   position: static;
 }
-
+details.mega-menu summary{
+  position: relative;
+}
+details.mega-menu summary::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+}
 .mega-menu__content {
   background-color: rgb(var(--color-background));
   border-left: 0;
@@ -38,10 +45,20 @@
 .mega-menu__list {
   display: grid;
   gap: 2.4rem 4rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   list-style: none;
 }
-
+.section-promotion{
+  overflow: hidden;
+}
+.section-promotion img{
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+.section-promotion:hover img{
+  transform: scale(1.13);
+}
 .mega-menu__link {
   color: rgba(var(--color-foreground), 0.75);
   display: block;
@@ -56,9 +73,11 @@
 
 .mega-menu__link--level-2 {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .mega-menu__link--level-2:not(:only-child) {
+  margin-top: 0.8rem;
   margin-bottom: 0.8rem;
 }
 
@@ -76,8 +95,11 @@
 
 .mega-menu__link:hover,
 .mega-menu__link--active {
-  color: rgb(var(--color-foreground));
+  color: rgba(var(--color-foreground), 1);
   text-decoration: underline;
+}
+.mega-menu__link--active {
+  text-decoration: none;
 }
 
 .mega-menu__link--active:hover {

@@ -112,9 +112,10 @@
       "custom_css": [
         ".banner-v3 {margin-top: -13%; position: relative; z-index: 2; padding: calc(100vw * 0.06) 0;}",
         ".banner__content,.banner__box,.banner__content * {padding-top: 0; padding-bottom: 0; color: #3e1e56; max-width: 100%;}",
-        ".banner-v3 .banner__heading {font-size: 4.6rem; line-height: 5.5rem; margin-top: -1rem;}",
+        ".banner__heading {font-size: 4.6rem; margin-top: -1rem;}",
         "@media only screen and (max-width: 999px) {.banner-v3 {margin-top: -19%; } .banner-v3 {padding: 10% 0; }}",
-        "@media only screen and (max-width: 690px) {.banner-v3 {margin-top: -38%; } .banner-v3 {padding: 19% 0; }}"
+        "@media only screen and (max-width: 690px) {.banner-v3 {margin-top: -38%; } .banner-v3 {padding: 19% 0; }}",
+        "@media only screen and (min-width: 1650px) {.banner-v3 {margin-top: -11%; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/bg.svg",
@@ -243,7 +244,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/moringa-1.jpg",
-            "title": "Real Food. Real Function.",
+            "title": "<p>Real Food. Real Function.<\/p>",
             "text": "<p>Unlike powders or pills, our natural long-slow infusion and cold-press process keeps everything intact and alive, “unlocking” the nutrients and making them more easily absorbed by the body.<\/p>",
             "link_label": "",
             "link": ""
@@ -253,7 +254,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/moringa-2.jpg",
-            "title": "Raw Honey From the Hive",
+            "title": "<p>Raw Honey From the Hive<\/p>",
             "text": "<p>Raw honey that has never been heated contains beneficial enzymes known to improved digestion, and in certain cases has specifically helped the body more effectively break down and use sugars.<\/p>",
             "link_label": "",
             "link": ""
@@ -263,7 +264,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/moringa-3.jpg",
-            "title": "Natural Remedies",
+            "title": "<p>Natural Remedies<\/p>",
             "text": "<p>Each ounce of our infusions contains a daily dose of apple cider vinegar, which has been shown to assist with weight loss, lowering cholesterol levels, and playing a large part in decrease blood glucose levels and increased insulin sensitivity.<\/p>",
             "link_label": "",
             "link": ""
@@ -297,6 +298,7 @@
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "icon_slider": false,
         "swipe_on_mobile": false,
         "padding_top": 60,
         "padding_bottom": 80
@@ -460,6 +462,7 @@
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "2",
+        "icon_slider": false,
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -566,7 +569,7 @@
         "template--19637154873650__01ded1c8-26a7-4edb-8c0b-d04559528e43-168841089207b65be1-0": {
           "type": "column",
           "settings": {
-            "title": "1 Ounce = 1 Serving",
+            "title": "<p>1 Ounce = 1 Serving<\/p>",
             "text": "",
             "link_label": "",
             "link": ""
@@ -611,6 +614,7 @@
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "icon_slider": false,
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -677,7 +681,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/sample-1.svg",
-            "title": "ELDERBERRY & HOLY BASIL",
+            "title": "<p>ELDERBERRY & HOLY BASIL<\/p>",
             "text": "<p>Supports the immune system, increases resilience to stress, and has ingredients known to aid in sinus & lung respiratory wellness.<\/p>",
             "link_label": "",
             "link": ""
@@ -687,7 +691,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/sample-2.svg",
-            "title": "GINGER & LEMONGRASS",
+            "title": "<p>GINGER & LEMONGRASS<\/p>",
             "text": "<p>Supports mobility, aids with inflammation, supports the immune system, and may assist with digestion, upset stomach & nausea.<\/p>",
             "link_label": "",
             "link": ""
@@ -697,7 +701,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/sample-3.svg",
-            "title": "SPEARMINT & ROSEMARY",
+            "title": "<p>SPEARMINT & ROSEMARY<\/p>",
             "text": "<p>Supports brain memory & focus, circulation, hormone balance, and has ingredients known to support anti-aging properties.<\/p>",
             "link_label": "",
             "link": ""
@@ -728,6 +732,7 @@
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "icon_slider": false,
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36

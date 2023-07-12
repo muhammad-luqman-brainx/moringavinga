@@ -1,4 +1,5 @@
 {
+  "wrapper": "div.product-v2",
   "sections": {
     "main": {
       "type": "main-product",
@@ -89,8 +90,161 @@
         "padding_bottom": 36
       }
     },
+    "a05e69ae-8e08-446e-818e-9ee3c2aba1d8": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/100_-pure-icon_df42a3e4-7a96-4263-af61-03c42e1abc9b.png",
+            "title": "<p>100% Pure<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/never-heated.png",
+            "title": "<p>Never Heated<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-additives-or-powders.png",
+            "title": "<p>No Additives Or Powders<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "512cb055-9152-4952-b481-7c3ec1cb20c9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18-months-shelf-life.png",
+            "title": "<p>18 Month Shelf Life<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "deec3ade-4819-4a76-955f-b7a306adfad2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-extracted-floavour.png",
+            "title": "<p>No Extracted Flavors<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-0",
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-1",
+        "template--19855267889458__a05e69ae-8e08-446e-818e-9ee3c2aba1d8-16889735040f544ed6-2",
+        "512cb055-9152-4952-b481-7c3ec1cb20c9",
+        "deec3ade-4819-4a76-955f-b7a306adfad2"
+      ],
+      "custom_css": [
+        ".multicolumn.icon-slider {background-color: #ececec !important;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "",
+        "content_position": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "icon_slider": true,
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "71218474-6f8e-4de5-b6d2-5c10109b9731": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/100_-pure-icon.png",
+            "title": "<p>100% Pure<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-additives-icon.png",
+            "title": "<p>No Additives<\/p><p>Or Powders<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18-month-shelf-life-icon.png",
+            "title": "<p>18 Month Shelf Life<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-0",
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-1",
+        "template--19855267889458__71218474-6f8e-4de5-b6d2-5c10109b9731-16889735040f544ed6-2"
+      ],
+      "custom_css": [
+        ".multicolumn .isolate {max-width: 85rem;}",
+        ".multicolumn-card__image-wrapper {width: 13.8rem; min-width: 13.8rem; margin-inline: auto;}",
+        "@media screen and (max-width: 749px) {.multicolumn .isolate {padding-top: 92px; padding-bottom: 92px; }}"
+      ],
+      "settings": {
+        "title": "Experience the extraordinary taste and multifaceted benefits. Its functional ingredients support mobility, ease inflammation, boost the immune system, aid digestion, and relieve upset stomach and nausea.",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "MORINGA INFUSION",
+        "content_position": "center",
+        "icon": "shopify:\/\/shop_images\/symbol-logo-dark.svg",
+        "bgImage": "shopify:\/\/shop_images\/moringa-infusion-bg.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "icon_slider": false,
+        "swipe_on_mobile": false,
+        "padding_top": 92,
+        "padding_bottom": 92
+      }
+    },
     "59ae0768-c898-45fd-924f-5dc434c00054": {
       "type": "tabs",
+      "disabled": true,
       "blocks": {
         "template--19462896320818__59ae0768-c898-45fd-924f-5dc434c00054-168665606896e878f0-0": {
           "type": "column",
@@ -138,6 +292,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "Related products",
         "heading_size": "h2",
@@ -152,11 +307,521 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "a8467a63-547f-4305-bfe8-afdea44edfe5": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-0": {
+          "type": "column",
+          "settings": {
+            "title": "<p>TASTING NOTES<\/p>",
+            "text": "<p>It combines the robust and warming flavor of ginger with the subtle and refreshing notes of lemongrass.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-1": {
+          "type": "column",
+          "settings": {
+            "title": "<p>CONSUMPTION DURATION<\/p>",
+            "text": "<p>All Moringa Vinga Infusions are handmade in Denver, Colorado and come carefully packaged in a glass container. Shelf-life of at least 18 months, even after opening.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-2": {
+          "type": "column",
+          "settings": {
+            "title": "<p>USAGE<\/p>",
+            "text": "<p>Serving can be enjoyed daily with sparkling or still water for a functional tonic, mixed with olive oil for a super herb dressing, or used in any number of your own tasty creations.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-0",
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-1",
+        "template--19855267889458__a8467a63-547f-4305-bfe8-afdea44edfe5-168898982723a82f59-2"
+      ],
+      "custom_css": [
+        ".multicolumn-list .inline-richtext {color: #45a371; font-size: 2rem; margin-bottom: 2rem;}",
+        "@media screen and (min-width: 990px) {.multicolumn .multicolumn-list__item {padding-inline: 1.5rem; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "h2",
+        "caption": "",
+        "content_position": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "icon_slider": false,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a873bebd-d8a1-4b12-bda2-d331450c2e4e": {
+      "type": "ingredients",
+      "blocks": {
+        "d1053a6d-7b85-45cd-aad8-42dafe06ee93": {
+          "type": "tooltip",
+          "settings": {
+            "title": "<p>Organic Raw Apple Cider Vinegar<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "ce8293c9-0b38-4672-990a-fb3279e783e0": {
+          "type": "tooltip",
+          "settings": {
+            "title": "<p>Organic Moringa Leaves<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "9bfb028a-54a5-4f18-995b-3f324ace7473": {
+          "type": "tooltip",
+          "settings": {
+            "title": "<p>Organic Ginger Root<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "ccfe997d-11d8-4a74-b8e6-00b85ef3d4f3": {
+          "type": "tooltip",
+          "settings": {
+            "title": "<p>Organic Lemongrass<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "3ae1cd68-5c4b-42f5-b028-383d3abd112a": {
+          "type": "tooltip",
+          "settings": {
+            "title": "<p>Raw Colorado Honey<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "template--19855267889458__a873bebd-d8a1-4b12-bda2-d331450c2e4e-1688996903101b5928-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ingredient-section-image.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d1053a6d-7b85-45cd-aad8-42dafe06ee93",
+        "ce8293c9-0b38-4672-990a-fb3279e783e0",
+        "9bfb028a-54a5-4f18-995b-3f324ace7473",
+        "ccfe997d-11d8-4a74-b8e6-00b85ef3d4f3",
+        "3ae1cd68-5c4b-42f5-b028-383d3abd112a",
+        "template--19855267889458__a873bebd-d8a1-4b12-bda2-d331450c2e4e-1688996903101b5928-0"
+      ],
+      "custom_css": [
+        ".image-with-text__text--caption {color: #45a371;}",
+        ".multicolumn .inline-richtext {letter-spacing: normal;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "title_size": "p",
+        "caption": "INGREDIENTS",
+        "content_position": "center",
+        "icon": "shopify:\/\/shop_images\/symbol-logo-dark.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3974d6a0-e57c-4994-a8ef-f847710d88fb": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moringa-leaves.png",
+            "title": "<p>Organic Moringa Leaves<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/organic-berries.png",
+            "title": "<p>Organic Berries<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wildflower-honey.png",
+            "title": "<p>Wildflower Honey Raw Colorado<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d18f3a98-2c1b-41e8-a3a1-7b1d2433905b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/non-gmo.png",
+            "title": "<p>Non-GMO<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a4bb8ea0-4d93-4d23-bed7-34e6e031ffcb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alcohol-free.png",
+            "title": "<p>Alcohol Free<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "58258c72-4de5-4995-9d1e-c4b35a812d1b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gluten-free.png",
+            "title": "<p>Gluten Free<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-0",
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-1",
+        "template--19855267889458__3974d6a0-e57c-4994-a8ef-f847710d88fb-16890583241f5a7fcb-2",
+        "d18f3a98-2c1b-41e8-a3a1-7b1d2433905b",
+        "a4bb8ea0-4d93-4d23-bed7-34e6e031ffcb",
+        "58258c72-4de5-4995-9d1e-c4b35a812d1b"
+      ],
+      "custom_css": [
+        ".multicolumn-list p {font-size: 1.6rem;}",
+        ".multicolumn-card__info {padding: 1.8rem;}",
+        "@media screen and (max-width: 749px) {.multicolumn-card__info {padding: 1.5rem 1rem; } .multicolumn-list p {font-size: 1.4rem; }}",
+        "@media screen and (max-width: 365px) {.multicolumn-card__info {padding: 1.5rem 0; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "",
+        "content_position": "center",
+        "bgImage": "shopify:\/\/shop_images\/uvps-bg.png",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "icon_slider": false,
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "5a7e6677-27bf-4f64-9695-8ffcd0233ca6": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-0": {
+          "type": "column",
+          "settings": {
+            "title": "<p>Supports mobility<\/p>",
+            "text": "<p>Aid with inflammation<\/p><p>Support the immune system<\/p><p>Assist with digestion, upset stomach and nausea.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/supports-mobility.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>This exceptional blend combines the potent properties of Moringa, Ginger, and Lemongrass to support and promote flexibility, joint health, and overall mobility. You can enjoy the benefits of these natural ingredients and unlock a greater sense of movement and vitality.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-0",
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-1",
+        "template--19855267889458__5a7e6677-27bf-4f64-9695-8ffcd0233ca6-16890583241f5a7fcb-2"
+      ],
+      "custom_css": [
+        ".image-with-text__text--caption {color: #45a371;}",
+        ".multicolumn-card__info {display: flex; flex-direction: column; justify-content: center; height: 100%;}",
+        ".inline-richtext {font-size: 1.8rem; text-decoration: underline;}",
+        ".multicolumn-card__info .rte p {color: #807f7f; margin: 2.5rem 0; line-height: 2.7rem;}",
+        ".multicolumn-card__info .rte > p:last-child {margin-top: 0; margin-bottom: 0;}",
+        "@media screen and (min-width: 990px) {.multicolumn-card__info .rte p {max-width: 28rem; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "BENEFITS OF MORINGA INFUSION",
+        "content_position": "center",
+        "icon": "shopify:\/\/shop_images\/symbol-logo-dark.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "icon_slider": false,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bfe0d0b4-c0b6-4321-8d83-f867566864ab": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/100_-pure-icon_df42a3e4-7a96-4263-af61-03c42e1abc9b.png",
+            "title": "<p>100% Pure<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/never-heated.png",
+            "title": "<p>Never Heated<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-additives-or-powders.png",
+            "title": "<p>No Additives Or Powders<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f4922ba9-4ee0-49ba-abae-111b173a9be4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18-months-shelf-life.png",
+            "title": "<p>18 Month Shelf Life<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d7127561-efd3-4d93-9e62-883b64e5f5bf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-extracted-floavour.png",
+            "title": "<p>No Extracted Flavors<\/p>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-0",
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-1",
+        "template--19855267889458__bfe0d0b4-c0b6-4321-8d83-f867566864ab-16890583241f5a7fcb-2",
+        "f4922ba9-4ee0-49ba-abae-111b173a9be4",
+        "d7127561-efd3-4d93-9e62-883b64e5f5bf"
+      ],
+      "custom_css": [
+        ".multicolumn.icon-slider {background-color: #ececec !important;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "title_size": "p",
+        "caption": "",
+        "content_position": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "icon_slider": true,
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "f65a233a-6815-4399-998b-c285045a9c3d": {
+      "type": "multicolumn",
+      "blocks": {
+        "d3b0abb0-82ab-42e7-9105-ec4e55e867d0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d3b0abb0-82ab-42e7-9105-ec4e55e867d0"
+      ],
+      "custom_css": [
+        ".image-with-text__text--caption {color: #45a371;}"
+      ],
+      "settings": {
+        "title": "Over 1 million servings enjoyed by happy customers like you...",
+        "heading_size": "h2",
+        "title_size": "p",
+        "caption": "LOVED BY 100+ CLIENTS",
+        "content_position": "center",
+        "icon": "shopify:\/\/shop_images\/symbol-logo-dark.svg",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "icon_slider": false,
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "29ef1116-5040-48f7-a497-df0bf1000b56": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-0",
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-1",
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-2",
+        "template--19855267889458__29ef1116-5040-48f7-a497-df0bf1000b56-168906403774d74cd3-3"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "icon": "shopify:\/\/shop_images\/symbol-logo-dark.svg",
+        "bgImage": "shopify:\/\/shop_images\/faqs-bg.png",
+        "caption": "FREQUENTLY ASKED QUESTIONS",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "main",
+    "a05e69ae-8e08-446e-818e-9ee3c2aba1d8",
+    "71218474-6f8e-4de5-b6d2-5c10109b9731",
     "59ae0768-c898-45fd-924f-5dc434c00054",
-    "related-products"
+    "related-products",
+    "a8467a63-547f-4305-bfe8-afdea44edfe5",
+    "a873bebd-d8a1-4b12-bda2-d331450c2e4e",
+    "3974d6a0-e57c-4994-a8ef-f847710d88fb",
+    "5a7e6677-27bf-4f64-9695-8ffcd0233ca6",
+    "bfe0d0b4-c0b6-4321-8d83-f867566864ab",
+    "f65a233a-6815-4399-998b-c285045a9c3d",
+    "29ef1116-5040-48f7-a497-df0bf1000b56"
   ]
 }

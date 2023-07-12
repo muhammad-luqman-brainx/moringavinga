@@ -85,3 +85,18 @@
 .accordion__content img {
   max-width: 100%;
 }
+.accordion-wrapper{
+  position: relative;
+}
+.accordion-wrapper .section-bgImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.accordion-wrapper .section-bgImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

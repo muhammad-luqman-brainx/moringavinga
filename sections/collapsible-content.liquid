@@ -15,13 +15,39 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} background-transparent gradient accordion-wrapper">
+  {%- if section.settings.bgImage -%}
+    <div class="section-bgImage bgImage">
+      {%- capture sizes -%}
+    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+    (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+  {%- endcapture -%}
+      {{
+        section.settings.bgImage
+        | image_url: width: 1150
+        | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+      }}
+    </div>
+  {%- endif -%}
   <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
       <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
         <div class="collapsible-content__header" style="text-align: {{ section.settings.heading_alignment }};">
+          {%- if section.settings.icon -%}
+            <div class="section-icon icon center">
+              {%- capture sizes -%}
+        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+        (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+      {%- endcapture -%}
+              {{
+                section.settings.icon
+                | image_url: width: 40
+                | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+              }}
+            </div>
+          {%- endif -%}
           {%- if section.settings.caption != blank -%}
-            <p class="caption-with-letter-spacing">{{ section.settings.caption | escape }}</p>
+            <p class="caption-with-letter-spacing subtitle">{{ section.settings.caption | escape }}</p>
           {% endif %}
           {%- if section.settings.heading != blank -%}
             <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
@@ -109,6 +135,16 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgImage",
+      "label": "Background Image"
+    },
     {
       "type": "text",
       "id": "caption",

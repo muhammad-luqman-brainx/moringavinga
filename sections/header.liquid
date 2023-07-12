@@ -64,16 +64,23 @@
   .list-menu--inline {
     display: inline-flex;
     flex-wrap: wrap;
+    width: 100%;
   }
-
+  .list-menu--inline li {
+    flex-grow: 1;
+  }
   summary.list-menu__item {
     padding-right: 2.7rem;
   }
 
   .list-menu__item {
     display: flex;
+    justify-content: center;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
+  }
+  .list-menu__item .icon-caret{
+    display: none;
   }
 
   .list-menu__item--link {
@@ -113,6 +120,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    details.mega-menu summary::after{
+      height: {{ section.settings.padding_top | times: 1.7 | round: 0 }}px;
+      bottom: -{{ section.settings.padding_top | times: 1.7 | round: 0 }}px;
+    }
   }
 {%- endstyle -%}
 
@@ -150,7 +161,7 @@
 -%}
 
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if section.settings.logo_position == 'middle-center' %} header--right{% endif %}{% if has_app_block %} header--has-app{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -227,9 +238,9 @@
                   </ul>
                 </nav>
                 <div class="menu-drawer__utility-links">
-                  {%- if shop.customer_accounts_enabled -%}
+                  {%- if shop.customer_accounts_enabled or section.settings.enable_account -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide">
-                      {% render 'icon-account' %}
+                      {% render 'icon-account-v2' %}
                       {%- liquid
                         if customer
                           echo 'customer.account_fallback' | t
@@ -461,10 +472,15 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
+      {%- if section.settings.logo_position == 'middle-center' -%}
+        {% assign limit = 2 %}
+      {%- else -%}
+        {% assign limit = 10 %}
+      {%- endif -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list">
-            {%- for link in section.settings.menu.links -%}
+          <ul class="list-menu list-menu--inline" role="list">         
+            {%- for link in section.settings.menu.links limit: limit -%}
               <li>
                 {%- if link.links != blank -%}
                   <header-menu>
@@ -514,19 +530,49 @@
       {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
-            {%- for link in section.settings.menu.links -%}
+            {%- for link in section.settings.menu.links limit: limit -%}
               <li>
                 {%- if link.links != blank -%}
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
                       <summary class="header__menu-item list-menu__item link focus-inset">
+                  <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset p0"{% if link.current %} aria-current="page"{% endif %}>
+
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                        </a>
                         {% render 'icon-caret' %}
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                        <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                        <ul class="mega-menu__list page-width{% if link.levels == 1 and section.settings.menu_type_desktop != 'mega' %} mega-menu__list--condensed{% endif %}" role="list">
                           {%- for childlink in link.links -%}
                             <li>
+                              {% assign PromotionImage = false %}
+                              {% for block in section.blocks %}
+                                {% assign menu_item =  block.settings.menu_item | downcase %}
+                                {% assign link_title =  childlink.title | downcase %}
+                                {% if menu_item == link_title %}
+                                  {% if block.settings.image !=  blank %}
+                                    {% assign PromotionImage = true %}
+                                    {% capture Promotion %}
+                                      <div class="section-promotion promotionImage">
+                                          {%- capture sizes -%}
+                                        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                                        (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                                      {%- endcapture -%}
+                                          {{
+                                            block.settings.image
+                                            | image_url: width: 370
+                                            | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                                          }}
+                                        </div>
+                                    {% endcapture %}
+                                  {% endif %}
+                                  {% break %}
+                                {% endif %}
+                              {% endfor %}
+                              {% if PromotionImage %}
+                                {{ Promotion }}
+                              {% endif %}
                               <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                 {{ childlink.title | escape }}
                               </a>
@@ -589,6 +635,136 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- if section.settings.menu != blank and section.settings.logo_position == 'middle-center' -%}
+    {% assign offset = 2 %}
+    {%- if section.settings.menu_type_desktop == 'dropdown' -%}
+      <nav class="header__inline-menu header__inline-menu-right">
+        <ul class="list-menu list-menu--inline" role="list">         
+          {%- for link in section.settings.menu.links offset: offset -%}
+            <li>
+              {%- if link.links != blank -%}
+                <header-menu>
+                  <details id="Details-HeaderMenu-{{ forloop.index }}">
+                    <summary class="header__menu-item list-menu__item link focus-inset">
+                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
+                      {%- for childlink in link.links -%}
+                        <li>
+                          {%- if childlink.links == blank -%}
+                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                              {{ childlink.title | escape }}
+                            </a>
+                          {%- else -%}
+                            <details id="Details-HeaderSubMenu-{{ forloop.index }}">
+                              <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
+                                <span>{{ childlink.title | escape }}</span>
+                                {% render 'icon-caret' %}
+                              </summary>
+                              <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
+                                {%- for grandchildlink in childlink.links -%}
+                                  <li>
+                                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </details>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </details>
+                </header-menu>
+              {%- else -%}
+                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
+      <nav class="header__inline-menu header__inline-menu-right">
+        <ul class="list-menu list-menu--inline" role="list">
+          {%- for link in section.settings.menu.links offset: offset -%}
+            <li>
+              {%- if link.links != blank -%}
+                <header-menu>
+                  <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                    <summary class="header__menu-item list-menu__item link focus-inset">
+                  <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset p0"{% if link.current %} aria-current="page"{% endif %}>
+
+                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                      </a>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
+                      <ul class="mega-menu__list page-width{% if link.levels == 1 and section.settings.menu_type_desktop != 'mega' %} mega-menu__list--condensed{% endif %}" role="list">
+                        {%- for childlink in link.links -%}
+                          <li>
+                            {% assign PromotionImage = false %}
+                            {% for block in section.blocks %}
+                              {% assign menu_item =  block.settings.menu_item | downcase %}
+                              {% assign link_title =  childlink.title | downcase %}
+                              {% if menu_item == link_title %}
+                                {% if block.settings.image !=  blank %}
+                                  {% assign PromotionImage = true %}
+                                  {% capture Promotion %}
+                                    <div class="section-promotion promotionImage">
+                                        {%- capture sizes -%}
+                                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                                      (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                                    {%- endcapture -%}
+                                        {{
+                                          block.settings.image
+                                          | image_url: width: 370
+                                          | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                                        }}
+                                      </div>
+                                  {% endcapture %}
+                                {% endif %}
+                                {% break %}
+                              {% endif %}
+                            {% endfor %}
+                            {% if PromotionImage %}
+                              {{ Promotion }}
+                            {% endif %}
+                            <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                              {{ childlink.title | escape }}
+                            </a>
+                            {%- if childlink.links != blank -%}
+                              <ul class="list-unstyled" role="list">
+                                {%- for grandchildlink in childlink.links -%}
+                                  <li>
+                                    <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  </details>
+                </header-menu>
+              {%- else -%}
+                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                  <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                </a>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+  {%- endif -%}
+
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header__localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -617,9 +793,10 @@
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
-                <use href="#icon-search">
+              <svg width="20" height="19.875" viewBox="0 0 30 29.875" class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+                {% render 'icon-search' %}
               </svg>
+
               <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
                 <use href="#icon-close">
               </svg>
@@ -695,9 +872,9 @@
         </details>
       </details-modal>
 
-      {%- if shop.customer_accounts_enabled -%}
+      {%- if shop.customer_accounts_enabled or section.settings.enable_account -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          {% render 'icon-account' %}
+          {% render 'icon-account-v2' %}
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -721,9 +898,9 @@
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
-            render 'icon-cart-empty'
+            render 'icon-cart-v2'
           else
-            render 'icon-cart'
+            render 'icon-cart-v2'
           endif
         -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
@@ -862,6 +1039,24 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  var menuItems = document.querySelectorAll("header-menu details")
+
+  menuItems.forEach((menuItem) => {
+    if (window.innerWidth >= 990) {
+      menuItem.addEventListener("mouseenter", function () {
+        menuItem.setAttribute("open", "open");
+      })
+      menuItem.addEventListener("mouseleave", function (event) {
+          menuItem.removeAttribute('open');
+        
+      })
+    }
+  })
+
+ 
+
+
 {% endjavascript %}
 
 <script type="application/ld+json">
@@ -908,7 +1103,6 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
   "settings": [
     {
       "type": "select",
@@ -1027,6 +1221,12 @@
     },
     {
       "type": "checkbox",
+      "id": "enable_account",
+      "default": true,
+      "label": "Enable Account"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_country_selector",
       "default": false,
       "label": "t:sections.header.settings.enable_country_selector.label"
@@ -1104,6 +1304,28 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+    "type": "image",
+    "name": "Menu promotion",
+    "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "Menu item",
+          "info": "Enter a dropdown menu item title to display the menu promotion on, e.g. 'Shop'."
+        },
+        {
+          "type": "header",
+          "content": "Promotion"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "800 x 600px recommended"
+        }
+      ]
     }
   ]
 }
