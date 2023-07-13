@@ -3,6 +3,14 @@
   z-index: 2;
   overflow: hidden;
 }
+.special .page-width{
+  max-width: 100rem;
+}
+@media only screen and (min-width: 1300px){
+  .special .page-width{
+    max-width: 130rem;
+  }
+}
 .image-with-text .grid {
   margin-bottom: 0;
 }
@@ -594,7 +602,7 @@ overflow: visible;
 }
 .hotspot_wrap .tooltip .tipclose {
   position: absolute;
-  top: 6rem;
+  top: 4rem;
   left: 50%;
   margin-left: -11px;
   height: 22px;
@@ -675,10 +683,17 @@ overflow: visible;
     top: -170px;
   }
   .hotspot-wrap_container > .hotspot_wrap:nth-child(2) .tooltip {
-    top: -210px;
+    top: -235px;
+    right: 50%;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(2) .tooltip img{
+    max-width: 45rem;
   }
   .hotspot-wrap_container > .hotspot_wrap:nth-child(3) .tooltip {
-    bottom: -20px;
+    bottom: -70px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(3) .tooltip img{
+    max-width: 37rem;
   }
   .hotspot-wrap_container > .hotspot_wrap:nth-child(4) .tooltip {
     bottom: -140px;
@@ -725,11 +740,37 @@ overflow: visible;
     top: 9px;
   }
 }
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+  .hotspot_wrap .tooltip img {
+    max-width: 35rem !important;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(1) .tooltip {
+    top: -190px;
+    right: 100%;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(2) .tooltip {
+    top: -250px;
+    right: 100%;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(3) .tooltip {
+    bottom: -85px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(4) .tooltip {
+    bottom: -150px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(5) .tooltip {
+    bottom: -130px;
+  }
+  .hotspot-wrap_container > .hotspot_wrap:nth-child(6) .tooltip {
+    top: -150px;
+    left: 10px;
+  }
+}
 @media (min-width: 691px) and (max-width: 1130px) {
   .hotspot_wrap .tooltip {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 0 !important;
+    top:  0 !important;
     width: 100vw;
     height: 100vh;
     max-width: none;
@@ -746,7 +787,9 @@ overflow: visible;
     justify-content: center;
     align-items: center;
   }
-
+  .hotspot_wrap .tooltip .inner{
+    position: relative;
+  }
   .hotspot_wrap .tooltip img {
     max-width: 100%;
   }
@@ -757,8 +800,8 @@ overflow: visible;
 @media only screen and (max-width: 690px) {
   .hotspot_wrap .tooltip {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 0 !important;
+    top: 0 !important;
     width: 100%;
     max-width: none;
     margin: 0;
@@ -772,6 +815,9 @@ overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .hotspot_wrap .tooltip .inner{
+    position: relative;
   }
   .hotspot_wrap .tooltip img {
     max-width: 100%;
