@@ -10,7 +10,7 @@
             "text_alignment": "center",
             "color_bg": "#fce182",
             "color_text": "#dd8500",
-            "link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1"
+            "link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45692856467762&quantity=1"
           }
         }
       },
@@ -54,7 +54,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "GET YOUR FREE SAMPLES",
-            "button_link_1": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1",
+            "button_link_1": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45692856467762&quantity=1",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -646,7 +646,7 @@
           "type": "button",
           "settings": {
             "button_label": "ORDER NOW",
-            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1",
+            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45692856467762&quantity=1",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -714,6 +714,7 @@
         "template--19637154873650__701c3d86-1be3-4f08-840c-cdc6ca3f9f72-16884918673c3d2394-2"
       ],
       "custom_css": [
+        ".multicolumn {background-color: #f9f9f9 !important;}",
         ".multicolumn .title {font-size: 4.6rem; line-height: 5.5rem;}",
         ".multicolumn .multicolumn-card__info .inline-richtext {font-size: 1.9rem; line-height: 2.9rem;}"
       ],
@@ -759,7 +760,7 @@
           "type": "button",
           "settings": {
             "button_label": "GET YOUR FREE SAMPLES",
-            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45653200666930&quantity=1"
+            "button_link": "https:\/\/moringavinga.myshopify.com\/cart\/add?id=45692856467762&quantity=1"
           }
         }
       },
@@ -767,6 +768,11 @@
         "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-0",
         "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-1",
         "template--19637154873650__922f6838-5eaf-400f-9d36-a89111197673-1688495771341f06ce-2"
+      ],
+      "custom_css": [
+        ".image-with-text__content { max-width: 69rem; margin: 0 auto; }",
+        ".image-with-text .image-with-text__heading {font-size: 4.6rem; line-height: 5.5rem;}",
+        "@media only screen and (max-width: 999px){.image-with-text .image-with-text__heading {font-size: 28.9px; line-height: 34px;}}"
       ],
       "settings": {
         "heading_image": "",

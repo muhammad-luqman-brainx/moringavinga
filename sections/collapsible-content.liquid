@@ -114,6 +114,17 @@
                     <div class="accordion__content-inner">
                       {{ block.settings.row_content }}
                       {{ block.settings.page.content }}
+                      {% if block.settings.image %}
+                        {%- capture sizes -%}
+                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                      (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                    {%- endcapture -%}
+                        {{
+                          block.settings.image
+                          | image_url: width: 1150
+                          | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                        }}
+                      {% endif %}
                     </div>
                   </div>
                 </details>
@@ -550,6 +561,11 @@
           "type": "richtext",
           "id": "row_content",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
         },
         {
           "type": "page",

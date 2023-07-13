@@ -389,9 +389,6 @@
 .image-with-text__content .image-with-text__text + .button {
   margin-top: calc(5rem - 15px);
 }
-.image-with-text .image-with-text__heading{
-
-}
 
 .image-with-text__heading {
   margin-bottom: 0;

@@ -2,10 +2,10 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/logo.png",
     "logo_width": 110,
-    "colors_solid_button_labels": "#fff",
+    "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#45a371",
     "gradient_accent_1": "",
-    "colors_accent_2": "#f4f4f4",
+    "colors_accent_2": "#e4e4e4",
     "gradient_accent_2": "",
     "colors_text": "#195059",
     "colors_outline_button_labels": "#3a9e81",

@@ -131,8 +131,14 @@ overflow: visible;
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
-.image-with-text .global-media-settings {
+.special .image-with-text .global-media-settings {
   overflow: hidden !important;
+}
+.special .global-media-settings {
+  background-color: transparent;
+}
+.special .global-media-settings::after {
+  opacity: 0;
 }
 
 .image-with-text .image-with-text__text-item > * {

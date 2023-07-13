@@ -71,6 +71,9 @@ z-index: 3;
   font-size: 15pt;
   padding: 1.6rem 3.2rem;
 }
+.mb-1{
+  margin-bottom: 1rem;
+}
 @media only screen and (min-width: 1425px) {
   .contact .contact-form {
     padding: calc(1245px * 0.06);

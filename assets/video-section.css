@@ -4,8 +4,10 @@
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
   border: 0;
 }
-
-.video-decor .video-section__poster::after {
+.video-decor .video-section{
+  overflow: hidden;
+}
+.video-decor .video-section::after {
   content: '';
   position: absolute;
   bottom: -1px;

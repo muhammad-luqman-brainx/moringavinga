@@ -90,6 +90,23 @@
   padding: 1rem 1.5rem;
 }
 
+.collapsible-row-layout .accordion .accordion__content .accordion__content-inner ul{
+  margin-left: 1.5rem;
+}
+.collapsible-row-layout .accordion .accordion__content .accordion__content-inner ul li{
+  list-style-position: outside;
+  
+}
+.collapsible-row-layout .accordion .accordion__content .accordion__content-inner *{
+  color: inherit;
+}
+.collapsible-row-layout .accordion .accordion__content .accordion__content-inner a{
+  color: rgba(var(--color-background), 1);
+  text-decoration: none;
+}
+.collapsible-row-layout .accordion .accordion__content .accordion__content-inner a:hover{
+  color: inherit;
+}
 .collapsible-content summary:hover {
   background: rgba(var(--color-background), 1);
 }

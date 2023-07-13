@@ -432,7 +432,7 @@
       ],
       "settings": {
         "title": "",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "title_size": "p",
         "caption": "INGREDIENTS",
         "content_position": "center",
@@ -523,7 +523,9 @@
         "58258c72-4de5-4995-9d1e-c4b35a812d1b"
       ],
       "custom_css": [
+        ".multicolumn .isolate{margin-block: 2rem;}",
         ".multicolumn-list p {font-size: 1.6rem;}",
+        ".multicolumn .section-bgImage img{object-fit: fill}",
         ".multicolumn-card__info {padding: 1.8rem;}",
         "@media screen and (max-width: 749px) {.multicolumn-card__info {padding: 1.5rem 1rem; } .multicolumn-list p {font-size: 1.4rem; }}",
         "@media screen and (max-width: 365px) {.multicolumn-card__info {padding: 1.5rem 0; }}"
@@ -593,7 +595,7 @@
         ".inline-richtext {font-size: 1.8rem; text-decoration: underline;}",
         ".multicolumn-card__info .rte p {color: #807f7f; margin: 2.5rem 0; line-height: 2.7rem;}",
         ".multicolumn-card__info .rte > p:last-child {margin-top: 0; margin-bottom: 0;}",
-        "@media screen and (min-width: 990px) {.multicolumn-card__info .rte p {max-width: 28rem; }}"
+        "@media screen and (min-width: 990px) {.multicolumn-card__info .rte {max-width: 28rem; }}"
       ],
       "settings": {
         "title": "",

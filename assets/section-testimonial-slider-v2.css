@@ -207,6 +207,17 @@
   font-style: italic;
   font-family: serif;
 }
+.testimonial-section .carousel-status .currentCount {
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+.testimonial-section .carousel-status .currentCount span {
+  display: inline-block;
+  -webkit-transition: transform 0.33s;
+  transition: transform 0.33s;
+  transform: translateX(-20px);
+}
 @media only screen and (max-width: 749px) {
   .testimonial-section
     .testimonial-carousel

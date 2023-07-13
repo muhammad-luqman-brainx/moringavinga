@@ -26,7 +26,7 @@
 }
 
 .color-accent-2 {
-  --color-foreground: var(--color-base-solid-button-labels);
+  --color-foreground: var(--color-base-solid-button-labels_2);
   --color-background: var(--color-base-accent-2);
   --gradient-background: var(--gradient-base-accent-2);
 }
@@ -1068,7 +1068,7 @@ summary::-webkit-details-marker {
 .subtitle {
   font-size: 1.8rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  letter-spacing: 0.06rem;
+  letter-spacing: normal;
   color: rgba(var(--color-foreground), 0.7);
 }
 
@@ -1944,7 +1944,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -3472,6 +3472,7 @@ blockquote p {
   line-height: calc(4px + var(--font-blockquote-size));
 }
 .blockquote-author span{
+  font-size: 1.9rem;
   font-family: var(--font-author-family);
   font-weight: var(--font-author-weight);
 }

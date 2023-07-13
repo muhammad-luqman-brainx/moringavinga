@@ -22,7 +22,11 @@ Array.prototype.forEach.call(SliderElements, function (element) {
 
   function updateStatus() {
     var slideNumber = flkty.selectedIndex + 1;
-    carouselStatus.textContent = slideNumber + " / " + flkty.slides.length;
+    carouselStatus.innerHTML = `<span class="currentCount"><span>${slideNumber}</span></span>  / ${flkty.slides.length}`;
+    setTimeout(function () {
+      carouselStatus.querySelector(".currentCount span").style.transform =
+        "translateX(0px)";
+    }, 0);
   }
   updateStatus();
 

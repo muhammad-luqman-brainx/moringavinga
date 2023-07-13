@@ -1,3 +1,6 @@
+.ingredients .page-width{
+  max-width: 100rem;
+}
 .tooltip-heading {
   position: relative;
   display: inline-block;

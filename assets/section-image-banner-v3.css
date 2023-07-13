@@ -446,6 +446,7 @@
 
   .banner-v3.show_side_decor .banner__media{
     overflow: visible;
+    background-color: transparent;
   }
   .banner-v3.show_side_decor::before,
   .banner-v3.show_side_decor .banner__media::before{

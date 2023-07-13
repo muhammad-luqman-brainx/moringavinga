@@ -49,6 +49,13 @@
       },
       {
         "type": "color",
+        "id": "colors_solid_button_labels_2",
+        "default": "#195059",
+        "label": "Solid Button Label 2",
+        "info": "Used as foreground color on accent 2 colors."
+      },
+      {
+        "type": "color",
         "id": "colors_accent_1",
         "default": "#121212",
         "label": "t:settings_schema.colors.settings.colors_accent_1.label",
