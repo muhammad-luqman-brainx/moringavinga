@@ -3292,6 +3292,9 @@ details-disclosure > details {
   max-width: 100%;
   padding: 0 !important;
 }
+.animated__cta  a{
+  z-index: 2;
+}
 .animated__cta > :first-child {
   position: relative;
   padding: 0;

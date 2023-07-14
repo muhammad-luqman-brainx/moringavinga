@@ -36,7 +36,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "How It Works",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/pages\/how-moringa-works",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -95,6 +95,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/here.webp",
+        "show_text_box_2": false,
         "image_overlay_opacity": 30,
         "image_height": "large",
         "desktop_content_position": "top-left",
@@ -147,7 +148,7 @@
         "fixedHeading": "Functional Ingredients You Can Feel",
         "fixedDescription": "Moringa oleifera is said to offer over 300 medicinal benefits. We combine adaptogens like moringa with powerful superfoods to bring you a convenient and easy way to take your health and wellness to the next level.",
         "fixedButtonText": "View all Testimonials",
-        "FixedButtonlink": "#"
+        "FixedButtonlink": "shopify:\/\/pages\/testimonials"
       }
     },
     "46a67235-1714-43b0-822b-0e8a19018e90": {
@@ -227,7 +228,7 @@
             "title": "Elderberry & Holy Basil",
             "text": "<p>Immunity | Calm | Breathe<\/p>",
             "link_label": "",
-            "link": "#"
+            "link": "shopify:\/\/products\/sweet-sipping-vinegar-basil"
           }
         },
         "template--19285340389682__91f93379-2c9a-4c1a-aedd-d483dfb9affb-1686215226b0b98a04-1": {
@@ -237,7 +238,7 @@
             "title": "Ginger & Lemongrass",
             "text": "<p>Motion | Soothe | Digestion<\/p>",
             "link_label": "",
-            "link": "#"
+            "link": "shopify:\/\/products\/sweet-sipping-vinegar-ginger"
           }
         },
         "template--19285340389682__91f93379-2c9a-4c1a-aedd-d483dfb9affb-1686215226b0b98a04-2": {
@@ -247,7 +248,7 @@
             "title": "Spearmint & Rosemary",
             "text": "<p>Mind | Renew | Circulation<\/p>",
             "link_label": "",
-            "link": "#"
+            "link": "shopify:\/\/products\/sweet-sipping-vinegar-spearmint"
           }
         }
       },
@@ -294,7 +295,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "#"
+            "button_link": "shopify:\/\/pages\/shop-online"
           }
         }
       },
@@ -339,7 +340,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "#"
+            "button_link": "shopify:\/\/pages\/how-moringa-works"
           }
         }
       },
@@ -384,7 +385,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "#"
+            "button_link": "shopify:\/\/pages\/ingredients"
           }
         }
       },
@@ -702,7 +703,7 @@
             "title": "Follow Along to receive updates, news, and discounts",
             "text": "<p>#MORINGAVINGA<\/p>",
             "link_label": "Follow Along",
-            "link": "#"
+            "link": "https:\/\/www.instagram.com\/moringavinga\/"
           }
         },
         "template--19462896156978__5a0e1d16-5470-4676-a2b3-9d01faeabe07-1686568625cee927b8-2": {

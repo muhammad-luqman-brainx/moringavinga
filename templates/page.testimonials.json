@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "14024ba9-1711-4465-9e93-251c11022725": {
+      "type": "page-banner",
+      "blocks": {
+        "template--19957133410610__14024ba9-1711-4465-9e93-251c11022725-168923750214da2fb1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customer Testimonials",
+            "heading_size": "h1"
+          }
+        },
+        "f9c3a7d7-011e-48ec-b7b4-8b12cee7c290": {
+          "type": "skip_section",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--19957133410610__14024ba9-1711-4465-9e93-251c11022725-168923750214da2fb1-0",
+        "f9c3a7d7-011e-48ec-b7b4-8b12cee7c290"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/testimonials.png",
+        "image_overlay_opacity": 80,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "show_side_decor": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "168923885631364dc4": {
+      "type": "apps",
+      "blocks": {
+        "a1839b8b-2c17-4697-b0e8-5389a242aa51": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/full-page\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "product_image": true,
+            "take": 30,
+            "label_substitute": "",
+            "color_star": "",
+            "color_verified": "",
+            "color_text": "",
+            "color_link": "",
+            "review_ids": "",
+            "product_ids": "",
+            "category": "",
+            "product_brand": "",
+            "tags": "",
+            "min_rating": "none",
+            "fill_empty": false,
+            "random": false,
+            "with_photos": false
+          }
+        }
+      },
+      "block_order": [
+        "a1839b8b-2c17-4697-b0e8-5389a242aa51"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "14024ba9-1711-4465-9e93-251c11022725",
+    "168923885631364dc4"
+  ]
+}

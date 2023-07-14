@@ -14,9 +14,8 @@
   line-height: 5.5rem;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 10px;
   overflow: hidden;
-  padding-bottom: 6rem;
+  margin-bottom: 7rem;
 }
 
 .banner__box .banner__text {
@@ -34,6 +33,7 @@
   transition: 0.3s ease opacity, 0.3s ease color;
   margin-top: 6px;
 }
+
 .banner__box .banner__text p.h2 {
   letter-spacing: -2px;
   font-size: 21px;
@@ -539,7 +539,7 @@
     padding-bottom: 25% !important;
   }
   .banner__box .banner__heading {
-    padding-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .banner__box .next-section-wrap{
     display: block;

@@ -69,7 +69,15 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              <div
+                class="fnc-slide__heading-line"
+                data-animation="fade-in-from-bottom"
+                style="transition-delay: 150ms;"
+              >
+                <span>
+                  {{ block.settings.heading }}
+                </span>
+              </div>
             </h2>
           {%- when 'subtitle' -%}
             <div

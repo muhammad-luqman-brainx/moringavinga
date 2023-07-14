@@ -1,6 +1,6 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-article-card-v2.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
@@ -71,7 +71,7 @@
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="blog__post grid__item article slider__slide slider__slide--full-width"
             >
-              {% render 'article-card',
+              {% render 'article-card-v2',
                 blog: section.settings.blog,
                 article: article,
                 media_aspect_ratio: 1.66,
